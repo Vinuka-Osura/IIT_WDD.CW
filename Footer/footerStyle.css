@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(4,9,30,0.7),rgba(4,9,30,0.7)
+    
+    /* ), url(Images/test.jpg */
+    );
+    background-position: center;
+    background-size: cover;
+    position: relative;
+} 
+
+.navbar_cointainer{
+
+}
+
+.navbar-menu{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: end;
+}
+
+.icon img{
+    width: 100px;
+    
+}
+
+.navbar-items{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
