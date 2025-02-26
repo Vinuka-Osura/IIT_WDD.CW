@@ -1,0 +1,78 @@
+/* global.css */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Headings styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Specific heading styling */
+h1 {
+    font-size: 2em;
+    color: #222;
+}
+
+h2 {
+    font-size: 1.75em;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #444;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 15px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Utility classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Additional common styles */
+/* Add more global styles as needed */
