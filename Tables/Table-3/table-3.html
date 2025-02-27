@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quality Education – Funding & Indicators</title>
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="table-3.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+</head>
+
+<body>
+  <section id="table-section">
+    <div class="data-table-container">
+      <!-- Website Logo -->
+      <div class="logo-container" style="text-align: center; margin-bottom:16px;">
+        <img src="images/website-logo.png" alt="Website Logo" style="height:50px;">
+      </div>
+      <!-- Table -->
+      <table id="education-table" class="display" aria-label="Quality Education Funding and Indicators">
+        <thead>
+          <!-- Merged header row -->
+          <tr>
+            <th colspan="7" style="text-align:center; font-size:1.2em;">
+              Quality Education – Funding, Infrastructure & Indicators
+            </th>
+          </tr>
+          <!-- Header groups -->
+          <tr>
+            <!-- Left group: Funding & Infrastructure -->
+            <th rowspan="2" aria-label="Country/Region">
+              <img src="images/country-icon.png" class="header-thumb" title="Country/Region"> Country/Region
+            </th>
+            <th colspan="3" aria-label="Funding & Infrastructure" title="Education Funding and Infrastructure">
+              Education Funding & Infrastructure
+            </th>
+            <!-- Right group: Quality Indicators -->
+            <th colspan="3" aria-label="Quality Indicators" title="Quality of Education Indicators">
+              Quality of Education Indicators
+            </th>
+          </tr>
+          <!-- Sub-columns -->
+          <tr>
+            <!-- Funding & Infrastructure -->
+            <th aria-label="Spending (% GDP)" title="Education Spending (% of GDP)">Spending (% GDP)</th>
+            <th aria-label="Schools per 100k" title="Number of Schools per 100,000 inhabitants">Schools/100k</th>
+            <th aria-label="Expenditure per Student" title="Average Expenditure per Student">Expenditure per Student</th>
+            <!-- Quality Indicators -->
+            <th aria-label="PISA Score" title="PISA Score / Standardized Test Score">PISA Score</th>
+            <th aria-label="Dropout Rate (%)" title="Dropout Rate (%)">Dropout Rate (%)</th>
+            <th aria-label="Teacher Qualification (%)" title="Teacher Qualification Ratio">Teacher Qualification (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic rows will be injected here via JSON -->
+        </tbody>
+      </table>
+      <!-- Footer -->
+      <footer style="margin-top:16px; text-align:center;">
+        <p>Assigned to [Student 2] | <a href="editor.html" class="table-link" target="_blank">Student 2 Editor</a></p>
+      </footer>
+    </div>
+  </section>
+
+  <script>
+    $(document).ready(function () {
+      $('#education-table').DataTable({
+        "ajax": "table-3data.json", // JSON file with your dynamic data
+        "columns": [
+          {
+            "data": "country",
+            // Render as a clickable link (update row.link accordingly)
+            "render": function (data, type, row) {
+              return '<a href="'+ row.link +'" class="table-link" aria-label="View details for '+ data +'">' + data + '</a>';
+            }
+          },
+          { "data": "educationSpending" },
+          { "data": "schoolsPer100k" },
+          { "data": "expenditurePerStudent" },
+          { "data": "pisaScore" },
+          { "data": "dropoutRate" },
+          { "data": "teacherQualification" }
+        ],
+        "pageLength": 5,
+        "order": [[0, "asc"]],
+        "responsive": true,
+        "autoWidth": false,
+        "language": {
+          "paginate": {
+            "previous": "<",
+            "next": ">"
+          },
+          "lengthMenu": "_MENU_"
+        },
+        // Custom layout: header (search) and footer (length, info, pagination)
+        "dom": '<"dt-header"f>rt<"dt-footer"<"footer-left"l><"footer-center"i><"footer-right"p>>'
+      });
+    });
+  </script>
+</body>
+</html>
