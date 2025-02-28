@@ -1,116 +1,121 @@
-/* Table Container */
-.table {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Global Table Styles */
-#education-data {
-    width: auto;
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --background-color: #f8f9fa;
+    --white: #ffffff;
+    --text-color: #333;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.9em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-}
-
-#education-data thead tr {
-    background-color: var(--primary-color, #007bff);
-    color: var(--white, #ffffff);
-}
-
-#education-data th,
-#education-data td {
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  }
+  
+  th, td {
     border: 1px solid #ddd;
-    padding: 12px;
+    padding: 10px;
     text-align: center;
-}
-
-#education-data th {
-    font-weight: bold;
-}
-
-#education-data tbody tr:nth-child(even) {
+  }
+  
+  th {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+  
+  tbody tr:nth-child(even) {
     background-color: #f3f3f3;
-}
-
-#education-data tbody tr:hover {
+  }
+  
+  tbody tr:hover {
     background-color: #e2e2e2;
-}
-
-#education-data img {
-    height: 30px;
-    width: auto;
-    border-radius: 3px;
-}
-
-/* Header (table title & search) styling */
-.table-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 8px;
-}
-
-.table-header h2 {
-    margin: 0;
+  }
+  
+  .graph-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1.2em;
+  }
+  
+  /* Modal Styles */
+  #modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  #modal-content {
+    background-color: var(--white);
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  #modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     font-size: 1.5em;
-}
-
-/* Bottom row styling for DataTables */
-.dataTables_wrapper .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 8px;
+    cursor: pointer;
   }
   
-  .dataTables_wrapper .col-4 {
-    flex: 1;
+  /* Full Graph Section */
+  #fullGraphSection {
+    width: 70%;
+    margin-top: 40px;
   }
   
-  .dataTables_wrapper .text-center {
-    text-align: center;
-  }
-  
+  /* DataTables header and footer styling */
   .dt-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    margin-bottom: 8px; /* adjust as needed */
-}
-
-/* Footer row styling (all elements in the same vertical line with top margin sx={{mt:2}}) */
-.dt-footer {
+    margin-bottom: 16px; /* mimics sx={{mb:2}} */
+  }
+  
+  .dt-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-}
-
-/* Left: Length menu aligned with container’s left edge */
-.footer-left {
-    margin-top: 8px;
+    margin-top: 16px; /* mimics sx={{mt:2}} */
+  }
+  
+  .footer-left {
     text-align: left;
-}
-
-/* Center: Table info (Showing 1 to ... entries) centered */
-.footer-center {
+  }
+  
+  .footer-center {
     text-align: center;
-}
-
-/* Right: Pagination aligned to the container’s right edge */
-.footer-right {
-    margin-top: 8px;
+    flex-grow: 1;
+  }
+  
+  .footer-right {
     text-align: right;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-
-    #education-data th,
-    #education-data td {
-        padding: 8px;
-        font-size: 0.8em;
-    }
-}
+  }
+  
+  /* Additional styles for logo or any other branding elements can be added here */
+  

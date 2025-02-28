@@ -2,115 +2,294 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quality Education - Home</title>
-
-    <link rel="stylesheet" href="tables.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Global Education Indicators (2015-2022)</title>
     <!-- DataTables CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 
-    <!-- jQuery -->
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="table-4.css">
+
+    <!-- jQuery and DataTables JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
 <body>
+    <h1>Expanded Global Education Indicators (2015-2022)</h1>
 
-    <section id="learn-more" class="table">
-        <table id="education-data" class="display">
-            <thead>
-                <tr>
-                    <th rowspan="2">Country</th>
-                    <th rowspan="2">Flag</th>
-                    <th colspan="2">2015 Data</th>
-                    <th colspan="2">2020 Data</th>
-                    <th colspan="2">Absolute Change</th>
-                    <th colspan="2">Relative Change (%)</th>
-                    <th rowspan="2">Student-Teacher Ratio</th>
-                </tr>
-                <tr>
-                    <th>Literacy Rate (%)</th>
-                    <th>Enrollment Rate (%)</th>
-                    <th>Literacy Rate (%)</th>
-                    <th>Enrollment Rate (%)</th>
-                    <th>Literacy</th>
-                    <th>Enrollment</th>
-                    <th>Literacy</th>
-                    <th>Enrollment</th>
-                </tr>
-            </thead>
-            <tbody>
+    <table id="global-table" aria-label="Global Education Indicators">
+        <thead>
+            <tr>
+                <th>Education Indicator</th>
+                <th>2015</th>
+                <th>2016</th>
+                <th>2017</th>
+                <th>2018</th>
+                <th>2019</th>
+                <th>2020</th>
+                <th>2021</th>
+                <th>2022</th>
+                <th>Graph</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Global Literacy Rate (%)</td>
+                <td>86.0</td>
+                <td>86.5</td>
+                <td>87.0</td>
+                <td>87.3</td>
+                <td>87.5</td>
+                <td>87.8</td>
+                <td>88.0</td>
+                <td>88.2</td>
+                <td><button class="graph-btn" data-index="0">&#128202;</button></td>
+            </tr>
+            <tr>
+                <td>Global Primary Enrollment Rate (%)</td>
+                <td>91.0</td>
+                <td>91.2</td>
+                <td>91.5</td>
+                <td>91.8</td>
+                <td>92.0</td>
+                <td>92.3</td>
+                <td>92.5</td>
+                <td>92.7</td>
+                <td><button class="graph-btn" data-index="1">&#128202;</button></td>
+            </tr>
+            <tr>
+                <td>Global Secondary Enrollment Rate (%)</td>
+                <td>75.0</td>
+                <td>75.5</td>
+                <td>76.0</td>
+                <td>76.3</td>
+                <td>76.8</td>
+                <td>77.0</td>
+                <td>77.2</td>
+                <td>77.5</td>
+                <td><button class="graph-btn" data-index="2">&#128202;</button></td>
+            </tr>
+            <tr>
+                <td>Global Tertiary Enrollment Rate (%)</td>
+                <td>36.0</td>
+                <td>37.0</td>
+                <td>38.0</td>
+                <td>39.0</td>
+                <td>40.0</td>
+                <td>40.0</td>
+                <td>40.5</td>
+                <td>41.0</td>
+                <td><button class="graph-btn" data-index="3">&#128202;</button></td>
+            </tr>
+            <tr>
+                <td>Global Teacher-Student Ratio</td>
+                <td>24</td>
+                <td>23</td>
+                <td>23</td>
+                <td>22</td>
+                <td>22</td>
+                <td>21</td>
+                <td>20</td>
+                <td>20</td>
+                <td><button class="graph-btn" data-index="4">&#128202;</button></td>
+            </tr>
+            <tr>
+                <td>Education Expenditure (% of GDP)</td>
+                <td>4.5</td>
+                <td>4.6</td>
+                <td>4.7</td>
+                <td>4.8</td>
+                <td>4.9</td>
+                <td>5.0</td>
+                <td>5.1</td>
+                <td>5.2</td>
+                <td><button class="graph-btn" data-index="5">&#128202;</button></td>
+            </tr>
+            <tr>
+                <td>Out-of-School Children (millions)</td>
+                <td>63.0</td>
+                <td>61.0</td>
+                <td>60.0</td>
+                <td>58.0</td>
+                <td>57.0</td>
+                <td>59.0</td>
+                <td>58.0</td>
+                <td>55.0</td>
+                <td><button class="graph-btn" data-index="6">&#128202;</button></td>
+            </tr>
+            <tr>
+                <td>School Completion Rate (%)</td>
+                <td>75.0</td>
+                <td>76.0</td>
+                <td>77.0</td>
+                <td>78.0</td>
+                <td>78.5</td>
+                <td>79.0</td>
+                <td>79.5</td>
+                <td>80.0</td>
+                <td><button class="graph-btn" data-index="7">&#128202;</button></td>
+            </tr>
+            <tr>
+                <td>Digital Learning Access (% of students)</td>
+                <td>20.0</td>
+                <td>22.0</td>
+                <td>25.0</td>
+                <td>28.0</td>
+                <td>30.0</td>
+                <td>50.0</td>
+                <td>55.0</td>
+                <td>60.0</td>
+                <td><button class="graph-btn" data-index="8">&#128202;</button></td>
+            </tr>
+            <tr>
+                <td>Gender Parity Index (GPI)</td>
+                <td>0.97</td>
+                <td>0.98</td>
+                <td>0.98</td>
+                <td>0.99</td>
+                <td>0.99</td>
+                <td>1.00</td>
+                <td>1.00</td>
+                <td>1.00</td>
+                <td><button class="graph-btn" data-index="9">&#128202;</button></td>
+            </tr>
+            <tr>
+                <td>School Infrastructure Access (% with electricity)</td>
+                <td>65.0</td>
+                <td>67.0</td>
+                <td>70.0</td>
+                <td>72.0</td>
+                <td>74.0</td>
+                <td>76.0</td>
+                <td>77.0</td>
+                <td>78.0</td>
+                <td><button class="graph-btn" data-index="10">&#128202;</button></td>
+            </tr>
+        </tbody>
+    </table>
 
-            </tbody>
-        </table>
+    <div id="modal">
+        <div id="modal-content">
+            <span id="modal-close">&times;</span>
+            <canvas id="rowChart"></canvas>
+        </div>
+    </div>
 
-        <script>
-            $(document).ready(function () {
-                $('#education-data').DataTable({
-                    "ajax": "table1data.json",
-                    "columns": [
-                        { "data": "country" },
-                        {
-                            "data": "flag",
-                            "render": function (data, type, row) {
-                                return '<img src="' + data + '" alt="' + row.country + ' Flag" style="height:30px;">';
-                            }
-                        },
-                        { "data": "literacy2015" },
-                        { "data": "enrollment2015" },
-                        { "data": "literacy2020" },
-                        { "data": "enrollment2020" },
-                        {
-                            "data": "absoluteChangeLiteracy",
-                            "render": function (data, type, row) {
-                                return data >= 0 ? '+' + data : data;
-                            }
-                        },
-                        {
-                            "data": "absoluteChangeEnrollment",
-                            "render": function (data, type, row) {
-                                return data >= 0 ? '+' + data : data;
-                            }
-                        },
-                        {
-                            "data": "relativeChangeLiteracy",
-                            "render": function (data, type, row) {
-                                return data >= 0 ? '+' + data : data;
-                            }
-                        },
-                        {
-                            "data": "relativeChangeEnrollment",
-                            "render": function (data, type, row) {
-                                return data >= 0 ? '+' + data : data;
-                            }
-                        },
-                        { "data": "studentTeacherRatio" }
-                    ],
-                    "pageLength": 5,
-                    "order": [[0, "asc"]],
-                    "responsive": true,
-                    "autoWidth": false,
-                    // Change pagination button text
-                    "language": {
-                        "paginate": {
-                            "previous": "<",
-                            "next": ">"
-                        },
-                        "lengthMenu": "_MENU_" // removes the "Show" word
-                    },
-                    // Custom layout: header contains the search, footer with left, center and right columns.
-                    "dom": '<"dt-header"f>rt<"dt-footer"<"footer-left"l><"footer-center"i><"footer-right"p>>'
-                });
-                // Immediately after DataTable initialization, inject the title into the header container:
-                $('.dt-header').prepend('<h2 style="margin-bottom:16px;">Quality Education Data</h2>');
-            });
-        </script>
+    <section id="fullGraphSection">
+        <h2>Full Graph: Global Education Indicators (2015-2022)</h2>
+        <canvas id="fullChart"></canvas>
     </section>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#global-table').DataTable({
+                pageLength: 8,
+                language: {
+                    paginate: {
+                        previous: "<",
+                        next: ">"
+                    },
+                    lengthMenu: "_MENU_"
+                },
+                "dom": '<"dt-header"f>rt<"dt-footer"<"footer-left"l><"footer-center"i><"footer-right"p>>'
+            });
+        });
+
+    </script>
+
+    <script>
+
+        const indicators = [
+            { indicator: "Global Literacy Rate (%)", values: [86.0, 86.5, 87.0, 87.3, 87.5, 87.8, 88.0, 88.2] },
+            { indicator: "Global Primary Enrollment Rate (%)", values: [91.0, 91.2, 91.5, 91.8, 92.0, 92.3, 92.5, 92.7] },
+            { indicator: "Global Secondary Enrollment Rate (%)", values: [75.0, 75.5, 76.0, 76.3, 76.8, 77.0, 77.2, 77.5] },
+            { indicator: "Global Tertiary Enrollment Rate (%)", values: [36.0, 37.0, 38.0, 39.0, 40.0, 40.0, 40.5, 41.0] },
+            { indicator: "Global Teacher-Student Ratio", values: [24, 23, 23, 22, 22, 21, 20, 20] },
+            { indicator: "Education Expenditure (% of GDP)", values: [4.5, 4.6, 4.7, 4.8, 4.9, 5.0, 5.1, 5.2] },
+            { indicator: "Out-of-School Children (millions)", values: [63.0, 61.0, 60.0, 58.0, 57.0, 59.0, 58.0, 55.0] },
+            { indicator: "School Completion Rate (%)", values: [75.0, 76.0, 77.0, 78.0, 78.5, 79.0, 79.5, 80.0] },
+            { indicator: "Digital Learning Access (% of students)", values: [20.0, 22.0, 25.0, 28.0, 30.0, 50.0, 55.0, 60.0] },
+            { indicator: "Gender Parity Index (GPI)", values: [0.97, 0.98, 0.98, 0.99, 0.99, 1.00, 1.00, 1.00] },
+            { indicator: "School Infrastructure Access (% with electricity)", values: [65.0, 67.0, 70.0, 72.0, 74.0, 76.0, 77.0, 78.0] }
+        ];
+
+        const modal = document.getElementById('modal');
+        const modalClose = document.getElementById('modal-close');
+        let rowChart;
+
+        function showRowChart(indicatorIndex) {
+            const ctx = document.getElementById('rowChart').getContext('2d');
+            const data = indicators[indicatorIndex].values;
+            const label = indicators[indicatorIndex].indicator;
+            const years = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"];
+
+            if (rowChart) rowChart.destroy();
+
+            rowChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: years,
+                    datasets: [{
+                        label: label,
+                        data: data,
+                        backgroundColor: 'rgba(0,123,255,0.2)',
+                        borderColor: 'rgba(0,123,255,1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    scales: { y: { beginAtZero: false } }
+                }
+            });
+
+            modal.style.display = 'block';
+        }
+
+        document.querySelectorAll('.graph-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const index = this.getAttribute('data-index');
+                showRowChart(index);
+            });
+        });
+
+        modalClose.addEventListener('click', () => { modal.style.display = 'none'; });
+
+        const fullChartCtx = document.getElementById('fullChart').getContext('2d');
+        const years = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"];
+
+        const fullDatasets = indicators.map(item => ({
+            label: item.indicator,
+            data: item.values,
+            borderColor: getRandomColor(),
+            fill: false,
+            tension: 0.3
+        }));
+
+        function getRandomColor() {
+            const r = Math.floor(Math.random() * 156) + 100;
+            const g = Math.floor(Math.random() * 156) + 100;
+            const b = Math.floor(Math.random() * 156) + 100;
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        const fullChart = new Chart(fullChartCtx, {
+            type: 'line',
+            data: { labels: years, datasets: fullDatasets },
+            options: {
+                plugins: { legend: { display: true, position: 'bottom' } },
+                scales: { y: { beginAtZero: false } }
+            }
+        });
+    </script>
 </body>
 
 </html>
