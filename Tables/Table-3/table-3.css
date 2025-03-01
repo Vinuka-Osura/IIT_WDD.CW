@@ -1,0 +1,83 @@
+/* Container styling */
+.data-table-container {
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+  }
+  
+  /* Global table styling */
+  #education-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9em;
+  }
+  
+  /* Header styling */
+  #education-table thead th {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  /* Zebra striping & hover effect for tbody */
+  #education-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+  #education-table tbody tr:hover {
+    background-color: #e2e2e2;
+  }
+  #education-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  /* Thumbnail icons in header */
+  .header-thumb {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+  
+  /* Clickable link styling */
+  a.table-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  a.table-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* DataTables header and footer styling (for search, length, info, pagination) */
+  .dt-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 16px; /* mimics sx={{mb:2}} */
+  }
+  .dt-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px; /* mimics sx={{mt:2}} */
+  }
+  .footer-left {
+    text-align: left;
+  }
+  .footer-center {
+    text-align: center;
+    flex-grow: 1;
+  }
+  .footer-right {
+    text-align: right;
+  }
+  
+  /* Tooltip styling (if needed, you can use title attribute or a JS tooltip plugin) */
+  
