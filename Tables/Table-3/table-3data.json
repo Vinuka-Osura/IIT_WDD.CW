@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "country": "Country A",
+      "link": "detailsA.html",
+      "educationSpending": 5.3,
+      "schoolsPer100k": 12.5,
+      "expenditurePerStudent": 1500,
+      "pisaScore": 520,
+      "dropoutRate": 4.5,
+      "teacherQualification": 95
+    },
+    {
+      "country": "Country B",
+      "link": "detailsB.html",
+      "educationSpending": 4.8,
+      "schoolsPer100k": 15.0,
+      "expenditurePerStudent": 1400,
+      "pisaScore": 510,
+      "dropoutRate": 5.2,
+      "teacherQualification": 92
+    },
+    {
+      "country": "Country C",
+      "link": "detailsC.html",
+      "educationSpending": 6.0,
+      "schoolsPer100k": 10.0,
+      "expenditurePerStudent": 1600,
+      "pisaScore": 530,
+      "dropoutRate": 3.8,
+      "teacherQualification": 97
+    },
+    {
+      "country": "Country D",
+      "link": "detailsD.html",
+      "educationSpending": 5.0,
+      "schoolsPer100k": 13.5,
+      "expenditurePerStudent": 1550,
+      "pisaScore": 525,
+      "dropoutRate": 4.0,
+      "teacherQualification": 94
+    },
+    {
+      "country": "Country E",
+      "link": "detailsE.html",
+      "educationSpending": 5.6,
+      "schoolsPer100k": 11.0,
+      "expenditurePerStudent": 1480,
+      "pisaScore": 518,
+      "dropoutRate": 4.8,
+      "teacherQualification": 96
+    },
+    {
+      "country": "Country F",
+      "link": "detailsF.html",
+      "educationSpending": 4.9,
+      "schoolsPer100k": 14.2,
+      "expenditurePerStudent": 1420,
+      "pisaScore": 512,
+      "dropoutRate": 5.0,
+      "teacherQualification": 93
+    },
+    {
+      "country": "Country G",
+      "link": "detailsG.html",
+      "educationSpending": 5.8,
+      "schoolsPer100k": 12.0,
+      "expenditurePerStudent": 1500,
+      "pisaScore": 528,
+      "dropoutRate": 4.2,
+      "teacherQualification": 95
+    },
+    {
+      "country": "Country H",
+      "link": "detailsH.html",
+      "educationSpending": 5.2,
+      "schoolsPer100k": 13.0,
+      "expenditurePerStudent": 1520,
+      "pisaScore": 524,
+      "dropoutRate": 4.6,
+      "teacherQualification": 94
+    }
+  ]
+}
