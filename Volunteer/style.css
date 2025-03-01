@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    margin-top: 100px;
+    padding: 0;
+    background-color: #f4f9ff; /* Light blue background */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 3%;
+    color: black;
+}
+
+.hero h1 span {
+    color: #31a0f5; /* Highlighted text color (orange) */
+}
+
+
+.main-image img {
+    width: 50%;
+    border-radius: 10px;
+    margin-left: 3%;
+}
+
+.image-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Buttons Section */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.btn a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
