@@ -15,7 +15,7 @@ body {
 }
 
 .hero h1 span {
-    color: #31a0f5; 
+    color: #8ac9f9; 
 }
 
 
@@ -82,7 +82,7 @@ body {
     grid-template-columns: repeat(2, 1fr); /* Two cards per row */
     gap: 90px; /* Increase space between cards */
     padding: 10px ;
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -90,26 +90,193 @@ body {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px; /* Increase padding */
-    text-align: center;
+    padding-left: 0px;
+    /* text-align: center;text-align: center; */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 700px; /* Adjust height */
+    position: relative;
+    overflow: hidden;
 }
 
 .card h2 {
-    font-size: 2em; /* Increase heading size */
-    color: #31a0f5;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 90px;
+    align-items: flex-start; /* Align text to the left */
+    font-size: 1.8em;
+    padding-left: 10px;
+    color: #000000;
+    line-height: 1.2; /* Adjust spacing */
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    
 }
+
+.card-description{
+    text-align: center;
+}
+.img1{
+    height: 370px; /* Adjust size */
+    width: auto;
+    position: absolute;
+    top: -50px; /* Distance from the top */
+    right: -75px; /* Distance from the left */
+    overflow: hidden;
+    border-radius: 50%;
+    border: 10px solid black;
+    object-fit: cover;
+    
+    
+}
+.img2{
+    height: 120px; /* Adjust size */
+    width: auto;
+    position: absolute;
+    top: 220px; /* Distance from the top */
+    right: 220px; /* Distance from the left */
+    border-radius: 50%;
+    border: 4px solid black;
+      
+}
+
 
 .card p {
-    font-size: 1.2em; /* Increase paragraph size */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.0em; /* Increase paragraph size */
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
-.card .btn {
-    padding: 12px 25px;
-    font-size: 1.1em;
+.card-btn {
+    bottom: -30px;
+    left: 45px;
+    padding: 10px 20px;
+    background-color: #8ac9f9; /* Blue background */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.card-list{
+    margin-top: 70px; /* Add space above the list */
+    padding-left: 50px; /* Optional: Add padding for better alignment */
+    list-style-type: disc; /* Add bullet points */
+    color: #ffffff; /* Adjust text color */
+    z-index: 2;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-list li {
+    margin-bottom: 15px; /* Add space below each list item */
+}
+
+.circle-title{
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font: weight 700px;;
+}
+
+/* Circle Container */
+.circle-container {
+    display: flex;
+    justify-content: center; /* Center the circle horizontally */
+    height: 500px; /* Adjust container height */
+    background-color: #ffffff; /* Light blue background */
+    position: absolute;
+    right: -270px;
+    margin-top: -10px;
+}
+
+/* Circle */
+.circle {
+    width:1500px; /* Circle width */
+    height:1500px; /* Circle height */
+    border-radius: 50%; /* Make it round */
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    background-color:#094776; /* Transparent background */
+    margin-top: 0px;
+    z-index: 0;
+    
+}
+
+.date-circle{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    right: 25px;
+    top: 300px;
+    width:200px; /* Circle width */
+    height:200px; /* Circle height */
+    border-radius: 50%; /* Make it round */
+    background-color:#8ac9f9; /* Transparent background */
+    z-index: 3;
+}
+
+/* Text Inside Circle */
+.circle-text {
+    font-size: 1.2em; /* Adjust text size */
+    color: #000000; /* Text color */
+    font-weight: bold; /* Bold text */
+    z-index: 4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 76px;
+    margin-top: 45px;
+    align-items: flex-start;
+
+}
+
+.date-line-1{
+    color: #000000;
+    margin-left: 25px;
+    font-size: 0.8em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    
+}
+
+.date-line-2{
+    color: #000000;
+    margin-left: 25px;
+    font-size: 1.8em;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+
+.date-line-3{
+    color: #000000;
+    margin-left: 25px;
+    font-size: 0.9em;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+
+.circle-address{
+    position: absolute;
+    color: #000000;
+    margin-top: -35px;
+    margin-left: 35px;
+    font-size: 0.9em;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 500;
+    text-align: center;
 }
 
 /* Responsive: Show one card per row on smaller screens */
