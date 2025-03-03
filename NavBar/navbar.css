@@ -1,4 +1,4 @@
-:root {
+.header {
     --primary-color: #007bff;
     --secondary-color: #0056b3;
     --background-color: #f8f9fa;
@@ -266,6 +266,10 @@ body.dark-mode .header-container {
     gap: 15px;
     justify-content: center;
 }
+
+/* .clamp-text {
+
+} */
 
 .subtopic {
     position: relative;

@@ -1,5 +1,5 @@
 /* Define CSS variables for easy color changes */
-:root {
+.site-footer {
     --primary-color: #007bff;
     --primary-hover: #0056b3;
     --secondary-color: #21d192;

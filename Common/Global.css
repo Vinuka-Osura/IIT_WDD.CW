@@ -1,78 +1,69 @@
-/* global.css */
+/* :root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --secondary-color: #0056b3;
+    --secondary-hover: #21d192;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --text-color-light: #333;
+    --text-color-dark: #faf9f9;
+    --white: #ffffff;
+    --border-color: #2c2929;
+    --gray: #e9ecef;
+    --dark-gray: #343a40;
+    --blue-gradient: linear-gradient(135deg, #0d47a1, #42a5f5);
+    --blue-reverce-gradient: linear-gradient(135deg, #42a5f5, #0d47a1);
+    --transition-speed: 0.3s;
+} */
 
-/* CSS Reset */
-* {
+:root {
+    /* Primary Colors */
+    --c: #007bff;
+    --color-primary-hover: #0056b3;
+
+    /* Secondary Colors */
+    --color-secondary: #0056b3;
+    --color-secondary-hover: #2159d1;
+
+    /* Background Colors */
+    --color-background-1: #f8f9fa;
+    --color-background-2: #e9ecef;
+
+    /* Text Colors */
+    --color-text: #333;
+    --color-text-inverse: #ffffff;
+
+    /* Neutrals */
+    --color-white: #ffffff;
+    --color-dark-gray: #343a40;
+    --color-border: #2c2929;
+
+    /* Gradients */
+    --gradient-blue: linear-gradient(135deg, #0d47a1, #42a5f5);
+    --gradient-blue-reverse: linear-gradient(135deg, #42a5f5, #0d47a1);
+
+    /* Dark Mode Header Gradient */
+    --gradient-header-dark: linear-gradient(135deg, #1f1f1f, #333333);
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+
+    /* Additional Colors */
+    --color-link: var(--color-primary);
+    --color-link-hover: var(--color-primary-hover);
+}
+
+/* Global Styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Base body styles */
-body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
-    background-color: #f8f8f8;
-    line-height: 1.6;
-    padding: 20px;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
-/* Headings styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: bold;
-    margin-bottom: 15px;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
-
-/* Specific heading styling */
-h1 {
-    font-size: 2em;
-    color: #222;
-}
-
-h2 {
-    font-size: 1.75em;
-    color: #333;
-}
-
-h3 {
-    font-size: 1.5em;
-    color: #444;
-}
-
-/* Paragraphs */
-p {
-    margin-bottom: 15px;
-}
-
-/* Links */
-a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Utility classes */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.mb-20 {
-    margin-bottom: 20px;
-}
-
-/* Additional common styles */
-/* Add more global styles as needed */
