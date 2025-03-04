@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     margin-top: 100px;
     padding: 0;
@@ -283,28 +283,28 @@ body {
     font-weight: 500;
     text-align: center;
 }
-
 /* Container styling */
 .dropdown-container {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
-    position: absolute;
-    
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    position: absolute; 
+    right: 110px;
+    top: 200px;
 }
 
 /* Dropdown styling */
 .dropdown {
-    position: absolute;
     padding: 8px 12px;
     font-size: 16px;
     border: 2px solid #007bff;
     border-radius: 6px;
     background-color: white;
-    color: #333;
+    color: #000000;
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease-in-out;
@@ -329,6 +329,208 @@ body {
     background-color: white;
     color: #333;
 }
+
+/* Reviews Section Styling */
+.reviews-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.reviews-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Layout */
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Overall Rating Summary */
+.overall-rating {
+    width: 30%;
+    background-color: #094776;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.rating{
+    font-size: 28px;
+
+}
+
+.rating-score {
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.rating-score-text {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.rating-summary {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Review Cards */
+.reviews-list {
+    width: 65%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.review-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-rating {
+    font-weight: bold;
+    color: #245386;
+}
+
+.review-text {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.see-more {
+    color: #457ba5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+
+.review-meta {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Feedback Section */
+.feedback-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.feedback-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Star Rating System */
+.rating-container {
+    margin-bottom: 15px;
+}
+
+.rating-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    direction: rtl; /* Right-to-left for proper star selection */
+
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
+
+/* Feedback Input */
+.feedback-input {
+    width: 80%;
+    max-width: 600px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+}
+
+/* Button Styling */
+.button-group {
+    margin-top: 15px;
+}
+
+.submit-btn, .cancel-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: black;
+    margin-left: 10px;
+}
+
+.cancel-btn:hover {
+    background-color: #999;
+}
+
 
 
 
