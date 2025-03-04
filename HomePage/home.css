@@ -244,6 +244,10 @@
 
 }
 
+.comment-form .comment {
+height: 300px;
+}
+
 .comment-form button {
     margin-top: 15px;
 
@@ -252,10 +256,13 @@
 .comment-image {
     flex: 1;
     min-width: 300px;
+    
 }
 
 .comment-image img {
     border-radius: 10px;
+    height: 400px;
+    width: 800px;
 }
 
 /* Responsive Adjustments */
