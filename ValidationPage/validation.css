@@ -28,12 +28,6 @@ section {
     border: 1px solid #ddd;
     background-color: #fafafa;
 }
-header, footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
 
 .ref li{
     list-style: none;
@@ -75,8 +69,4 @@ aside li{
 .top a:hover {
     background-color: #0056b3; /* Darker shade on hover */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-}
-
-img{
-    width: 90%;
 }

@@ -197,10 +197,11 @@ body.dark-mode .header-container {
     display: flex;
     margin: 0;
     padding: 0;
+    margin-right: 25px;
 }
 
 .navbar-item {
-    margin: 0 10px;
+    margin: 0 0px;
 }
 
 .navbar-item a {
