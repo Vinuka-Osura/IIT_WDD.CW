@@ -18,7 +18,7 @@
 
 :root {
     /* Primary Colors */
-    --c: #007bff;
+    --color-primary: #007bff;
     --color-primary-hover: #0056b3;
 
     /* Secondary Colors */
@@ -28,15 +28,29 @@
     /* Background Colors */
     --color-background-1: #f8f9fa;
     --color-background-2: #e9ecef;
+    --color-background-3: #fff;
+    --color-background-4: #007bffae;
+    --color-transparent-black: rgba(0, 0, 0, 0.15);
 
     /* Text Colors */
     --color-text: #333;
     --color-text-inverse: #ffffff;
 
+    /* Headings */
+    --heading-bg: #e0f7fa;
+    --heading-text-color: #006064;
+    --underline-pattern: repeating-linear-gradient(90deg, #006064, #006064 5px, transparent 5px, transparent 10px);
+
     /* Neutrals */
     --color-white: #ffffff;
+    --color--light-gray: #f0f0f0;
     --color-dark-gray: #343a40;
     --color-border: #2c2929;
+
+    /*tables*/
+    --color-table-border: #ddd;
+    --color-table-hover: #cecece;
+
 
     /* Gradients */
     --gradient-blue: linear-gradient(135deg, #0d47a1, #42a5f5);
@@ -53,10 +67,10 @@
     --color-link-hover: var(--color-primary-hover);
 }
 
-/* Global Styles */
 body {
     margin: 0;
     padding: 0;
+    padding-top: 108px;
     font-family: Arial, sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);
@@ -66,4 +80,11 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+#header-placeholder {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }

@@ -1,10 +1,8 @@
-/* Table Container */
-.table {
+.table-1 {
     width: 80%;
     margin: 0 auto;
 }
 
-/* Global Table Styles */
 #education-data {
     width: auto;
     border-collapse: collapse;
@@ -15,13 +13,13 @@
 }
 
 #education-data thead tr {
-    background-color: var(--color-primary, #007bff);
-    color: var(--color-white, #ffffff);
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 #education-data th,
 #education-data td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-table-border);
     padding: 12px;
     text-align: center;
 }
@@ -31,11 +29,11 @@
 }
 
 #education-data tbody tr:nth-child(even) {
-    background-color: #f3f3f3;
+    background-color: var(--color--light-gray);
 }
 
 #education-data tbody tr:hover {
-    background-color: #e2e2e2;
+    background-color: var(--color-table-hover);
 }
 
 #education-data img {
@@ -99,7 +97,6 @@
     text-align: right;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
 
     #education-data th,

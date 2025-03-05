@@ -104,7 +104,8 @@
     <section class="partners">
         <h2>Our Partners</h2>
         <div class="partner-logos">
-            <div class="partner"><img src="Images/Partner-Education International (EI).png" alt="Education International (EI)">
+            <div class="partner"><img src="Images/Partner-Education International (EI).png"
+                    alt="Education International (EI)">
                 <p>Education International (EI)</p>
             </div>
             <div class="partner"><img src="Images/Partner-Global Campaign for Education (GCE).png" alt="teste">
@@ -155,7 +156,7 @@
             .then(data => {
                 document.getElementById("header-placeholder").innerHTML = data;
 
-                // ✅ Manually load the navbar.js script
+                // Manually load the navbar.js script
                 const script = document.createElement("script");
                 script.src = "../NavBar/navbar.js";  // Ensure this path is correct
                 script.defer = true;  // Ensures it loads after the DOM is updated
