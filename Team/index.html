@@ -1,22 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quality Education - Home</title>
     <link rel="stylesheet" href="Styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .team-member {
+            background: rgb(162, 232, 151);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            text-align: center;
+            overflow: hidden;
+        }
+        .team-member:hover {
+            transform: scale(1.1);
+            background: rgb(122, 202, 111);
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .team-details {
+            opacity: 0;
+            height: 0;
+            transition: opacity 0.3s ease, height 0.3s ease;
+        }
+        .team-member:hover .team-details {
+            opacity: 1;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+
+
 </head>
+
 <body>
     <!-- Header Placeholder -->
     <header>
         <!-- Include Navigation Bar Here -->
     </header>
-    
-    
-    
+
+
+
+    <h1>Meet Our Team</h1>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="images/Vinuka.jpg" alt="Member Photo">
+            <div class="team-details">
+                <h3>Vinuka</h3>
+                <p>Student 01</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="images/Treeshanie.jpg" alt="Member Photo">
+            <div class="team-details">
+                <h3>Treeshanie</h3>
+                <p>Student 02</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="images/Navodya.jpg" alt="Member Photo">
+            <div class="team-details">
+                <h3>Navodya</h3>
+                <p>Student 03</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
     <!-- Footer Placeholder -->
     <footer>
         <!-- Include Footer Here -->
     </footer>
 </body>
+
 </html>
