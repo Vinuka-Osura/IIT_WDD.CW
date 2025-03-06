@@ -1,16 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetch('../NavBar/index.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar-container').innerHTML = data;
 
-            // Load navbar CSS dynamically
-            let link = document.createElement("link");
-            link.rel = "stylesheet";
-            link.href = "../NavBar/navbar.css"; // Ensure correct path
-            document.head.appendChild(link);
-        })
-
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data)
+                .catch(error => console.error(`Error loading ${file}:`, error));
+                }
         
-        .catch(error => console.error('Error loading navbar:', error));
-});
+
+        // Load Navbar and Footer
+        loadComponent("navbar-container", "../NavBar/navbar.html");
+        loadComponent("footer-container", "../Footer/footer.html");
