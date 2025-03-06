@@ -1,10 +1,8 @@
-/* Table Container */
-.table {
+.table-1 {
     width: 80%;
     margin: 0 auto;
 }
 
-/* Global Table Styles */
 #education-data {
     width: auto;
     border-collapse: collapse;
@@ -15,13 +13,13 @@
 }
 
 #education-data thead tr {
-    background-color: var(--primary-color, #007bff);
-    color: var(--white, #ffffff);
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 #education-data th,
 #education-data td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-table-border);
     padding: 12px;
     text-align: center;
 }
@@ -31,11 +29,11 @@
 }
 
 #education-data tbody tr:nth-child(even) {
-    background-color: #f3f3f3;
+    background-color: var(--color--light-gray);
 }
 
 #education-data tbody tr:hover {
-    background-color: #e2e2e2;
+    background-color: var(--color-table-hover);
 }
 
 #education-data img {
@@ -44,7 +42,6 @@
     border-radius: 3px;
 }
 
-/* Header (table title & search) styling */
 .table-header {
     display: flex;
     justify-content: space-between;
@@ -57,7 +54,6 @@
     font-size: 1.5em;
 }
 
-/* Bottom row styling for DataTables */
 .dataTables_wrapper .row {
     display: flex;
     justify-content: space-between;
@@ -77,10 +73,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px; /* adjust as needed */
+    margin-bottom: 8px;
 }
 
-/* Footer row styling (all elements in the same vertical line with top margin sx={{mt:2}}) */
 .dt-footer {
     display: flex;
     justify-content: space-between;
@@ -88,24 +83,20 @@
     
 }
 
-/* Left: Length menu aligned with container’s left edge */
 .footer-left {
     margin-top: 8px;
     text-align: left;
 }
 
-/* Center: Table info (Showing 1 to ... entries) centered */
 .footer-center {
     text-align: center;
 }
 
-/* Right: Pagination aligned to the container’s right edge */
 .footer-right {
     margin-top: 8px;
     text-align: right;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
 
     #education-data th,

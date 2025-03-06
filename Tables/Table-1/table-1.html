@@ -5,33 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quality Education - Home</title>
-
-    <link rel="stylesheet" href="tables.css">
-
-    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="../../Common/global.css">
+    <link rel="stylesheet" href="../Table-1/table-1.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-
-    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-
 </head>
 
 <body>
 
-    <section id="learn-more" class="table">
+    <section id="learn-more" class="table-1">
         <table id="education-data" class="display">
             <thead>
                 <tr>
-                    <th rowspan="2">Country</th>
-                    <th rowspan="2">Flag</th>
+                    <th rowspan="2" width="100px">Country</th>
+                    <th rowspan="2"> Country <br> Flag</th>
                     <th colspan="2">2015 Data</th>
                     <th colspan="2">2020 Data</th>
                     <th colspan="2">Absolute Change</th>
                     <th colspan="2">Relative Change (%)</th>
-                    <th rowspan="2">Student-Teacher Ratio</th>
+                    <th rowspan="2">Students <br> To <br>Teacher Ratio</th>
                 </tr>
                 <tr>
                     <th>Literacy Rate (%)</th>
@@ -95,18 +88,16 @@
                     "order": [[0, "asc"]],
                     "responsive": true,
                     "autoWidth": false,
-                    // Change pagination button text
+
                     "language": {
                         "paginate": {
                             "previous": "<",
                             "next": ">"
                         },
-                        "lengthMenu": "_MENU_" // removes the "Show" word
+                        "lengthMenu": "_MENU_"
                     },
-                    // Custom layout: header contains the search, footer with left, center and right columns.
                     "dom": '<"dt-header"f>rt<"dt-footer"<"footer-left"l><"footer-center"i><"footer-right"p>>'
                 });
-                // Immediately after DataTable initialization, inject the title into the header container:
                 $('.dt-header').prepend('<h2 style="margin-bottom:16px;">Quality Education Data</h2>');
             });
         </script>

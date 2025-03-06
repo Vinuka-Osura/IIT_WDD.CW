@@ -1,9 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 </head>
+
 <body>
-    
+    <div id="header-placeholder"></div>
+
+    <section id="learn-more" class="table-1">
+        <table id="education-data" class="display">
+            <thead>
+                <tr>
+                    <th rowspan="2" width="100px">Country</th>
+                    <th rowspan="2"> Country <br> Flag</th>
+                    <th colspan="2">2015 Data</th>
+                    <th colspan="2">2020 Data</th>
+                    <th colspan="2">Absolute Change</th>
+                    <th colspan="2">Relative Change (%)</th>
+                    <th rowspan="2">Students <br> To <br>Teacher Ratio</th>
+                </tr>
+                <tr>
+                    <th>Literacy Rate (%)</th>
+                    <th>Enrollment Rate (%)</th>
+                    <th>Literacy Rate (%)</th>
+                    <th>Enrollment Rate (%)</th>
+                    <th>Literacy</th>
+                    <th>Enrollment</th>
+                    <th>Literacy</th>
+                    <th>Enrollment</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <script>
+            $(document).ready(function () {
+                $('#education-data').DataTable({
+                    "ajax": "table1data.json",
+                    "columns": [
+                        { "data": "country" },
+                        {
+                            "data": "flag",
+                            "render": function (data, type, row) {
+                                return '<img src="' + data + '" alt="' + row.country + ' Flag" style="height:30px;">';
+                            }
+                        },
+                        { "data": "literacy2015" },
+                        { "data": "enrollment2015" },
+                        { "data": "literacy2020" },
+                        { "data": "enrollment2020" },
+                        {
+                            "data": "absoluteChangeLiteracy",
+                            "render": function (data, type, row) {
+                                return data >= 0 ? '+' + data : data;
+                            }
+                        },
+                        {
+                            "data": "absoluteChangeEnrollment",
+                            "render": function (data, type, row) {
+                                return data >= 0 ? '+' + data : data;
+                            }
+                        },
+                        {
+                            "data": "relativeChangeLiteracy",
+                            "render": function (data, type, row) {
+                                return data >= 0 ? '+' + data : data;
+                            }
+                        },
+                        {
+                            "data": "relativeChangeEnrollment",
+                            "render": function (data, type, row) {
+                                return data >= 0 ? '+' + data : data;
+                            }
+                        },
+                        { "data": "studentTeacherRatio" }
+                    ],
+                    "pageLength": 5,
+                    "order": [[0, "asc"]],
+                    "responsive": true,
+                    "autoWidth": false,
+
+                    "language": {
+                        "paginate": {
+                            "previous": "<",
+                            "next": ">"
+                        },
+                        "lengthMenu": "_MENU_"
+                    },
+                    "dom": '<"dt-header"f>rt<"dt-footer"<"footer-left"l><"footer-center"i><"footer-right"p>>'
+                });
+                $('.dt-header').prepend('<h2 style="margin-bottom:16px;">Quality Education Data</h2>');
+            });
+        </script>
+    </section>
+
+    <section class="table-2">
+        <table id="projects-table" aria-label="Projects Improving Quality Education">
+            <thead>
+                <tr>
+                    <th colspan="4" class="table-title">
+                        <img src="Images/logo.jpg" alt="Website Logo" class="table-logo">
+                        Projects Improving Quality Education
+                    </th>
+                </tr>
+
+                <tr>
+                    <th title="Project Name">
+                        <img src="Images/project-icon.png" alt="Project Icon" class="header-icon">
+                        Project Name
+                    </th>
+                    <th title="Duration">
+                        <img src="Images/calendar-icon.png" alt="Duration Icon" class="header-icon">
+                        Duration
+                    </th>
+                    <th title="Impact/Outcome">
+                        <img src="Images/impact-icon.png" alt="Impact Icon" class="header-icon">
+                        Impact
+                    </th>
+                    <th title="Details">
+                        <img src="Images/details-icon.png" alt="Details Icon" class="header-icon">
+                        Details
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Teacher Training Program</td>
+                    <td>2018 - 2020</td>
+                    <td>Enhanced teacher skills, +15% performance <span class="icon-check"
+                            title="Successful">&#10004;</span></td>
+                    <td><a href="project1.html">View Details</a></td>
+                </tr>
+                <tr>
+                    <td>Digital Classroom Initiative</td>
+                    <td>2019 - 2021</td>
+                    <td>Increased student engagement, +20% enrollment <span class="icon-check"
+                            title="Successful">&#10004;</span>
+                    </td>
+                    <td><a href="project2.html">View Details</a></td>
+                </tr>
+                <tr>
+                    <td>Community Library Setup</td>
+                    <td>2017 - 2019</td>
+                    <td>Improved literacy, +10% access <span class="icon-check" title="Successful">&#10004;</span></td>
+                    <td><a href="project3.html">View Details</a></td>
+                </tr>
+                <tr>
+                    <td>Scholarship Fund</td>
+                    <td>2020 - Present</td>
+                    <td>Provided support to 500+ students <span class="icon-check" title="Ongoing">&#10004;</span></td>
+                    <td><a href="project4.html">View Details</a></td>
+                </tr>
+                <tr>
+                    <td>STEM Outreach Program</td>
+                    <td>2016 - 2018</td>
+                    <td>Boosted enrollment in STEM courses <span class="icon-check" title="Successful">&#10004;</span>
+                    </td>
+                    <td><a href="project5.html">View Details</a></td>
+                </tr>
+                <tr>
+                    <td>After-School Tutoring</td>
+                    <td>2015 - 2020</td>
+                    <td>Raised academic performance, +12% pass rate <span class="icon-check"
+                            title="Successful">&#10004;</span>
+                    </td>
+                    <td><a href="project6.html">View Details</a></td>
+                </tr>
+                <tr>
+                    <td>Infrastructure Upgrade</td>
+                    <td>2018 - 2021</td>
+                    <td>Modernized facilities, enhanced safety <span class="icon-check"
+                            title="Successful">&#10004;</span></td>
+                    <td><a href="project7.html">View Details</a></td>
+                </tr>
+                <tr>
+                    <td>Inclusive Education Program</td>
+                    <td>2019 - Present</td>
+                    <td>Improved access for disabled students <span class="icon-check" title="Ongoing">&#10004;</span>
+                    </td>
+                    <td><a href="project8.html">View Details</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="table-section">
+        <div class="data-table-container">
+
+            <div class="logo-container" style="text-align: center; margin-bottom:16px;">
+                <img src="images/website-logo.png" alt="Website Logo" style="height:50px;">
+            </div>
+
+            <table id="education-table" class="display" aria-label="Quality Education Funding and Indicators">
+                <thead>
+                    <tr>
+                        <th colspan="7" style="text-align:center; font-size:1.2em;">
+                            Quality Education – Funding, Infrastructure & Indicators
+                        </th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" aria-label="Country/Region">
+                            <img src="images/country-icon.png" class="header-thumb" title="Country/Region">
+                            Country/Region
+                        </th>
+                        <th colspan="3" aria-label="Funding & Infrastructure"
+                            title="Education Funding and Infrastructure">
+                            Education Funding & Infrastructure
+                        </th>
+                        <th colspan="3" aria-label="Quality Indicators" title="Quality of Education Indicators">
+                            Quality of Education Indicators
+                        </th>
+                    </tr>
+                    <tr>
+                        <th aria-label="Spending (% GDP)" title="Education Spending (% of GDP)">Spending (% GDP)</th>
+                        <th aria-label="Schools per 100k" title="Number of Schools per 100,000 inhabitants">Schools/100k
+                        </th>
+                        <th aria-label="Expenditure per Student" title="Average Expenditure per Student">Expenditure per
+                            Student
+                        </th>
+
+                        <th aria-label="PISA Score" title="PISA Score / Standardized Test Score">PISA Score</th>
+                        <th aria-label="Dropout Rate (%)" title="Dropout Rate (%)">Dropout Rate (%)</th>
+                        <th aria-label="Teacher Qualification (%)" title="Teacher Qualification Ratio">Teacher
+                            Qualification (%)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <footer style="margin-top:16px; text-align:center;">
+                <p>Assigned to [Student 2] | <a href="editor.html" class="table-link" target="_blank">Student 2
+                        Editor</a></p>
+            </footer>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $('#education-table').DataTable({
+                    "ajax": "table-3data.json",
+                    "columns": [
+                        {
+                            "data": "country",
+                            "render": function (data, type, row) {
+                                return '<a href="' + row.link + '" class="table-link" aria-label="View details for ' + data + '">' + data + '</a>';
+                            }
+                        },
+                        { "data": "educationSpending" },
+                        { "data": "schoolsPer100k" },
+                        { "data": "expenditurePerStudent" },
+                        { "data": "pisaScore" },
+                        { "data": "dropoutRate" },
+                        { "data": "teacherQualification" }
+                    ],
+                    "pageLength": 5,
+                    "order": [[0, "asc"]],
+                    "responsive": true,
+                    "autoWidth": false,
+                    "language": {
+                        "paginate": {
+                            "previous": "<",
+                            "next": ">"
+                        },
+                        "lengthMenu": "_MENU_"
+                    },
+                    "dom": '<"dt-header"f>rt<"dt-footer"<"footer-left"l><"footer-center"i><"footer-right"p>>'
+                });
+            });
+        </script>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("../NavBar/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+
+                // Manually load the navbar.js script
+                const script = document.createElement("script");
+                script.src = "../NavBar/navbar.js";  // Ensure this path is correct
+                script.defer = true;  // Ensures it loads after the DOM is updated
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error("Error loading the header:", error));
+
+        fetch("../Footer/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading the footer:", error));
+    </script>
 </body>
+
 </html>
