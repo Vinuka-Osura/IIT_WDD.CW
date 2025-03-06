@@ -128,10 +128,8 @@
     </section>
   </div>
 
-  <!-- Footer Placeholder -->
   <div id="footer-placeholder"></div>
 
-  <!-- Resize Iframe Script -->
   <script>
     function resizeIframe(iframe) {
       try {
@@ -141,8 +139,6 @@
       }
     }
   </script>
-
-  <!-- Header and Footer Loading -->
   <script>
     fetch("../NavBar/navbar.html")
       .then(response => response.text())
@@ -162,8 +158,6 @@
       })
       .catch(error => console.error("Error loading the footer:", error));
   </script>
-
-  <!-- Sidebar Toggle and Auto-Close Script -->
   <script>
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebar-toggle');
@@ -189,8 +183,6 @@
       }
     });
   </script>
-
-  <!-- Go To Top Script -->
   <script>
     const goToTopBtn = document.getElementById('go-to-top');
     goToTopBtn.addEventListener('click', (e) => {
