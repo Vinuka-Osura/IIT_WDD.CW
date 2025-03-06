@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quality Education – Funding & Indicators</title>
-  <!-- DataTables CSS -->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="table-3.css">
-  <!-- jQuery -->
+  <link rel="stylesheet" href="../../Common/global.css">
+  <link rel="stylesheet" href="../Table-3/table-3.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- DataTables JS -->
   <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 </head>
 
@@ -43,11 +41,13 @@
           <tr>
             <th aria-label="Spending (% GDP)" title="Education Spending (% of GDP)">Spending (% GDP)</th>
             <th aria-label="Schools per 100k" title="Number of Schools per 100,000 inhabitants">Schools/100k</th>
-            <th aria-label="Expenditure per Student" title="Average Expenditure per Student">Expenditure per Student</th>
+            <th aria-label="Expenditure per Student" title="Average Expenditure per Student">Expenditure per Student
+            </th>
 
             <th aria-label="PISA Score" title="PISA Score / Standardized Test Score">PISA Score</th>
             <th aria-label="Dropout Rate (%)" title="Dropout Rate (%)">Dropout Rate (%)</th>
-            <th aria-label="Teacher Qualification (%)" title="Teacher Qualification Ratio">Teacher Qualification (%)</th>
+            <th aria-label="Teacher Qualification (%)" title="Teacher Qualification Ratio">Teacher Qualification (%)
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -58,40 +58,41 @@
         <p>Assigned to [Student 2] | <a href="editor.html" class="table-link" target="_blank">Student 2 Editor</a></p>
       </footer>
     </div>
-  </section>
-
-  <script>
-    $(document).ready(function () {
-      $('#education-table').DataTable({
-        "ajax": "table-3data.json",
-        "columns": [
-          {
-            "data": "country",
-            "render": function (data, type, row) {
-              return '<a href="'+ row.link +'" class="table-link" aria-label="View details for '+ data +'">' + data + '</a>';
-            }
+    
+    <script>
+      $(document).ready(function () {
+        $('#education-table').DataTable({
+          "ajax": "table-3data.json",
+          "columns": [
+            {
+              "data": "country",
+              "render": function (data, type, row) {
+                return '<a href="' + row.link + '" class="table-link" aria-label="View details for ' + data + '">' + data + '</a>';
+              }
+            },
+            { "data": "educationSpending" },
+            { "data": "schoolsPer100k" },
+            { "data": "expenditurePerStudent" },
+            { "data": "pisaScore" },
+            { "data": "dropoutRate" },
+            { "data": "teacherQualification" }
+          ],
+          "pageLength": 5,
+          "order": [[0, "asc"]],
+          "responsive": true,
+          "autoWidth": false,
+          "language": {
+            "paginate": {
+              "previous": "<",
+              "next": ">"
+            },
+            "lengthMenu": "_MENU_"
           },
-          { "data": "educationSpending" },
-          { "data": "schoolsPer100k" },
-          { "data": "expenditurePerStudent" },
-          { "data": "pisaScore" },
-          { "data": "dropoutRate" },
-          { "data": "teacherQualification" }
-        ],
-        "pageLength": 5,
-        "order": [[0, "asc"]],
-        "responsive": true,
-        "autoWidth": false,
-        "language": {
-          "paginate": {
-            "previous": "<",
-            "next": ">"
-          },
-          "lengthMenu": "_MENU_"
-        },
-        "dom": '<"dt-header"f>rt<"dt-footer"<"footer-left"l><"footer-center"i><"footer-right"p>>'
+          "dom": '<"dt-header"f>rt<"dt-footer"<"footer-left"l><"footer-center"i><"footer-right"p>>'
+        });
       });
-    });
-  </script>
+    </script>
+  </section>
 </body>
+
 </html>

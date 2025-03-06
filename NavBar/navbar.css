@@ -1,67 +1,207 @@
-/* CSS Variables for easy theme and color changes */
-:root {
+.header {
     --primary-color: #007bff;
     --secondary-color: #0056b3;
     --background-color: #f8f9fa;
-    --text-color: #333;
+    --text-color: #ffffff;
+    --black: #333;
     --white: #ffffff;
     --dark-gray: #343a40;
+    --blue-gradient: linear-gradient(135deg, #0d47a1, #42a5f5);
+    --blue-reverce-gradient: linear-gradient(135deg, #42a5f5,#0d47a1 );
+    --transition-speed: 0.3s;
 }
 
-/* Global Styles */
-body {
-    margin: 0;
-    padding: 0;
+.body {
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+/* -------------------- Top-Level Header -------------------- */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: var(--blue-gradient);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.site-name {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: 600;
+    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+/* Header Icons */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ......................................................... Search Container ........................................................................................*/
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-box {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: calc(100% + 10px);
+    background: #fff;
+    padding: 5px 5px 5px 5px;
+    width : auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity var(--transition-speed);
+    white-space: nowrap;
+}
+
+.search-container.active .search-box {
     display: block;
 }
 
-/* Header & Navbar */
-.header {
-    width: 100%;
-    background-color: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
+.search-box input {
+    border: 1px solid var(--white);
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-submit,
+.search-reset {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+/* ...................................................... Dark Light Mode ..................................................... */
+
+body.dark-mode {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.header-container {
+    background: linear-gradient(135deg, #0d47a1, #42a5f5);
+}
+
+body.dark-mode .header-container {
+    background: linear-gradient(135deg, #1f1f1f, #333333);
+}
+
+.mode-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ....................................................... Language drop Down .................................................. */
+
+.language-dropdown {
+    position: relative;
+    margin: 0 10px;
+}
+
+.language-dropdown .mobile-item {
+    display: none;
+}
+
+.language-dropdown .desktop-item {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+.language-dropdown .drop-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--blue-gradient);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     z-index: 100;
 }
 
+.language-dropdown .drop-menu li {
+    padding: 5px 20px;
+}
+
+.language-dropdown .drop-menu li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.language-dropdown:hover .drop-menu {
+    display: block;
+}
+
+/* ....................................................... User Profile ......................................................... */
+
+.user-profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ................................................... Language Dropdown .......................................... */
+
+/* ................................................   Navigation Bar .............................................. */
 .navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-}
-
-.navbar-container {
+    position: relative;
+    width: 100%;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: space-between;
-}
-
-/* Logo */
-.navbar-logo img {
-    height: 50px;
+    background: var(--blue-gradient);
 }
 
 /* Navigation Menu */
 .navbar-menu {
     list-style: none;
     display: flex;
-    align-items: center;
     margin: 0;
     padding: 0;
+    margin-right: 25px;
 }
 
 .navbar-item {
-    position: relative;
-    margin: 0 10px;
+    margin: 0 0px;
 }
 
 .navbar-item a {
@@ -69,91 +209,104 @@ img {
     color: var(--text-color);
     padding: 10px 15px;
     display: block;
-    transition: border-bottom 0.3s ease;
+    font-weight: bold;
+    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+    transition: border-bottom var(--transition-speed);
 }
 
 .navbar-item a:hover,
 .navbar-item.active a {
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--white);
+    background-color:rgba(0, 0, 0, 0.15)
 }
 
-/* Mega Menu (Sub-links) */
+/* Mega Menu */
 .mega-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background: var(--white);
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--blue-gradient);
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.384);
     z-index: 200;
-}
-
-.mega-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.mega-menu li {
-    margin: 5px 0;
-}
-
-.mega-menu a {
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 5px 10px;
-    display: block;
+    width: 100%;
 }
 
 .navbar-item:hover .mega-menu {
     display: block;
 }
 
-/* Icons: Search and Light/Dark Mode */
-.navbar-icons {
+.mega-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.mega-description {
+    flex: 0.5;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    color: var(--white)
+}
+
+.vertical-divider {
+    width: 2px;
+    height: 100%;
+    background: rgb(0, 0, 0);
+}
+
+/* Subtopics Section */
+.mega-subtopics {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* .clamp-text {
+
+} */
+
+.subtopic {
+    position: relative;
+    flex: 1;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.search-container {
-    position: relative;
-    margin-right: 10px;
-}
 
-.search-toggle {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-.search-input {
+.subtopic-overlay {
     position: absolute;
-    right: 0;
     top: 0;
-    width: 0;
-    opacity: 0;
-    transition: width 0.3s ease, opacity 0.3s ease;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.15);
+    transition: background var(--transition-speed);
 }
 
-.search-container.active .search-input {
-    width: 150px;
-    opacity: 1;
-    margin-left: 5px;
+.subtopic:hover .subtopic-overlay {
+    background: rgba(0, 0, 0, 0.35);
 }
 
-.mode-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
+/* Subtopic Link */
+.subtopic a {
+    position: relative;
+    color: var(--white);
+    font-weight: bold;
+    z-index: 2;
 }
 
-/* Responsive Adjustments */
+/* ............................................... Responsive Adjustments ........................................*/
 @media (max-width: 768px) {
     .navbar-container {
         flex-wrap: wrap;
@@ -167,22 +320,4 @@ img {
     .navbar-item {
         margin: 5px 0;
     }
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #333;
-    color: #f8f9fa;
-}
-
-body.dark-mode .header {
-    background-color: #444;
-}
-
-body.dark-mode .navbar-item a {
-    color: #f8f9fa;
-}
-
-body.dark-mode .mega-menu {
-    background: #444;
 }

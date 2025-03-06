@@ -1,36 +1,10 @@
-/* CSS Variables for easy color changes */
-:root {
-    --primary-color: #007bff;
-    --secondary-color: #0056b3;
-    --background-color: #f8f9fa;
-    --text-color: #333;
-    --white: #ffffff;
-    --gray: #e9ecef;
-    --dark-gray: #343a40;
-}
-
-/* Global Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 /* Hero Section */
 .hero {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 20px;
-    background: var(--gray);
+    background: var(--color-background-2);
 }
 
 .hero-image,
@@ -52,7 +26,7 @@ img {
 .hero-text h2 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--color-primary);
 }
 
 .hero-text p {
@@ -63,7 +37,7 @@ img {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--primary-color);
+    background-color: var(--color-primary);
     color: var(--white);
     text-decoration: none;
     border-radius: 5px;
@@ -71,13 +45,13 @@ img {
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--color-secondary);
 }
 
 /* Intro Section */
 .intro {
     padding: 40px 20px;
-    background: var(--white);
+    background: var(--color-white);
     text-align: center;
     max-width: 800px;
     margin: 20px auto;
@@ -92,7 +66,7 @@ img {
 /* Content Cards Section */
 .content-cards {
     padding: 40px 20px;
-    background: var(--gray);
+    background: var(--color-background-2);
     text-align: center;
 }
 
@@ -108,7 +82,7 @@ img {
 }
 
 .card {
-    background: var(--white);
+    background: var(--color-white);
     width: 250px;
     border-radius: 10px;
     overflow: hidden;
@@ -130,7 +104,7 @@ img {
     padding: 10px;
     margin: 0;
     font-size: 1.2em;
-    color: var(--primary-color);
+    color: var(--color-primary);
 }
 
 .card p {
@@ -144,7 +118,7 @@ img {
     flex-wrap: wrap;
     align-items: center;
     padding: 40px 20px;
-    background: var(--white);
+    background: var(--color-white);
     margin: 20px 0;
 }
 
@@ -161,13 +135,13 @@ img {
 
 .our-goal .goal-text h2 {
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--color-primary);
 }
 
 /* Public Examples / Success Stories Section */
 .public-examples {
     padding: 40px 20px;
-    background: var(--gray);
+    background: var(--color-background-2);
     text-align: center;
 }
 
@@ -197,7 +171,7 @@ img {
 /* Partners Section */
 .partners {
     padding: 40px 20px;
-    background: var(--white);
+    background: var(--color-white);
     text-align: center;
 }
 
@@ -217,8 +191,8 @@ img {
 }
 
 .partner img {
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 100px;
     border-radius: 5px;
 }
 
@@ -230,7 +204,7 @@ img {
 /* Comments Section */
 .comments {
     padding: 40px 20px;
-    background: var(--gray);
+    background: var(--color-background-2);
 }
 
 .comments h2 {
@@ -270,6 +244,10 @@ img {
 
 }
 
+.comment-form .comment {
+height: 300px;
+}
+
 .comment-form button {
     margin-top: 15px;
 
@@ -278,20 +256,14 @@ img {
 .comment-image {
     flex: 1;
     min-width: 300px;
+    
 }
 
 .comment-image img {
     border-radius: 10px;
+    height: 400px;
+    width: 800px;
 }
-
-/* Footer Placeholder (for common template) */
-/* footer {
-    background: var(--dark-gray);
-    color: var(--white);
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-} */
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

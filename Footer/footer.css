@@ -1,5 +1,5 @@
 /* Define CSS variables for easy color changes */
-:root {
+.site-footer {
     --primary-color: #007bff;
     --primary-hover: #0056b3;
     --secondary-color: #21d192;
@@ -13,8 +13,8 @@
     background-color: var(--footer-bg);
     color: var(--footer-text);
     padding: 20px 20px;
-    /* slightly reduced spacing */
     font-family: Arial, sans-serif;
+    margin-top: 30px;
 }
 
 /* Links Styling */
@@ -32,22 +32,29 @@
 .footer-middle {
     display: flex;
     flex-wrap: wrap;
+    border-top: 1px dotted var(--border-color);
     justify-content: space-between;
     align-items: flex-start;
-    /* align items at the top */
     margin-top: 20px;
-    gap: 20px;
 }
 
-/* Branding Column */
 .footer-branding {
     flex: 1 1 250px;
+    margin-top: 20px;
+}
+
+.footer-textlogo {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-textlogo h2 {
+    margin-left: 10px;
+    margin-top: 0;
 }
 
 .footer-branding .footer-logo {
     height: 70px;
-    /* increased logo size */
-    margin-bottom: 10px;
 }
 
 .branding-social {
@@ -56,7 +63,7 @@
 
 .branding-social a {
     margin-right: 10px;
-    font-size: 1.2em;
+    font-size: 2.5em;
 }
 
 /* Quick Links Column */
@@ -67,7 +74,6 @@
 .footer-links ul {
     list-style: none;
     padding: 0;
-    /* Two columns for quick links */
     column-count: 2;
     column-gap: 20px;
 }
@@ -81,7 +87,6 @@
     flex: 1 1 200px;
 }
 
-/* Newsletter / Call-to-Action Column */
 .footer-newsletter {
     flex: 1 1 200px;
 }
@@ -115,12 +120,9 @@
 /* Bottom Section: Copyright and Legal */
 .footer-bottom {
     text-align: center;
-    margin-top: 16px;
-    /* slightly reduced margin */
+    margin-top: 5px;
     border-top: 1px dotted var(--border-color);
-    /* dotted divider */
-    padding-top: 15px;
-    /* reduced padding */
+    padding-top: 5px;
     font-size: 0.9em;
 }
 
