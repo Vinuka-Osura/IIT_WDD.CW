@@ -96,7 +96,19 @@
                         },
                         "lengthMenu": "_MENU_"
                     },
-                    "dom": '<"dt-header"f>rt<"dt-footer"<"footer-left"l><"footer-center"i><"footer-right"p>>'
+                    "dom": '<"dt-header"f>rt<"dt-footer"<"footer-left"l><"footer-center"i><"footer-right"p>>',
+                    "initComplete": function (settings, json) {
+                        // Ensure the iframe resizes after content is fully rendered
+                        if (window.frameElement) {
+                            window.parent.resizeIframe(window.frameElement);
+                        }
+                    }
+
+                });
+                table.on('draw.dt', function () {
+                    if (window.frameElement) {
+                        window.parent.resizeIframe(window.frameElement);
+                    }
                 });
                 $('.dt-header').prepend('<h2 style="margin-bottom:16px;">Quality Education Data</h2>');
             });
