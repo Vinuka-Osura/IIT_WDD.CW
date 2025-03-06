@@ -6,7 +6,7 @@ body {
     background-color: #ebeced; /* Light blue background */
 }
 
-.hero h1 {
+.title-h1 {
     font-size: 3rem;
     font-weight: bold;
     text-align: left;
@@ -14,7 +14,7 @@ body {
     color: rgb(0, 0, 0);
 }
 
-.hero h1 span {
+.title-h1-span {
     color: #8ac9f9; 
 }
 
@@ -294,7 +294,7 @@ body {
     color: #000000;
     position: absolute; 
     right: 110px;
-    top: 200px;
+    top: 100px;
 }
 
 /* Dropdown styling */
