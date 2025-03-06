@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.team-member {
+    background: rgb(162, 232, 151);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 250px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+}
+.team-member:hover {
+    transform: scale(1.1);
+    background: rgb(122, 202, 111);
+}
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 60%;
+    /* object-fit: cover; */
+}
+.team-details {
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+.team-member:hover .team-details {
+    opacity: 1;
+    height: auto;
+    margin-top: 10px;
+}
