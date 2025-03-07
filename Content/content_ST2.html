@@ -7,12 +7,12 @@
     <title>Quality Education – Content</title>
 
     <link rel="stylesheet" href="../Common/global.css">
-    <link rel="stylesheet" href="content2.css">
+    <link rel="stylesheet" href="content_ST2.css">
+    <script src="../Common/global.js"></script>
 </head>
 
 <body>
 
-    <script src="../NavBar/NavBar.js"></script>
     <div id="header-placeholder"></div>
 
     <section class="hero-section">
@@ -198,31 +198,9 @@
     <!-- Go To Top Button -->
     <a href="#" id="go-to-top" title="Go to top">Top</a>
 
-    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
     <script>
-        // Load header and footer via fetch
-        fetch("../NavBar/navbar.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header-placeholder").innerHTML = data;
-
-                // Manually load the navbar.js script
-                const script = document.createElement("script");
-                script.src = "../NavBar/navbar.js";
-                script.defer = true;
-                document.body.appendChild(script);
-            })
-            .catch(error => console.error("Error loading the header:", error));
-
-        fetch("../Footer/footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer-placeholder").innerHTML = data;
-            })
-            .catch(error => console.error("Error loading the footer:", error));
-
         // Sidebar arrow
         const sidebar = document.getElementById('sidebar');
         const sidebarToggle = document.getElementById('sidebar-toggle');
@@ -251,7 +229,6 @@
                 }
             });
         });
-
 
         // Go to Top functionality
         const goToTopBtn = document.getElementById('go-to-top');
