@@ -1,47 +1,52 @@
-document.addEventListener('DOMContentLoaded', function () {
+function initNavbar() {
+    // Search functionality
     const searchContainer = document.querySelector('.search-container');
-    const searchToggle = document.querySelector('.search-toggle');
-    const searchInput = searchContainer.querySelector('input');
-    const searchReset = document.querySelector('.search-reset');
+    if (searchContainer) {
+        const searchToggle = document.querySelector('.search-toggle');
+        const searchInput = searchContainer.querySelector('input');
+        const searchReset = document.querySelector('.search-reset');
 
-    // Toggle the search box on the icon click
-    searchToggle.addEventListener('click', function (e) {
-        e.stopPropagation(); // Prevent the click from propagating to document
-        searchContainer.classList.toggle('active');
-        if (searchContainer.classList.contains('active')) {
-            searchInput.focus();
-        } else {
-            searchInput.value = '';
-        }
-    });
+        searchToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            searchContainer.classList.toggle('active');
+            if (searchContainer.classList.contains('active')) {
+                searchInput.focus();
+            } else {
+                searchInput.value = '';
+            }
+        });
 
-    // Reset the search box when reset button is clicked
-    searchReset.addEventListener('click', function (e) {
-        e.stopPropagation();
-        searchContainer.classList.remove('active');
-        searchInput.value = '';
-    });
-
-    // Hide the search box when clicking outside the search container
-    document.addEventListener('click', function (e) {
-        if (!searchContainer.contains(e.target)) {
+        searchReset.addEventListener('click', function (e) {
+            e.stopPropagation();
             searchContainer.classList.remove('active');
             searchInput.value = '';
-        }
-    });
-});
+        });
 
-document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('click', function (e) {
+            if (!searchContainer.contains(e.target)) {
+                searchContainer.classList.remove('active');
+                searchInput.value = '';
+            }
+        });
+    }
+
+    // Dark/Light mode toggle
     const modeToggle = document.querySelector('.mode-toggle');
-    
-    modeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        
-        // Update the toggle button icon based on the current mode
-        if (document.body.classList.contains('dark-mode')) {
-            modeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        } else {
-            modeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        }
-    });
-});
+    if (modeToggle) {
+        modeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                modeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                modeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+    }
+}
+
+// If the document is already loaded, call initNavbar immediately.
+if (document.readyState !== 'loading') {
+    initNavbar();
+} else {
+    document.addEventListener('DOMContentLoaded', initNavbar);
+}
