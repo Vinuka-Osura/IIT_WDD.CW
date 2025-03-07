@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Tables - Quality Education Data</title>
+  <link rel="stylesheet" href="../Common/global.css">
+  <link rel="stylesheet" href="../Table/table.css">
+  <style>
+    iframe {
+      width: 100%;
+      border: none;
+      overflow: hidden;
+      margin-bottom: 20px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- Side Navigation Bar -->
+  <nav id="sidebar">
+    <button id="sidebar-toggle" title="Sidebar">&#9654;</button>
+    <ul>
+      <li><a href="#intro">Overview</a></li>
+      <li><a href="#table1-heading">Literacy & Enrollment</a></li>
+      <li><a href="#table2-heading">Projects</a></li>
+      <li><a href="#table3-heading">Funding & Infrastructure</a></li>
+      <li><a href="#table4-heading">Global Indicators</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+  </nav>
+
+  <!-- Go To Top Button -->
+  <a href="#" id="go-to-top">Top</a>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <h1>Quality Education: Empowering Minds for a Sustainable Future</h1>
+      <p>Explore comprehensive data and insights on Quality Education – from global literacy and enrollment rates to the funding and projects driving change. Dive in to understand trends, challenges, and success stories that shape education worldwide.</p>
+    </div>
+  </section>
+
+  <div class="content-all">
+    <!-- Introductory Content -->
+    <section class="intro-section" id="intro">
+      <h2 class="section-heading">Global Education Data Overview</h2>
+      <p>
+        This page presents interactive tables capturing key indicators for Quality Education across the globe.
+        Whether it’s literacy, enrollment, projects, or funding, our data offers a window into the progress and challenges
+        in achieving sustainable and equitable education.
+      </p>
+    </section>
+
+    <!-- Table 1 Section: Literacy & Enrollment -->
+    <section class="table-section" id="table1-heading">
+      <h2 class="section-heading">Global Literacy and Enrollment Rates</h2>
+      <iframe src="Table-1/table-1.html" title="Table 1: Literacy & Enrollment Data" onload="resizeIframe(this)"></iframe>
+      <section class="analysis-section">
+        <h3>Data Insights: Literacy & Enrollment Trends</h3>
+        <div class="analysis-content">
+          <img src="Images/insight-1.jpg" alt="Graphical representation of literacy rates">
+          <p>
+            Trends indicate steady improvements in literacy and enrollment, yet disparities persist. This data guides policy
+            planning to bridge gaps in education access.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- Table 2 Section: Projects -->
+    <section class="table-section" id="table2-heading">
+      <h2 class="section-heading">Projects Improving Quality Education</h2>
+      <iframe src="Table-2/table-2.html" title="Table 2: Education Projects" onload="resizeIframe(this)"></iframe>
+      <section class="analysis-section">
+        <h3>Project Analysis</h3>
+        <div class="analysis-content">
+          <img src="Images/insight-2.jpg" alt="Students engaged in a project">
+          <p>
+            Innovative projects—from digital classrooms to teacher training—drive tangible improvements in education. These initiatives address local challenges and empower communities.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- Table 3 Section: Funding, Infrastructure & Indicators -->
+    <section class="table-section" id="table3-heading">
+      <h2 class="section-heading">Quality Education – Funding, Infrastructure & Indicators</h2>
+      <iframe src="Table-3/table-3.html" title="Table 3: Funding & Infrastructure" onload="resizeIframe(this)"></iframe>
+      <section class="analysis-section">
+        <h3>Financial & Structural Analysis</h3>
+        <div class="analysis-content">
+          <img src="Images/insight-3.jpg" alt="Infographic on education funding">
+          <p>
+            This data links investments in education to improved outcomes. By analyzing funding, infrastructure, and quality metrics,
+            we gain insights into how resources can drive educational success.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- Table 4 Section: Expanded Global Education Indicators -->
+    <section class="table-section" id="table4-heading">
+      <h2 class="section-heading">Expanded Global Education Indicators (2015-2022)</h2>
+      <iframe src="Table-4/table-4.html" title="Table 4: Expanded Global Education Indicators" onload="resizeIframe(this)"></iframe>
+      <section class="analysis-section">
+        <h3>Trend Analysis</h3>
+        <div class="analysis-content">
+          <img src="Images/insight-4.jpg" alt="Line graph showing global education trends">
+          <p>
+            A multi-year perspective reveals long-term trends in key education metrics. Visualizing these trends helps stakeholders
+            identify progress and areas needing further intervention.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- Concluding Content -->
+    <section class="analysis-section" id="conclusion">
+      <h2 class="section-heading">Conclusions and Next Steps</h2>
+      <p>
+        The interactive tables provide valuable insights into Quality Education worldwide. They showcase successes and highlight persistent challenges that require concerted action from governments, communities, and international organizations. By continuing to monitor these indicators and supporting innovative projects, we can drive further improvements in education for all.
+      </p>
+    </section>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    function resizeIframe(iframe) {
+      try {
+        iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+      } catch (e) {
+        console.error('Error resizing iframe:', e);
+      }
+    }
+  </script>
+  <script>
+    fetch("../NavBar/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        const script = document.createElement("script");
+        script.src = "../NavBar/navbar.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      })
+      .catch(error => console.error("Error loading the header:", error));
+
+    fetch("../Footer/footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading the footer:", error));
+  </script>
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    let autoCloseTimer;
+
+    function openSidebar() {
+      sidebar.classList.add('open');
+      sidebarToggle.innerHTML = '&#9664;';
+      autoCloseTimer = setTimeout(closeSidebar, 3000);
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      sidebarToggle.innerHTML = '&#9654;';
+    }
+
+    sidebarToggle.addEventListener('click', () => {
+      if (sidebar.classList.contains('open')) {
+        clearTimeout(autoCloseTimer);
+        closeSidebar();
+      } else {
+        openSidebar();
+      }
+    });
+  </script>
+  <script>
+    const goToTopBtn = document.getElementById('go-to-top');
+    goToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
