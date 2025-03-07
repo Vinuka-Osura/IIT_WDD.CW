@@ -153,36 +153,42 @@
   }
 </script>
 <script>
+
+  // Sidebar arrow toggle functionality
   const sidebar = document.getElementById('sidebar');
   const sidebarToggle = document.getElementById('sidebar-toggle');
-  let autoCloseTimer;
-
-  function openSidebar() {
-    sidebar.classList.add('open');
-    sidebarToggle.innerHTML = '&#9664;';
-    autoCloseTimer = setTimeout(closeSidebar, 3000);
-  }
-
-  function closeSidebar() {
-    sidebar.classList.remove('open');
-    sidebarToggle.innerHTML = '&#9654;';
-  }
-
   sidebarToggle.addEventListener('click', () => {
-    if (sidebar.classList.contains('open')) {
-      clearTimeout(autoCloseTimer);
-      closeSidebar();
-    } else {
-      openSidebar();
-    }
+      if (sidebar.classList.contains('open')) {
+          sidebar.classList.remove('open');
+          sidebarToggle.innerHTML = '&#9654;';
+      } else {
+          sidebar.classList.add('open');
+          sidebarToggle.innerHTML = '&#9664;';
+      }
   });
-</script>
-<script>
+
+  // Adjust scroll position when clicking sidebar links
+  document.querySelectorAll("#sidebar a").forEach(link => {
+      link.addEventListener("click", function (event) {
+          event.preventDefault(); 
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+              const headerOffset = 108;
+              const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+              const offsetPosition = elementPosition - headerOffset;
+              window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+          }
+      });
+  });
+
+  // Go to Top functionality
   const goToTopBtn = document.getElementById('go-to-top');
   goToTopBtn.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
 </script>
 
 </html>
