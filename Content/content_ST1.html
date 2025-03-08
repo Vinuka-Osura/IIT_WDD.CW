@@ -14,58 +14,183 @@
 
 <body>
         
-    <script src="../Volunteer/volunteer.js"></script>
+    <script src="../Common/global.js"></script>
             
      <header>
-        <div id="navbar-container"></div>
+        <div id="header-placeholder"></div>
     </header>
-    <!-- Main Container with Sidebar and Content -->
-    <div class="container">
-        <!-- Sidebar Menu -->
-        <div id="sidebar" class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="#challenges">Challenges</a></li>
-                    <li><a href="#goals">UN Goals</a></li>
-                    <li><a href="#solutions">Solutions</a></li>
-                </ul>
-            </nav>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#education-for-all">Education For All</a></li>
+                <li><a href="#challenges-in-education">Challenges in Education</a></li>
+                <li><a href="#un-goals">United Nations Goals for Quality Education</a></li>
+                <li><a href="#world-efforts">How is the World Working Toward SDG 4?</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Box with Image and Text -->
+        <div class="box">
+            <div class="box-text">
+                <h2>Challenges in Education<br> & <br>United Nations Goals for Quality Education</h2>
+            </div>
+            <div class="box-image">
+                <img src="../Content/Images/ai-generated-8985308_1280.jpg" alt="Education Image">
+            </div>
+            
         </div>
 
-        <!-- Toggle Button -->
-        <button id="toggleButton" class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <!-- New Paragraph Section -->
+        <section id="education-for-all" class="paragraph-section">
+            <h2>Education for All: Overcoming Challenges to Achieve SDG 4</h2>
+            <p>
+                Education is a fundamental right, yet millions of children and adults worldwide still 
+                lack access to quality learning opportunities. Several barriers hinder education, from 
+                poverty to lack of infrastructure. However, global efforts, including the United Nations 
+                Sustainable Development Goal 4 (SDG 4), aim to ensure inclusive and equitable education for 
+                all. Below, we explore the key challenges in education, the UN’s goals, and possible solutions 
+                to improve global learning.
+            </p>
+        </section>
+
         
-        <!-- Main Content -->
-        <div class="main-content">
-            <h1 class="main-topic">Barriers to Education & the Path to Quality Learning for All</h1>
-            <h1>Challenges in Global Education</h1>
-            <p>Understanding the barriers and solutions for a better future.</p>
+        <!-- Challenges in Education Section -->
+        <section class="challenges-section" id="challenges-in-education">
+            <h2>Challenges in Education</h2>
+            <p class="intro-text">
+                Despite global progress, many obstacles still prevent access to quality education. Some of the biggest challenges include:
+            </p>
+
+            <!-- Zigzag Layout Section -->
+        <section class="zigzag-section">
+            <!-- Row 1: Picture on Left, Content on Right -->
+            <div class="zigzag-row">
+                <div class="zigzag-image">
+                    <img src="../Content/Images/DeWatermark.ai_1741466012723.jpg" alt="Image 1">
+                </div>
+                <div class="zigzag-content">
+                    <h3>Lack of Access to Schools</h3>
+                    <p>
+                        Millions of children live in remote areas with no nearby schools. Poor infrastructure, including lack of classrooms, electricity, and clean water, makes learning difficult. In developing countries, children often travel long distances to attend school.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Row 2: Picture on Right, Content on Left -->
+            <div class="zigzag-row reverse">
+                <div class="zigzag-image">
+                    <img src="../Content/Images/diverse-people-refugee-camps.jpg" alt="Image 2">
+                </div>
+                <div class="zigzag-content">
+                    <h3>Poverty & Financial Barriers</h3>
+                    <p>
+                        Many families cannot afford school fees, books, uniforms, and transportation. Children from low-income families are more likely to drop out to work and support their households. Public schools may lack funding, leading to overcrowded classrooms and poor facilities.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Row 3: Picture on Left, Content on Right -->
+            <div class="zigzag-row">
+                <div class="zigzag-image">
+                    <img src="../Content/Images/stock-photo-hampi-karnataka-india-february-unidentified-children-attending-lesson-at-a-small-247169659-processed(lightpdf.com).jpg" alt="Image 3">
+                </div>
+                <div class="zigzag-content">
+                    <h3>Shortage of Qualified Teachers & Learning Materials</h3>
+                    <p>
+                        Many regions suffer from a lack of well-trained teachers, affecting education quality. Teachers often work with limited resources, outdated textbooks, and large class sizes. Inconsistent training programs lead to ineffective teaching methods.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Row 4: Picture on Right, Content on Left -->
+            <div class="zigzag-row reverse">
+                <div class="zigzag-image">
+                    <img src="../Content/Images/stock-photo-young-happy-man-with-down-syndrome-with-his-mentoring-friend-celebrating-success-indoors-at-school-2063272721-processed.jpg" alt="Image 4">
+                </div>
+                <div class="zigzag-content">
+                    <h3> Barriers for Children with Disabilities</h3>
+                    <p>
+                        Many schools lack facilities for students with special needs.Inadequate teacher training prevents proper support for disabled students.Social stigma and discrimination make education inaccessible for many disabled learners.
+                    </p>
+                </div>
+            </div>
+        </section>
+
         
-            <section id="challenges">
-                <h2>Challenges in Global Education</h2>
-                <img src="images/education-challenge.jpg" alt="Children in a rural school">
-                <p>Millions of children lack access to quality education due to poverty, conflict, and insufficient resources.</p>
-            </section>
+        <!-- United Nations Goals Section -->
+        <section class="un-goals-section" id="un-goals">
+            <h2>United Nations Goals for Quality Education (SDG 4)</h2>
+            <p class="intro-text">
+                To overcome these challenges, the United Nations established Sustainable Development Goal 4 (SDG 4), which aims to "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all" by 2030.
+            </p>
+
+            <!-- Goals Grid -->
+            <div class="goals-grid">
+                <!-- Goal 1: Free, Equitable, and Quality Education -->
+                <div class="goal-card">
+                    <div class="goal-icon">✔</div>
+                    <h3>Free, Equitable, and Quality Education</h3>
+                    <p>Every child should have access to basic education without financial barriers.</p>
+                </div>
+
+                <!-- Goal 2: Early Childhood Education -->
+                <div class="goal-card">
+                    <div class="goal-icon">✔</div>
+                    <h3>Early Childhood Education</h3>
+                    <p>Ensuring young children receive quality preschool learning experiences.</p>
+                </div>
+
+                <!-- Goal 3: Equal Access to Technical, Vocational, and Higher Education -->
+                <div class="goal-card">
+                    <div class="goal-icon">✔</div>
+                    <h3>Equal Access to Technical, Vocational, and Higher Education</h3>
+                    <p>Encouraging skill development and career opportunities.</p>
+                </div>
+
+                <!-- Goal 4: Eliminating Gender Disparities -->
+                <div class="goal-card">
+                    <div class="goal-icon">✔</div>
+                    <h3>Eliminating Gender Disparities</h3>
+                    <p>Promoting equal opportunities for girls and boys in education.</p>
+                </div>
+
+                <!-- Goal 5: Improving Literacy & Numeracy -->
+                <div class="goal-card">
+                    <div class="goal-icon">✔</div>
+                    <h3>Improving Literacy & Numeracy</h3>
+                    <p>Reducing the number of youth and adults who cannot read or write.</p>
+                </div>
+
+                <!-- Goal 6: Enhancing Teacher Training & Resources -->
+                <div class="goal-card">
+                    <div class="goal-icon">✔</div>
+                    <h3>Enhancing Teacher Training & Resources</h3>
+                    <p>Ensuring teachers receive proper education and materials to support students.</p>
+                </div>
+            </div>
+
+            <!-- How the World is Working Toward SDG 4 -->
+            <div class="world-efforts" id="world-efforts">
+                <h3>🌎 How is the World Working Toward SDG 4?</h3>
+                <ul>
+                    <li>Governments are introducing free education policies to remove financial barriers.</li>
+                    <li>NGOs and organizations like UNICEF, UNESCO, and the Global Partnership for Education support school development in poor regions.</li>
+                    <li>Technology is being used to bring digital education to remote communities.</li>
+                    <li>Campaigns and scholarships encourage higher female enrollment in schools.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    
         
-            <section id="goals">
-                <h2>United Nations' Goals for Quality Education</h2>
-                <img src="images/un-goals.jpg" alt="United Nations Education Goals">
-                <p>The UN has set targets to ensure inclusive and equitable education for all by 2030.</p>
-            </section>
-        
-            <section id="solutions">
-                <h2>Possible Solutions</h2>
-                <img src="images/education-solutions.jpg" alt="Children using digital learning tools">
-                <p>Improving teacher training, increasing education funding, and integrating technology can enhance global education.</p>
-            </section>
-        </div>
-    </div>
-        
-    <!-- "Go to Top" Button -->
-    <button class="top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆ Go to Top</button>
-        
+      
     <footer>
-        <div id="footer-container"></div>
+        <div id="footer-placeholder"></div>
     </footer>
         
     <script src="content_ST1.js"></script> <!-- Sidebar JavaScript -->
