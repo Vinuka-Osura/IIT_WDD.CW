@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Education - Home</title>
+    <link rel="stylesheet" href="content_ST1.css">
+    <link rel="stylesheet" href="../NavBar/navbar.css"> <!-- Navbar Styles -->
+    <link rel="stylesheet" href="../Footer/footer.css"> <!-- Footer Styles -->
+    <link rel="stylesheet" href="../Common/Global.css">  <!-- Link to Global Styles -->
+    <link rel="stylesheet" href="sidebar.css"> <!-- Sidebar Styles -->
+</head>
+
+<body>
+        
+    <script src="../Volunteer/volunteer.js"></script>
+            
+     <header>
+        <div id="navbar-container"></div>
+    </header>
+    <!-- Main Container with Sidebar and Content -->
+    <div class="container">
+        <!-- Sidebar Menu -->
+        <div id="sidebar" class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#challenges">Challenges</a></li>
+                    <li><a href="#goals">UN Goals</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Toggle Button -->
+        <button id="toggleButton" class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 class="main-topic">Barriers to Education & the Path to Quality Learning for All</h1>
+            <h1>Challenges in Global Education</h1>
+            <p>Understanding the barriers and solutions for a better future.</p>
+        
+            <section id="challenges">
+                <h2>Challenges in Global Education</h2>
+                <img src="images/education-challenge.jpg" alt="Children in a rural school">
+                <p>Millions of children lack access to quality education due to poverty, conflict, and insufficient resources.</p>
+            </section>
+        
+            <section id="goals">
+                <h2>United Nations' Goals for Quality Education</h2>
+                <img src="images/un-goals.jpg" alt="United Nations Education Goals">
+                <p>The UN has set targets to ensure inclusive and equitable education for all by 2030.</p>
+            </section>
+        
+            <section id="solutions">
+                <h2>Possible Solutions</h2>
+                <img src="images/education-solutions.jpg" alt="Children using digital learning tools">
+                <p>Improving teacher training, increasing education funding, and integrating technology can enhance global education.</p>
+            </section>
+        </div>
+    </div>
+        
+    <!-- "Go to Top" Button -->
+    <button class="top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆ Go to Top</button>
+        
+    <footer>
+        <div id="footer-container"></div>
+    </footer>
+        
+    <script src="content_ST1.js"></script> <!-- Sidebar JavaScript -->
+
+</body>
+
+</html>
