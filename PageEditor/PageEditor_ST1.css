@@ -1,0 +1,53 @@
+/* editor.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #004c99;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.review-card {
+    background: #fff;
+    padding: 15px;
+    border-left: 5px solid #004c99;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: #004c99;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #003366;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #004c99;
+    color: white;
+}
