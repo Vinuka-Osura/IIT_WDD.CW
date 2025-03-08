@@ -1,0 +1,89 @@
+
+/* Sidebar Styles */
+.container {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 0; /* Start with collapsed sidebar */
+    min-height: 100vh;
+    background-color:#b8b9bb;
+    padding-top: 60px;
+    transition: width 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.sidebar.open {
+    width: 220px;
+}
+
+/* Sidebar Menu Items */
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    padding: 15px;
+    text-align: left;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #006494;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    position: absolute;
+    left: 0; /* Keep it always visible */
+    top: 110px;
+    background-color: #104da6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000; /* Ensure it stays above everything */
+    transition: left 0.3s ease;
+}
+
+/* Move button when sidebar expands */
+.sidebar.open + .toggle-btn {
+    left: 220px; /* Push the button to match expanded sidebar */
+}
+
+.toggle-btn:hover {
+    background-color: #006494;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+    margin-left: 0; /* Default position */
+}
+
+.sidebar.open ~ .main-content {
+    margin-left: 220px; /* Shift content when sidebar opens */
+}
+
+.main-topic{
+    background-color: rgb(176, 177, 177);
+    padding: 20px;
+    color: #000000;
+    text-align: center;
+    margin-top: 0px;
+}

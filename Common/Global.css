@@ -71,7 +71,7 @@ body {
     margin: 0;
     padding: 0;
     /* padding-top: 108px; */
-    font-family: Arial, sans-serif;
+    font-family:'Times New Roman', Times, serif;
     background-color: var(--color-background);
     color: var(--color-text);
 }
