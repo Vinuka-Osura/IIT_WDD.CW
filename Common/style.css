@@ -62,7 +62,7 @@ body {
     margin: 0;
     padding: 0;
     /* padding-top: 108px; */
-    font-family:'Times New Roman', Times, serif;
+    font-family: Arial, sans-serif;
     background-color: #F8F6F0;
     color: var(--color-text);
 }

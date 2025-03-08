@@ -191,7 +191,7 @@ body.dark-mode .header-container {
     background: var(--blue-gradient);
 }
 
-/* Navigation Menu */
+/* .................................................... Navigation Menu ....................................................... */
 .navbar-menu {
     list-style: none;
     display: flex;
@@ -220,7 +220,7 @@ body.dark-mode .header-container {
     background-color:rgba(0, 0, 0, 0.15)
 }
 
-/* Mega Menu */
+/* ............................................................ Mega Menu ........................................................ */
 .mega-menu {
     display: none;
     position: absolute;
@@ -260,7 +260,7 @@ body.dark-mode .header-container {
     background: rgb(0, 0, 0);
 }
 
-/* Subtopics Section */
+/* ....................................................... Subtopics Section .................................................... */
 .mega-subtopics {
     flex: 1;
     display: flex;
@@ -298,7 +298,7 @@ body.dark-mode .header-container {
     background: rgba(0, 0, 0, 0.35);
 }
 
-/* Subtopic Link */
+/* ................................................... Subtopic Link ............................................ */
 .subtopic a {
     position: relative;
     color: var(--white);
