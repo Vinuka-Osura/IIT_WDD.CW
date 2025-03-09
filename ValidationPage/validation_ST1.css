@@ -1,0 +1,9 @@
+.stud h2{
+    color: black;
+}
+
+/* Sections with Scroll Margin */
+#splashVal
+{
+    scroll-margin-top: 150px; /* Adjust based on header height */
+}

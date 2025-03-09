@@ -1,0 +1,40 @@
+.body{
+    color: black;
+}
+
+.stud h2{
+    color: black;
+}
+
+.bullet-point-list {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 50px; /* Indent for readability */
+    text-align: left; /* Aligns text properly */
+    color: rgb(0, 0, 0); /* Ensures visibility on a dark background */
+}
+
+.bullet-point-list li {
+    margin-bottom: 10px; /* Adjust this value to increase spacing */
+}
+
+p{
+    padding-left: 50px;
+}
+
+.span-highlight{
+    background-color: rgb(195, 195, 195);
+}
+
+.code-snippet {
+    background-color: #f4f4f4;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+/* Sections with Scroll Margin */
+#splash
+{
+    scroll-margin-top: 150px; /* Adjust based on header height */
+}
