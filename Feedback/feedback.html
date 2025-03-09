@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <form id="feedback-form">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Telephone Number:</label>
+            <input type="tel" id="phone" name="phone">
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Feedback Details</legend>
+            <label for="comments">Comment or Message:</label>
+            <textarea id="comments" name="comments" rows="4" maxlength="500" oninput="updateCharCount()"></textarea>
+            <p id="char-count">500 characters remaining</p>
+            
+            <label for="feedback-type">Feedback Type:</label>
+            <select id="feedback-type" name="feedback-type">
+                <option value="suggestion">Suggestion</option>
+                <option value="complaint">Complaint</option>
+                <option value="question">Question</option>
+            </select>
+            
+            <label>Rating:</label>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label> 
+
+            </div>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            
+            <label for="datetime">Schedule Submission:</label>
+            <input type="datetime-local" id="datetime" name="datetime">
+            
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file">
+        </fieldset>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function updateCharCount() {
+            let comments = document.getElementById("comments");
+            let count = 500 - comments.value.length;
+            document.getElementById("char-count").textContent = count + " characters remaining";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".star");
+            const ratingValue = document.getElementById("rating-value");
+
+            stars.forEach(star => {
+                star.addEventListener("click", function () {
+                    let value = this.getAttribute("data-value");
+                    ratingValue.value = value;
+                    stars.forEach(s => s.classList.remove("selected"));
+                    this.classList.add("selected");
+                    stars.forEach(s => {
+                        if (s.getAttribute("data-value") <= value) {
+                            s.classList.add("active");
+                        } else {
+                            s.classList.remove("active");
+                        }
+                    });
+                });
+                star.addEventListener("mouseover", function () {
+                    let value = this.getAttribute("data-value");
+                    stars.forEach(s => {
+                        if (s.getAttribute("data-value") <= value) {
+                            s.classList.add("hover");
+                        }
+                    });
+                });
+                star.addEventListener("mouseout", function () {
+                    stars.forEach(s => s.classList.remove("hover"));
+                });
+            });
+        });
+    </script>
+</body>
+</html>
