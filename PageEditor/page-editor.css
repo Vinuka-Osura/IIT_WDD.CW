@@ -5,6 +5,27 @@ body {
     padding: 0;
 }
 
+.container a {
+    color: #007bff;
+}
+
+/* ........................................... Dark mode ........................................................ */
+
+body.dark-mode .container a {
+    color: #40c4ff;
+}
+
+body.dark-mode .container a:hover,
+.container a:hover {
+    color: #0056b3;
+}
+
+/* ..................................... Adjusting links within .top in dark mode .................................... */
+body.dark-mode .top a {
+    color: #ddd;
+}
+
+/* ............................................. Rest of css ............................................. */
 .container {
     display: flex;
     flex-direction: row-reverse;
@@ -19,16 +40,17 @@ main {
 
 aside {
     flex: 1;
-    background-color: #f4f4f4;
+    background-color: #f4f4f42f;
     padding: 15px;
     border: 1px solid #ddd;
     margin-right: 20px;
+    font-size: 1.2em;
 }
 section {
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #ddd;
-    background-color: #fafafa;
+    background-color: #fafafa2f;
 }
 
 .ref li{
