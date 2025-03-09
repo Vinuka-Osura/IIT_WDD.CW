@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Interactive Tables - Quality Education Data</title>
+  <title>Quality Education - Global Data</title>
   <link rel="stylesheet" href="../Common/global.css">
   <link rel="stylesheet" href="../Table/table.css">
   <script src="../Common/global.js"></script>
@@ -68,7 +68,7 @@
       <section class="analysis-section">
         <h3>Data Insights: Literacy & Enrollment Trends</h3>
         <div class="analysis-content">
-          <img src="Images/insight-1.jpg" alt="Graphical representation of literacy rates">
+          <img src="Images/global-literasy-spred.png" alt="Graphical representation of literacy rates">
           <p>
             Trends indicate steady improvements in literacy and enrollment, yet disparities persist. This data guides
             policy
@@ -85,7 +85,7 @@
       <section class="analysis-section">
         <h3>Project Analysis</h3>
         <div class="analysis-content">
-          <img src="Images/insight-2.jpg" alt="Students engaged in a project">
+          <img src="Images/project-school.jpg" alt="Students engaged in a project">
           <p>
             Innovative projects—from digital classrooms to teacher training—drive tangible improvements in education.
             These initiatives address local challenges and empower communities.
@@ -101,7 +101,7 @@
       <section class="analysis-section">
         <h3>Financial & Structural Analysis</h3>
         <div class="analysis-content">
-          <img src="Images/insight-3.jpg" alt="Infographic on education funding">
+          <img src="Images/government-expenditure-on-education-gdp.png" alt="Infographic on education funding">
           <p>
             This data links investments in education to improved outcomes. By analyzing funding, infrastructure, and
             quality metrics,
@@ -119,7 +119,7 @@
       <section class="analysis-section">
         <h3>Trend Analysis</h3>
         <div class="analysis-content">
-          <img src="Images/insight-4.jpg" alt="Line graph showing global education trends">
+          <img src="Images/share-of-the-world-population-with-at-least-basic-education.png" alt="Line graph showing global education trends">
           <p>
             A multi-year perspective reveals long-term trends in key education metrics. Visualizing these trends helps
             stakeholders
@@ -130,7 +130,7 @@
     </section>
 
     <!-- Concluding Content -->
-    <section class="analysis-section" id="conclusion">
+    <section id="conclusion">
       <h2 class="section-heading">Conclusions and Next Steps</h2>
       <p>
         The interactive tables provide valuable insights into Quality Education worldwide. They showcase successes and
@@ -158,28 +158,28 @@
   const sidebar = document.getElementById('sidebar');
   const sidebarToggle = document.getElementById('sidebar-toggle');
   sidebarToggle.addEventListener('click', () => {
-      if (sidebar.classList.contains('open')) {
-          sidebar.classList.remove('open');
-          sidebarToggle.innerHTML = '&#9654;';
-      } else {
-          sidebar.classList.add('open');
-          sidebarToggle.innerHTML = '&#9664;';
-      }
+    if (sidebar.classList.contains('open')) {
+      sidebar.classList.remove('open');
+      sidebarToggle.innerHTML = '&#9654;';
+    } else {
+      sidebar.classList.add('open');
+      sidebarToggle.innerHTML = '&#9664;';
+    }
   });
 
   // Adjust scroll position when clicking sidebar links
   document.querySelectorAll("#sidebar a").forEach(link => {
-      link.addEventListener("click", function (event) {
-          event.preventDefault(); 
-          const targetId = this.getAttribute("href").substring(1);
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-              const headerOffset = 108;
-              const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-              const offsetPosition = elementPosition - headerOffset;
-              window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-          }
-      });
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const headerOffset = 108;
+        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      }
+    });
   });
 
   // Go to Top functionality
