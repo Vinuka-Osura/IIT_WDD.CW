@@ -21,6 +21,7 @@
     --color-background-5: #a4abb48b;
     --color-bacground-body: #F8F9FA;
     --color-transparent-black: rgba(0, 0, 0, 0.15);
+    --color-background-footer: #d4d9dd;
 
     /* Text Colors */
     --color-text: #333;
@@ -42,7 +43,6 @@
     --color-table-border: #ddd;
     --color-table-hover: #cecece;
 
-
     /* Gradients */
     --gradient-blue: linear-gradient(135deg, #0d47a1, #42a5f5);
     --gradient-blue-reverse: linear-gradient(135deg, #42a5f5, #0d47a1);
@@ -61,7 +61,6 @@
 body {
     margin: 0;
     padding: 0;
-    /* padding-top: 108px; */
     font-family: Arial, sans-serif;
     background-color: #F8F6F0;
     color: var(--color-text);
