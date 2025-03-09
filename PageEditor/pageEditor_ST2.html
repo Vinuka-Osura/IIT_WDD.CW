@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Editor Student - provide your student name</title>
-    <link rel="stylesheet" href="../Common/global.css">
+    <link rel="stylesheet" href="../Common/style.css">
     <link rel="stylesheet" href="page-editor.css">
     <script src="../Common/global.js"></script>
 
@@ -22,110 +22,949 @@
     <div class="container">
         <!-- Main content area -->
         <main>
+
+
             <section>
-                <h2 id="splash">Home Page</h2>
+                <h2 id="home" class="linkoffset">Home Page</h2>
                 <h3>Technical Description</h3>
-                <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the
-                    key tags and styling choices focusing on functionality and design without copying large code
-                    sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS
-                    properties used to create structure and styling.</p>
+                <h4>HTML Techniques</h4>
+                <dl>
+                    <dt>Document Structure &amp; Metadata</dt>
+                    <dd>
+                        <p>
+                            The page begins with a proper HTML5 declaration (<code>&lt;!DOCTYPE html&gt;</code>) and
+                            sets the language attribute
+                            (<code>&lt;html lang="en"&gt;</code>) to enhance search engine optimization and
+                            accessibility.
+                        </p>
+                        <p>
+                            In the <code>&lt;head&gt;</code> section, metadata elements such as
+                            <code>&lt;meta charset="UTF-8"&gt;</code> and
+                            <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>
+                            ensure correct encoding
+                            and responsive behavior across devices.
+                        </p>
+                        <p>
+                            External CSS and JavaScript files are linked to maintain a clear separation between content,
+                            styling, and functionality.
+                        </p>
+                    </dd>
+
+                    <dt>Key Structural Tags</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <strong>Header and Footer Placeholders - </strong> Using
+                                <code>&lt;div id="header-placeholder"&gt;</code> and a similar footer placeholder allows
+                                dynamic content loading, ensuring consistency across pages.
+                            </li>
+                            <li>
+                                <strong>Hero Section - </strong> Encapsulated in a
+                                <code>&lt;section class="hero-section"&gt;</code>, this area employs a full-width
+                                background image and an overlay (<code>&lt;div class="hero-overlay"&gt;</code>) to
+                                enhance text readability. Headings (<code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code>)
+                                and a paragraph (<code>&lt;p&gt;</code>) are used to clearly present the mission
+                                statement.
+                            </li>
+                            <li>
+                                <strong>Content Sections - </strong> Sections such as the “Intro,” “Content Cards,” “Our
+                                Goal,” “Public Examples,” “Partners,” and “Comments” are organized to provide both
+                                information and interactivity. Each section uses appropriate heading levels (e.g.,
+                                <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) and paragraphs to define content
+                                hierarchy, which is essential for both human readers and assistive technologies.
+                            </li>
+                            <li>
+                                <strong>Form Elements - </strong> The comment section includes a form with
+                                <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>,
+                                and <code>&lt;button&gt;</code> elements. These not only gather user input but are also
+                                structured semantically to aid accessibility and improve user experience.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <h4>CSS Techniques</h4>
+                <dl>
+                    <dt>Layout and Spacing</dt>
+                    <dd>
+                        CSS properties such as margin, padding, and border-radius are consistently used to create
+                        whitespace and soften element edges, improving the overall visual appeal and readability of the
+                        page. The body margin adjustment (e.g., margin-top: 108px;) is purposefully set to accommodate
+                        dynamically loaded header content.
+                    </dd>
+
+                    <dt>Responsive Design & Flexbox</dt>
+                    <dd>
+                        The page employs the Flexbox layout model (display: flex; flex-wrap: wrap; justify-content:
+                        center;) in multiple sections (like the card containers and the comments area) to ensure that
+                        content adapts smoothly across different screen sizes. Media queries (e.g., @media (max-width:
+                        768px)) adjust layouts for smaller devices, ensuring the page remains user-friendly on mobile
+                        platforms.
+                    </dd>
+
+                    <dt>Visual Enhancements and Animations</dt>
+                    <dd>
+                        The hero section uses a background image with a semi-transparent overlay to make text stand out.
+                        Text shadows are applied to headings to enhance legibility against varying backgrounds.
+                        Additionally, keyframe animations (such as wiggle for card hover effects and pop for button
+                        interactions) provide dynamic feedback to users, making the page feel interactive and engaging.
+                    </dd>
+
+                    <dt>Theming with CSS Variables</dt>
+                    <dd>
+                        The use of CSS custom properties (e.g., var(--color-primary), var(--color-background-5))
+                        standardizes the color scheme and design elements across the page. This approach not only
+                        ensures consistency but also makes future maintenance and theme updates straightforward.
+                    </dd>
+                </dl>
+                <h4>Logic and Purpose</h4>
+                <dl>
+                    <dt>Separation of Content, Presentation, and Behavior</dt>
+                    <dd>
+                        By separating HTML (structure), CSS (styling), and JavaScript (functionality), the design
+                        adheres to best practices in web development. This modular approach improves code readability,
+                        facilitates easier maintenance, and enhances scalability.
+                    </dd>
+
+                    <dt>User Engagement and Usability</dt>
+                    <dd>
+                        The chosen layout and visual techniques (responsive design, engaging animations, and clear
+                        content segmentation) are aimed at guiding the user naturally through the content. Interactive
+                        elements like the comment form and animated cards are designed to foster engagement while
+                        ensuring the overall user experience is smooth and intuitive.
+                    </dd>
+
+                    <dt>Design Consistency and Maintainability</dt>
+                    <dd>
+                        Using placeholders for repetitive components (header and footer) and employing CSS variables for
+                        consistent theming are strategic choices to support long-term maintainability. These techniques
+                        allow for quick updates and ensure that design changes propagate throughout the website
+                        efficiently.
+                    </dd>
+                </dl>
 
                 <h3>Accessibility</h3>
-                <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                <br>
+                <h4>Semantic HTML for Improved Accessibility</h4>
+                <dl>
+                    <dt>
+                        Use of Semantic Elements
+                    </dt>
+                    <dd>
+                        The implementation uses semantic tags (such as &lt;section&gt;, &lt;header&gt;, &lt;footer&gt;,
+                        &lt;h1&gt;–&lt;h3&gt;, and &lt;p&gt;) to create a logical document structure. This not only
+                        improves search
+                        engine optimization but also aids screen readers in navigating the
+                        content, thereby enhancing accessibility for users with visual
+                        impairments.
+                    </dd>
+                    <dt>
+                        Descriptive Alternative Texts
+                    </dt>
+                    <dd>
+                        All images include meaningful alt attributes (e.g., alt="Volunteer Programs") to ensure that
+                        users who rely on screen readers receive appropriate descriptions of visual content. This
+                        practice is essential for conveying the context and purpose of each image.
+                    </dd>
+                </dl>
 
+                <h4>Responsive and Accessible Design</h4>
+                <dl>
+                    <dt>
+                        Responsive Layouts
+                    </dt>
+                    <dd>
+                        The use of Flexbox and media queries ensures that the page layout adjusts seamlessly across
+                        different devices. This responsiveness is crucial for accessibility, as it guarantees that users
+                        on mobile devices or with varying screen sizes can access the content without hindrance.
+                    </dd>
+                    <dt>
+                        Color Contrast and Readability
+                    </dt>
+                    <dd>
+                        The design employs text shadows and overlay techniques to maintain high contrast between text
+                        and background images. This enhances readability for users with visual impairments and meets
+                        accessibility standards for color contrast.
+                    </dd>
+                </dl>
+
+                <h4>Accessible Interactive Elements</h4>
+                <dl>
+                    <dt>
+                        Form Accessibility
+                    </dt>
+                    <dd>
+                        The comment section features a well-structured form with &lt;label&gt; tags that are explicitly
+                        associated with corresponding input fields. This relationship between labels and form
+                        controls is key to ensuring that screen readers can effectively communicate form purposes
+                        and guide users through the input process.
+                    </dd>
+                </dl>
+
+                <h4>Overall Impact</h4>
+                <dl>
+                    <dt>
+                        Inclusive User Experience
+                    </dt>
+                    <dd>
+                        By integrating semantic HTML, proper alt texts, accessible form controls, and responsive design,
+                        the page is built to accommodate a wide range of users, including those with disabilities. These
+                        measures not only comply with accessibility guidelines but also enhance the overall user
+                        experience, ensuring that all visitors can engage with the content effectively.
+                    </dd>
+                    <dt>
+                        Future-Proofing
+                    </dt>
+                    <dd>
+                        The thoughtful use of accessible design practices and semantic markup lays a strong foundation
+                        for future enhancements. It ensures that the site remains inclusive as new features are added
+                        and as accessibility standards evolve.
+                    </dd>
+                </dl>
                 <h3>Link to the validation page</h3>
-                <p><a href="validation_ST0.html#splashVal">Go to Validation Page - Home Page Section</a></p>
 
+                <p><a href="../ValidationPage/validation _ST2.html#homeV">Go to Validation Page - Home Page Section</a></p>
 
-                <h3>Link to the page</h3>
-                <p><a href="home.html">Go to Home Page  (home.html)</a></p>
+                <h3>Link to the Home page</h3>
+                <p><a href="../HomePage/home.html">Go to Home Page (home.html)</a></p>
             </section>
 
+            <!-- ---------------------------------------------------- Table Section -------------------------------------------------------------------------------- -->
+
             <section>
-                <h2 id="volunteer">Table Page (Educational Data)</h2>
+
+                <h2 id="table" class="linkoffset">Table Page (Global Data)</h2>
                 <h3>Technical Description</h3>
-                <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the
-                    key tags and styling choices focusing on functionality and design without copying large code
-                    sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS
-                    properties used to create structure and styling.</p>
+                <h4>HTML Techniques</h4>
+                <dl>
+                    <dt>Document Structure &amp; Metadata</dt>
+                    <dd>
+                        The page begins with a proper HTML5 declaration (<code>&lt;!DOCTYPE html&gt;</code>) and sets
+                        the language attribute (<code>&lt;html lang="en"&gt;</code>) for improved accessibility and SEO.
+                        In the <code>&lt;head&gt;</code> section, essential metadata such as
+                        <code>&lt;meta charset="UTF-8"&gt;</code> and
+                        <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code> ensure
+                        correct character encoding and responsive behavior. External CSS and JavaScript files are linked
+                        to separate content, styling, and functionality.
+                    </dd>
+
+                    <dt>Key Structural Tags</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <strong>Header and Footer Placeholders -</strong> Elements like
+                                <code>&lt;div id="header-placeholder"&gt;</code> and
+                                <code>&lt;div id="footer-placeholder"&gt;</code> allow dynamic content loading to ensure
+                                consistency across pages.
+                            </li>
+                            <li>
+                                <strong>Navigation Sidebar - </strong> The <code>&lt;nav id="sidebar"&gt;</code>
+                                contains
+                                navigation links and a toggle button for a responsive sidebar that enhances usability.
+                            </li>
+                            <li>
+                                <strong>Hero Section - </strong> Encapsulated in a
+                                <code>&lt;section class="hero-section"&gt;</code>, this area employs a background image
+                                and an overlay (<code>&lt;div class="hero-overlay"&gt;</code>) with headings
+                                (<code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code>) and a paragraph
+                                (<code>&lt;p&gt;</code>) to clearly convey the page's purpose.
+                            </li>
+                            <li>
+                                <strong>Content and Table Sections - </strong> The main content is wrapped in
+                                <code>&lt;div class="content-all"&gt;</code> and divided into sections
+                                (<code>&lt;section&gt;</code>) for the introduction, multiple table displays (embedded
+                                via <code>&lt;iframe&gt;</code> elements), and analysis segments. This modular approach
+                                simplifies editing and maintenance.
+                            </li>
+                            <li>
+                                <strong>Interactive Elements - </strong> Script tags include functions for dynamically
+                                resizing iframes, toggling the sidebar, enabling smooth scrolling, and providing a "Go
+                                to Top" button, thereby enhancing the user experience.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+
+                <h4>CSS Techniques</h4>
+                <dl>
+                    <dt>Global and Modular Styling</dt>
+                    <dd>
+                        A global CSS file (<code>global.css</code>) sets the baseline styling using variables for
+                        colors, spacing, and transitions, ensuring consistency across the website. Additionally,
+                        page-specific styles (e.g., <code>table-1.css</code>, <code>table-2.css</code>, etc.) allow for
+                        targeted customization of individual tables without affecting the overall layout.
+                    </dd>
+
+                    <dt>Layout and Responsive Design</dt>
+                    <dd>
+                        CSS rules define margins, paddings, and fixed positioning (e.g., for the header and sidebar) to
+                        maintain layout integrity. Media queries adjust padding and layout (such as switching flexbox
+                        directions) for smaller screens, ensuring that the content remains accessible and visually
+                        appealing on mobile devices.
+                    </dd>
+
+                    <dt>Visual Enhancements</dt>
+                    <dd>
+                        The CSS applies background images, overlays, box shadows, and custom borders to create a modern,
+                        polished appearance. Specific styles for table elements include zebra striping, hover effects,
+                        and shadow effects that improve readability and interactivity.
+                    </dd>
+                </dl>
+
+                <h4>Individual Table Implementations</h4>
+                <dl>
+                    <dt>Table 1 - Global Literacy and Enrollment Rates</dt>
+                    <dd>
+                        This table uses a complex structure with multi-level headers implemented via
+                        <code>rowspan</code> and <code>colspan</code> to group data by year and change metrics. The
+                        DataTables library enhances interactivity with sorting, pagination, and responsive features,
+                        while custom rendering functions format images (e.g., country flags) and numerical data (e.g.,
+                        prepending a '+' sign for positive values).
+                    </dd>
+
+                    <dt>Table 2 - Projects Improving Quality Education</dt>
+                    <dd>
+                        Featuring a merged header cell that includes a logo and title, this table uses thumbnail images
+                        in its headers for visual cues. It displays project details across multiple rows with clickable
+                        links for additional information, and employs icons to visually indicate status (e.g., tick
+                        marks for successful projects). CSS styling, including alternating row colors and hover effects,
+                        enhances readability and engagement.
+                    </dd>
+
+                    <dt>Table 3 - Funding, Infrastructure &amp; Quality Indicators</dt>
+                    <dd>
+                        With multi-level headers separating funding metrics from quality indicators, this table utilizes
+                        AJAX data loading through the DataTables library for dynamic interactivity. Country names are
+                        rendered as clickable links, and the table's layout is optimized through CSS to ensure clarity
+                        and readability.
+                    </dd>
+
+                    <dt>Table 4 - Expanded Global Education Indicators (2015-2022)</dt>
+                    <dd>
+                        This table presents multi-year data with merged header cells and individual columns for each
+                        year. A dedicated column includes buttons that trigger Chart.js-based line charts in a modal
+                        window, enabling dynamic visualization of trends. The table incorporates custom borders, shadow
+                        effects, and hover animations for a professional and interactive appearance.
+                    </dd>
+                </dl>
+
+                <h4>Logic, Purpose, and Design Decisions</h4>
+                <dl>
+                    <dt>Modularity and Maintainability</dt>
+                    <dd>
+                        The use of iframes to integrate each table allows for modular development, enabling independent
+                        updates and simplifying maintenance. This approach ensures that modifications in one table do
+                        not disrupt the overall page structure.
+                    </dd>
+
+                    <dt>User Experience and Interactivity</dt>
+                    <dd>
+                        The integration of interactive libraries such as DataTables and Chart.js provides dynamic
+                        features like sorting, pagination, and live data visualization. These enhancements improve user
+                        engagement and ensure that data is presented in an accessible and meaningful manner.
+                    </dd>
+
+                    <dt>Responsive and Accessible Design</dt>
+                    <dd>
+                        Media queries and flexbox layouts are utilized to adapt the page for various devices, ensuring a
+                        seamless user experience on mobile and desktop. Accessibility features, including proper use of
+                        aria-labels, alt attributes, and tooltips, guarantee that the content is usable by all
+                        individuals.
+                    </dd>
+
+                    <dt>Brand Consistency and Thematic Relevance</dt>
+                    <dd>
+                        Consistent styling through a global CSS file, along with the inclusion of branding elements
+                        (such as logos and thematic icons), reinforces the website's identity. Every design choice—from
+                        the hero section layout to the detailed table presentations—supports the overarching goal of
+                        providing comprehensive, interactive global education data.
+                    </dd>
+                </dl>
 
                 <h3>Accessibility</h3>
-                <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+
+                <h4>Accessibility Principles and Implementations</h4>
+                <dl>
+                    <dt>Document Structure and Semantic HTML</dt>
+                    <dd>
+                        All pages begin with the proper HTML5 declaration (<code>&lt;!DOCTYPE html&gt;</code>) and
+                        specify the language (<code>&lt;html lang="en"&gt;</code>). This semantic markup is crucial for
+                        screen readers and search engines, ensuring that assistive technologies can accurately interpret
+                        the content.
+                    </dd>
+
+                    <dt>Accessible Navigation</dt>
+                    <dd>
+                        The navigation sidebar is constructed using the semantic <code>&lt;nav&gt;</code> element and
+                        includes a toggle button with a clear <code>title</code> attribute. This supports keyboard
+                        navigation and helps users understand the function of the sidebar.
+                    </dd>
+
+                    <dt>Accessible Data Tables</dt>
+                    <dd>
+                        Each table incorporates descriptive <code>aria-label</code> attributes (e.g.,
+                        <code>aria-label="Quality Education Data"</code>) and proper table header markup
+                        (<code>&lt;th&gt;</code>). These practices enable screen readers to interpret table structures
+                        and relay information about the data correctly.
+                    </dd>
+
+                    <dt>Images and Icons</dt>
+                    <dd>
+                        All images, including logos, icons, and thumbnails, are provided with descriptive
+                        <code>alt</code> attributes. Thumbnails in header rows include <code>title</code> attributes
+                        that serve as tooltips, offering additional context which enhances the experience for users with
+                        visual impairments.
+                    </dd>
+
+                    <dt>Interactive Elements</dt>
+                    <dd>
+                        Interactive components such as the sidebar toggle, "Go to Top" button, and chart modal buttons
+                        are designed to be fully keyboard accessible. They include descriptive labels and title
+                        attributes to ensure that users relying on assistive technology can easily interact with them.
+                    </dd>
+
+                    <dt>Modal Dialog Accessibility</dt>
+                    <dd>
+                        The chart modal includes a clearly identifiable close button (<code>&times;</code>) and is
+                        designed to manage focus appropriately when active. This ensures that users navigating via
+                        keyboard or screen readers can interact with the modal dialog efficiently.
+                    </dd>
+
+                    <dt>Responsive and Accessible Design</dt>
+                    <dd>
+                        Responsive design principles, such as media queries and flexible layouts, are employed to ensure
+                        that content is readable and navigable on all devices. This approach guarantees that the pages
+                        remain accessible whether viewed on desktop, tablet, or mobile devices.
+                    </dd>
+                </dl>
+
+                <h4>Summary</h4>
+                <p>
+                    The assigned web pages—including the main tables page and the four individual table
+                    pages—demonstrate a robust commitment to accessibility. Through the use of semantic HTML,
+                    comprehensive labeling, keyboard navigable interactive elements, and responsive design, these pages
+                    adhere to modern accessibility standards. This ensures an inclusive and user-friendly experience for
+                    all users, including those with disabilities.
+                </p>
 
                 <h3>Link to the validation page</h3>
-                <!-- Update the path to link the Page Editor with the splash page -->
-                <p><a href="validation_ST0.html#volunteerVal">Include a link to the validation page</a>, use the marker
-                    to jump to the corresponding section of the validation page.</p>
-                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
+                <p><a href="../ValidationPage/validation _ST2.html#tableV">Go to Validation Page - Global Data (Table) Page Section</a>
 
-                <h3>Link to the page</h3>
-                <p><a href="volunteer.html">Include a link to the actual page you describe.</a></p>
+                <h3>Link to the Global Data Page</h3>
+
+                <p><a href="../Table/table.html">Go to Global Data Page (table.html)</a></p>
             </section>
 
+            <!-- ------------------------------------------------ Content Page ------------------------------------------------------------------------------------- -->
+
             <section>
-                <h2 id="content">Content Page</h2>
+                <h2 id="content" class="linkoffset">Content Page</h2>
                 <h3>Technical Description</h3>
-                <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the
-                    key tags and styling choices focusing on functionality and design without copying large code
-                    sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS
-                    properties used to create structure and styling.</p>
+
+                <h4>HTML Techniques</h4>
+                <dl>
+                    <dt>Document Structure &amp; Metadata</dt>
+                    <dd>
+                        The content page starts with a proper HTML5 declaration (<code>&lt;!DOCTYPE html&gt;</code>) and
+                        specifies the language (<code>&lt;html lang="en"&gt;</code>). Within the
+                        <code>&lt;head&gt;</code> section, essential metadata such as
+                        <code>&lt;meta charset="UTF-8"&gt;</code> and
+                        <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code> are
+                        included to ensure correct encoding and responsiveness. External resources (CSS and JavaScript)
+                        are linked to maintain separation of content, presentation, and behavior.
+                    </dd>
+
+                    <dt>Key Structural Tags</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <strong>Header Placeholder - </strong> The
+                                <code>&lt;div id="header-placeholder"&gt;</code> serves as a container for dynamic
+                                header content, ensuring consistency across the site.
+                            </li>
+                            <li>
+                                <strong>Hero Section - </strong> Encapsulated within
+                                <code>&lt;section class="hero-section"&gt;</code> and enhanced with an overlay
+                                (<code>&lt;div class="hero-overlay"&gt;</code>), this section uses headings
+                                (<code>&lt;h1&gt;</code>) and paragraphs (<code>&lt;p&gt;</code>) to deliver a
+                                compelling introductory message that defines the theme of Quality Education.
+                            </li>
+                            <li>
+                                <strong>Main Content Areas - </strong> The primary content is organized within a
+                                <code>&lt;div class="content-all"&gt;</code>, and further segmented into multiple
+                                <code>&lt;section&gt;</code> elements. Each section (such as "What is Quality
+                                Education?", "The Role of Education in Sustainable Development", "Global Education
+                                Challenges", "Why is Quality Education Important?", "Innovative Approaches", and
+                                "Conclusion") is uniquely identified with an <code>id</code> attribute for internal
+                                navigation and uses semantic tags to establish a clear document hierarchy.
+                            </li>
+                            <li>
+                                <strong>Image and Text Content - </strong> The content sections employ a combination of
+                                <code>&lt;div class="content-image"&gt;</code> and
+                                <code>&lt;div class="content-text"&gt;</code> to neatly separate images from text,
+                                providing visual balance and clarity. This approach supports accessibility and
+                                responsive design.
+                            </li>
+                            <li>
+                                <strong>Internal Navigation - </strong> A sidebar navigation
+                                (<code>&lt;nav id="sidebar"&gt;</code>) with anchor links allows users to quickly jump
+                                to different sections of the page. The use of a toggle button
+                                (<code>&lt;button id="sidebar-toggle"&gt;</code>) enhances interactivity.
+                            </li>
+                            <li>
+                                <strong>Footer Placeholder - </strong> The
+                                <code>&lt;div id="footer-placeholder"&gt;</code> is used for inserting footer content
+                                dynamically, maintaining uniformity across pages.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+
+                <h4>CSS Techniques</h4>
+                <dl>
+                    <dt>Layout and Spacing</dt>
+                    <dd>
+                        Global CSS rules (from <code>global.css</code>) and page-specific styles (from
+                        <code>content_ST2.css</code>) define the overall layout. The <code>body</code> margin and the
+                        <code>.content-all</code> container create consistent spacing. The use of flexbox in
+                        <code>.content-section</code> ensures a flexible layout that adjusts the positioning of images
+                        and text.
+                    </dd>
+
+                    <dt>Visual Enhancements</dt>
+                    <dd>
+                        The hero section employs a background image with an overlay (<code>.hero-overlay</code>) to
+                        enhance text readability. Headings within content sections are styled with background colors and
+                        padding to emphasize section titles. Additionally, alternating layouts (image-left and
+                        image-right) are implemented to create visual interest.
+                    </dd>
+
+                    <dt>Responsive Design</dt>
+                    <dd>
+                        Media queries adjust the layout for screens with a maximum width of 768px. For example, the
+                        <code>.content-section</code> layout switches to a column orientation, ensuring that text and
+                        images stack vertically for improved readability on mobile devices.
+                    </dd>
+
+                    <dt>Interactive Elements</dt>
+                    <dd>
+                        The sidebar navigation and "Go to Top" button are styled with hover effects and smooth
+                        transition animations, enhancing user interaction and overall usability.
+                    </dd>
+                </dl>
+
+                <h4>Logic, Purpose, and Design Decisions</h4>
+                <dl>
+                    <dt>Modular Structure</dt>
+                    <dd>
+                        The use of placeholders (<code>header-placeholder</code> and <code>footer-placeholder</code>)
+                        along with distinct content sections supports modularity. This design choice allows for easy
+                        updates and maintenance while ensuring consistency across the website.
+                    </dd>
+
+                    <dt>Clear Content Hierarchy</dt>
+                    <dd>
+                        Semantic HTML elements (such as <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, and
+                        <code>&lt;h2&gt;</code>) establish a logical hierarchy that benefits both users and search
+                        engines. This structure aids accessibility and improves the overall user experience.
+                    </dd>
+
+                    <dt>Responsive and Adaptive Design</dt>
+                    <dd>
+                        The combination of global CSS rules and responsive media queries ensures that the content is
+                        accessible and visually appealing on all devices. This is critical for maintaining usability
+                        across different screen sizes and enhancing engagement.
+                    </dd>
+
+                    <dt>User-Centric Interactivity</dt>
+                    <dd>
+                        Interactive elements such as the sidebar toggle and "Go to Top" button provide intuitive
+                        navigation. These features, backed by JavaScript, enhance the user experience by enabling smooth
+                        scrolling and efficient navigation within the page.
+                    </dd>
+                </dl>
 
                 <h3>Accessibility</h3>
-                <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                <br>
+                <h4>Semantic HTML for Improved Accessibility</h4>
+                <dl>
+                    <dt>Use of Semantic Elements</dt>
+                    <dd>
+                        The content page utilizes semantic HTML tags such as <code>&lt;section&gt;</code>,
+                        <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, and <code>&lt;footer&gt;</code> to create
+                        a well-structured document. This logical structure aids screen readers and assistive
+                        technologies in navigating and interpreting the content efficiently.
+                    </dd>
+                    <dt>Descriptive Alternative Texts</dt>
+                    <dd>
+                        Every image is provided with a meaningful alt attribute (e.g.,
+                        <code>alt="Classroom with engaged students"</code> and
+                        <code>alt="A makeshift school in a rural area"</code>). These descriptive texts ensure that
+                        users who rely on screen readers can understand the visual content, thereby enhancing
+                        accessibility.
+                    </dd>
+                </dl>
+
+                <h4>Responsive and Accessible Design</h4>
+                <dl>
+                    <dt>Responsive Layouts</dt>
+                    <dd>
+                        The design incorporates responsive techniques using Flexbox and media queries. This ensures that
+                        the layout adapts seamlessly to different screen sizes, making the content easily accessible on
+                        mobile devices, tablets, and desktops.
+                    </dd>
+                    <dt>Color Contrast and Readability</dt>
+                    <dd>
+                        High color contrast between text and background is maintained through the use of overlays and
+                        well-chosen color variables. These practices enhance readability, particularly for users with
+                        visual impairments, and help meet established accessibility standards.
+                    </dd>
+                </dl>
+
+                <h4>Accessible Interactive Elements</h4>
+                <dl>
+                    <dt>Keyboard Navigable Navigation</dt>
+                    <dd>
+                        The internal sidebar navigation and the "Go to Top" button are designed to be fully keyboard
+                        accessible. The sidebar toggle button includes a title attribute, ensuring that users can
+                        identify its functionality and navigate the page without relying solely on a mouse.
+                    </dd>
+                    <dt>Accessible Links and Buttons</dt>
+                    <dd>
+                        All interactive elements such as links and buttons include descriptive labels and titles. This
+                        enables users who depend on assistive technologies to interact with the page elements
+                        confidently.
+                    </dd>
+                </dl>
+
+                <h4>Overall Impact</h4>
+                <dl>
+                    <dt>Inclusive User Experience</dt>
+                    <dd>
+                        By integrating semantic HTML, providing descriptive alt texts, and ensuring responsive design,
+                        the content page is built to accommodate a wide range of users, including those with
+                        disabilities. These measures not only comply with accessibility guidelines but also
+                        significantly enhance the overall user experience.
+                    </dd>
+                    <dt>Future-Proofing Accessibility</dt>
+                    <dd>
+                        The thoughtful use of accessible design practices and semantic markup lays a strong foundation
+                        for future enhancements. As new features are added or accessibility standards evolve, the
+                        content page will remain inclusive and user-friendly.
+                    </dd>
+                </dl>
 
                 <h3>Link to the validation page</h3>
-                <!-- Update the path to link the Page Editor with the splash page -->
-                <p><a href="validation_ST0.html#contentVal">Include a link to the validation page</a>, use the marker to
-                    jump to the corresponding section of the validation page.</p>
-                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
+                <p><a href="../ValidationPage/validation _ST2.html#contentV">Go to Validation Page - What is Quality Education Page (Content
+                        student 2) Section</a>
 
-                <h3>Link to the page</h3>
-                <p><a href="content.html">Include a link to the actual page you describe.</a></p>
+                <h3>Link to the Content page</h3>
+                <p><a href="../Content/content_ST2.html">Go to What is Quality Education Page (content_ST2.html)</a></p>
             </section>
 
+            <!-- ------------------------------------------------ Challenge Section ------------------------------------------------------------------------------------- -->
+
             <section>
-                <h2 id="challenge"> Challenges and Lessons Learned</h2>
-                <p>Detail any challenges encountered during the implementation process and explain how they were
-                    resolved. Reflect on the lessons learned from overcoming these challenges.</p>
+                <h2 id="challenge" class="linkoffset"> Challenges and Lessons Learned</h2>
+                <p>
+                    Throughout the development of our project, our team encountered several challenges that provided
+                    valuable learning experiences.
+                    Below are the key challenges we faced, how we addressed them, and the lessons we learned from the
+                    experience.
+                </p>
+
+                <dl>
+
+                    <dt><strong>1. Integration of Responsive Design</strong></dt>
+                    <dd>
+                        Initially, we struggled with making the website fully responsive across different screen sizes.
+                        Some elements were not aligning properly, and maintaining consistency in layout proved
+                        difficult.
+                        <ul>
+                            <li><strong>Solution -</strong> We researched CSS Flexbox and Grid techniques, implemented a
+                                mobile-first approach, and used browser developer tools for debugging. still coudent
+                                make it
+                                responcive to mobiles completly
+                            </li>
+                            <li><strong>Lesson Learned -</strong> Planning for responsiveness from the start and testing
+                                on multiple devices early in development can prevent major redesign efforts later.
+                            </li>
+                        </ul>
+                    </dd>
+
+                    <dt><strong>2. Managing Dynamic Data Handling</strong></dt>
+                    <dd>
+                        Integrating dynamic content, such as tables and user input forms, posed challenges in ensuring
+                        smooth data updates without causing page reloads or layout shifts.
+                        <ul>
+                            <li><strong>Solution -</strong> We implemented asynchronous JavaScript techniques and
+                                learned how to efficiently update the DOM.
+                            </li>
+                            <li><strong>Lesson Learned -</strong> Understanding how the front-end interacts with data
+                                dynamically is crucial for building seamless user experiences.
+                            </li>
+                        </ul>
+                    </dd>
+
+                    <dt><strong>3. Accessibility and User Experience</strong></dt>
+                    <dd>
+                        Ensuring our website was accessible to all users, including those with disabilities, required
+                        extra attention. screen reader compatibility, and color contrast were areas where
+                        improvements were needed.
+                        <ul>
+                            <li><strong>Solution -</strong> We followed WCAG guidelines, incorporated ARIA attributes,
+                                and used tools like Lighthouse to evaluate accessibility.
+                            </li>
+                            <li><strong>Lesson Learned -</strong> Accessibility should be considered from the beginning
+                                rather than as an afterthought, making it easier to integrate inclusive design
+                                practices.
+                            </li>
+                        </ul>
+                    </dd>
+
+                    <dt><strong>4. Team Collaboration and Code Consistency</strong></dt>
+                    <dd>
+                        Differences in coding styles and levels of expertise sometimes led to inconsistencies, making
+                        debugging and merging code more complex.
+                        <ul>
+                            <li><strong>Solution -</strong> We established a coding standard, conducted regular code
+                                reviews, and used Git for version control.
+                            </li>
+                            <li><strong>Lesson Learned -</strong> Consistent coding practices and effective use of
+                                version control streamline teamwork and reduce conflicts.
+                            </li>
+                        </ul>
+                    </dd>
+
+                    <dt><strong>5. Time Management and Meeting Deadlines</strong></dt>
+                    <dd>
+                        Balancing coursework, team schedules, and development tasks proved challenging, leading to
+                        occasional delays. Also as a part time learners we had to spent most of the time to our jobs.
+                        <ul>
+                            <li><strong>Solution -</strong> We used task management tools like Trello and set smaller
+                                milestones to track progress more effectively.
+                            </li>
+                            <li><strong>Lesson Learned -</strong> Breaking tasks into smaller deliverables and
+                                maintaining clear deadlines improves workflow efficiency.
+                            </li>
+                        </ul>
+                    </dd>
+
+                </dl>
+
+                <h3>Final Reflection</h3>
+                <p>
+                    This project reinforced the importance of structured planning, effective communication, and
+                    continuous learning.
+                    While technical difficulties and collaboration hurdles were present, they ultimately strengthened
+                    our problem-solving
+                    skills and adaptability. Moving forward, we aim to apply these lessons in future projects, ensuring
+                    smoother development processes and higher-quality outcomes.
+                </p>
             </section>
 
+            <!-- ------------------------------------------------ compliance Section ------------------------------------------------------------------------------------- -->
+
             <section>
-                <h2 id="compliance"> Compliance</h2>
-                <p>Discuss how the pages you have created are compliant with Janet regulations governing web page
-                    publication. This includes demonstrating your understanding and application of these regulations. Be
-                    realistic and truthful.</p>
+                <h2 id="compliance" class="linkoffset"> Compliance</h2>
+                <p>
+                    Our website follows Janet regulations to ensure secure, ethical, and legally compliant content.
+                    Below are
+                    key measures taken to align with these standards.
+                </p>
 
+                <dl>
+                    <dt><strong>1. Appropriate and Legal Content</strong></dt>
+                    <dd>
+                        All content on our website is appropriate for an educational setting and aligns with
+                        Janet’s Acceptable Use Policy (AUP). We ensure that
+                        <ul>
+                            <li>No offensive, discriminatory, or inappropriate material is present.</li>
+                            <li>Content is fact-checked and sourced from reliable, verifiable references.</li>
+                            <li>Any interactive elements, such as feedback forms, prevent misuse through input
+                                validation.</li>
+                        </ul>
+                    </dd>
 
+                    <dt><strong>2. Secure and Ethical Development Practices</strong></dt>
+                    <dd>
+                        Security and ethical coding practices are fundamental in web development. To ensure compliance,
+                        we have
+                        <ul>
+                            <li>Hosted the website on an HTTPS-enabled server, ensuring encrypted and secure data
+                                transmission.</li>
+                            <li>Implemented clean and efficient code, avoiding unnecessary scripts or security
+                                vulnerabilities.</li>
+                        </ul>
+                    </dd>
+
+                    <dt><strong>3. Copyright and Licensing Compliance</strong></dt>
+                    <dd>
+                        To respect copyright laws and intellectual property rights, we have
+                        <ul>
+                            <li>Used only royalty-free images and properly cited sources where necessary.</li>
+                            <li>Ensured that all written content is original or referenced correctly, avoiding
+                                plagiarism.</li>
+                        </ul>
+                    </dd>
+
+                    <dt><strong>4. Accessibility Standards (WCAG Compliance)</strong></dt>
+                    <dd>
+                        Accessibility is a key consideration in our web development, ensuring inclusivity for users with
+                        disabilities.
+                        Our website adheres to the Web Content Accessibility Guidelines (WCAG) through
+                        <ul>
+                            <li>Providing alternative text (alt attributes) for images.</li>
+                            <li>Ensuring proper color contrast for readability.</li>
+                            <li>Using semantic HTML for improved accessibility and navigation.</li>
+                        </ul>
+                    </dd>
+
+                </dl>
+
+                <h3>Final Reflection</h3>
+                <p>
+                    By adhering to these regulations, we ensure a secure, ethical, and accessible website that provides
+                    a
+                    positive experience for all users.
+                </p>
             </section>
 
+            <!-- ------------------------------------------------ Refrence Section ------------------------------------------------------------------------------------- -->
+
             <section>
-                <h2 id="ref">References</h2>
-                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified
-                    style). For example:<br><br>
-                <ul class="ref">
-                    <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last
-                        accessed: 11 Feb 2025).</li>
-                    <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc.
-                            Indianappolis.</i></li>
-                </ul>
+                <h2 id="ref" class="linkoffset">References</h2>
+
+                <p>
+                    Below are the key resources and data sources that informed our project.
+                </p>
+                <div class="refrence">
+                    <h3>Content Resources</h3>
+                    <ul class="ref">
+                        <li>
+                            UNESCO Institute for Statistics. (2021). <i>Education and Literacy Statistics.</i>
+                            Available at: <a href="https://uis.unesco.org" target="_blank">https://uis.unesco.org</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            UNICEF. (2020). <i>Out-of-School Children: Global Education Challenges.</i>
+                            Available at: <a href="https://www.unicef.org" target="_blank">https://www.unicef.org</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            World Bank. (2021). <i>The Economic Returns of Education.</i>
+                            Available at: <a href="https://www.worldbank.org"
+                                target="_blank">https://www.worldbank.org</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            OECD. (2021). <i>Education at a Glance.</i>
+                            Available at: <a href="https://www.oecd.org/education"
+                                target="_blank">https://www.oecd.org/education</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            Khan Academy. (n.d.). <i>About Khan Academy.</i>
+                            Available at: <a href="https://www.khanacademy.org"
+                                target="_blank">https://www.khanacademy.org</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            W3Schools. (n.d.). <i>Online Web Tutorials.</i>
+                            Available at: <a href="https://www.w3schools.com"
+                                target="_blank">https://www.w3schools.com</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            The Website Architect. (n.d.). <i>YouTube Channel.</i>
+                            Available at: <a href="https://www.youtube.com/@thewebsitearchitect"
+                                target="_blank">https://www.youtube.com/@thewebsitearchitect</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            Webdeasy. (n.d.). <i>Top 20 CSS Buttons Animations.</i>
+                            Available at: <a href="https://dev.to/webdeasy/top-20-css-buttons-animations-f41"
+                                target="_blank">https://dev.to/webdeasy/top-20-css-buttons-animations-f41</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                    </ul>
+
+                    <h3>Image Resources</h3>
+                    <ul class="ref">
+                        <li>
+                            iStock. (2025). <i>iStock Photo Resources.</i>
+                            Available at: <a href="https://www.istockphoto.com"
+                                target="_blank">https://www.istockphoto.com</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            Pexels. (n.d.). <i>Free Stock Photos for Education.</i>
+                            Available at: <a href="https://www.pexels.com/search/education/"
+                                target="_blank">https://www.pexels.com/search/education/</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            Pixabay. (n.d.). <i>Free Stock Photos for Education.</i>
+                            Available at: <a href="https://pixabay.com/images/search/education/"
+                                target="_blank">https://pixabay.com/images/search/education/</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            Freepik. (n.d.). <i>Free Education Photos and Vectors.</i>
+                            Available at: <a href="https://www.freepik.com/photos/education"
+                                target="_blank">https://www.freepik.com/photos/education</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            Burst by Shopify. (n.d.). <i>Free Stock Photos for Education.</i>
+                            Available at: <a href="https://www.shopify.com/stock-photos/education"
+                                target="_blank">https://www.shopify.com/stock-photos/education</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                    </ul>
+
+                    <h3>Table Data Sources</h3>
+                    <ul class="ref">
+                        <li>
+                            UNESCO Institute for Statistics. (2021). <i>Education and Literacy Statistics.</i>
+                            Available at: <a href="https://uis.unesco.org" target="_blank">https://uis.unesco.org</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            UNICEF. (2020). <i>Out-of-School Children: Global Education Challenges.</i>
+                            Available at: <a href="https://www.unicef.org" target="_blank">https://www.unicef.org</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            World Bank. (2021). <i>The Economic Returns of Education.</i>
+                            Available at: <a href="https://www.worldbank.org"
+                                target="_blank">https://www.worldbank.org</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                        <li>
+                            OECD. (2021). <i>Education at a Glance.</i>
+                            Available at: <a href="https://www.oecd.org/education"
+                                target="_blank">https://www.oecd.org/education</a>
+                            (Last accessed: 11 Feb 2025).
+                        </li>
+                    </ul>
+                </div>
             </section>
 
             <p class="top"><a href="#top">Go top</a></p>
         </main>
 
-        <!-- Sidebar area -->
-        <aside>
-            <h3>Core pages developed:</h3>
+        <!-- --------------------------------------------------------- Sidebar area ------------------------------------------------------------------------------------ -->
 
-            <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+        <aside>
+            <h3>Core pages developed</h3>
+
             <ul class="top-level-ul">
-                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
                 <li>Student 2</li>
                 <ul>
-                    <li><a href="#splash">Home Page</a></li>
-                    <li><a href="#volunteer">Table Page (education data)</a></li>
+                    <li><a href="#home">Home Page</a></li>
+                    <li><a href="#table">Table Page (education data)</a></li>
                     <li><a href="#content">Content page</a></li>
                 </ul>
 
@@ -134,6 +973,7 @@
                 <li><a href="#ref">References</a></li>
             </ul>
         </aside>
+
     </div>
 
     <div id="footer-placeholder"></div>

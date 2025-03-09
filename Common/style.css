@@ -62,7 +62,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #F8F6F0;
+    background-color: var(--color-bacground-body);
     color: var(--color-text);
 }
 
@@ -77,4 +77,16 @@ img {
     top: 0;
     width: 100%;
     z-index: 1000;
+}
+
+.linkoffset {
+    position: relative;
+}
+
+.linkoffset::before {
+    content: "";
+    display: block;
+    height: 108px;
+    margin-top: -108px;
+    visibility: hidden;
 }
