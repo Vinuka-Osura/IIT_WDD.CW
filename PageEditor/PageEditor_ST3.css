@@ -16,19 +16,26 @@ body {
 main {
     flex: 3;
 }
+p {
+    font-size: 15px; 
+    max-width: 80%; 
+    margin: 0 auto;
+    line-height: 1.6; 
+    color: #333; 
+}
 
 aside {
     flex: 1;
-    background-color: #f4f4f4;
+    background-color: #d2efff;
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #b5cef4;
     margin-right: 20px;
 }
 section {
     margin-bottom: 20px;
     padding: 15px;
-    border: 1px solid #ddd;
-    background-color: #fafafa;
+    border: 1px solid #bcdbf0;
+    background-color: #bad0ed;
 }
 
 .ref li{
@@ -47,7 +54,7 @@ aside li{
 .stud {
     text-align: center;
     line-height: 0;
-    background-color: #cbccc2ef;
+    background-color: #6dd7d2ef;
     color: white;
     margin-top: 8px;
 }

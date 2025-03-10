@@ -29,17 +29,19 @@
         </fieldset>
         
         <fieldset>
-            <legend>Feedback Details</legend>
-            <label for="comments">Comment or Message:</label>
-            <textarea id="comments" name="comments" rows="4" maxlength="500" oninput="updateCharCount()"></textarea>
-            <p id="char-count">500 characters remaining</p>
-            
+
             <label for="feedback-type">Feedback Type:</label>
             <select id="feedback-type" name="feedback-type">
                 <option value="suggestion">Suggestion</option>
                 <option value="complaint">Complaint</option>
                 <option value="question">Question</option>
             </select>
+            <legend>Feedback Details</legend>
+            <label for="comments">Comment or Message:</label>
+            <textarea id="comments" name="comments" rows="4" maxlength="500" oninput="updateCharCount()"></textarea>
+            <p id="char-count">500 characters remaining</p>
+            
+           
             
             <label>Rating:</label>
             <div class="rating">
