@@ -9,6 +9,7 @@ body {
     font-size: 3rem;
     font-weight: bold;
     text-align: left;
+    margin-top: 150px;
     margin-left: 3%;
     color: rgb(0, 0, 0);
 }
@@ -513,7 +514,7 @@ body {
 }
 
 .submit-btn {
-    background-color: #007bff;
+    background-color: #042a54;
     color: white;
 }
 

@@ -4,6 +4,8 @@
 
 /* Sections with Scroll Margin */
 #splashVal
+#volunteerVal
 {
     scroll-margin-top: 150px; /* Adjust based on header height */
+
 }

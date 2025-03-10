@@ -236,26 +236,95 @@
                         </ul>
 
                     <h4>Wave Evaluation report for accessibility in Volunteer Page</h4>
-                    <img src="../PageEditor/images/Screenshot 2025-03-09 215154.png">
+                    <img src="../PageEditor/images/Screenshot 2025-03-10 023035.png">
 
-                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#volunteerVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
-
-                        
+                    <h3>Link to the validation page</h3> 
+                        <p><a href="../ValidationPage/validation_ST1.html#volunteerhVal">Navigate to Validation page - Volunteer Page section</a></p> 
                     <h3>Link to the page</h3>
-                        <p><a href="volunteer.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="../Volunteer/volunteer.html">Navigate to Volunteer Page</a></p>
             </section>
 
             <section>
                 <h2 id="content">Content Page</h2>
+
+                    <h3>Technical Description</h3>
+
+                    <h4>HTML Techniques</h4>
+                    <ul class="bullet-point-list">
+                        <li>Semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;footer&gt;</code> are used to structure the content logically.
+                             This improves accessibility and maintainability.
+                        </li>
+                        <li>ARIA roles and attributes enhance accessibility for screen readers and keyboard navigation.</li>
+                        <li>External resources (e.g., CSS and JavaScript files) promote modularity and reusability.</li>
+
+                    </ul>
+
+                    <h4>CSS Techniques</h4>
+                    <ul class="bullet-point-list">
+                        <li>Flexbox layout is used for creating flexible and responsive layouts.
+                            <ul class="bullet-point-list">
+                                <li><b>display: flex </b>: Used in .box, .zigzag-row, and .card-container for flexible alignment.</li>
+
+                                <li><b>flex-direction</b>: Controls the direction of flex items (e.g., row or column).</li>    
+                                    
+                                <li><b>justify-content and align-items</b>: Center content horizontally and vertically.</li>
+                            </ul>
+                        </li>
+                        <li>Grid Layout is used for creating complex, responsive layouts.
+                            <ul class="bullet-point-list">
+                                <li><b>display: grid </b>: Used in .goals-grid for a responsive card layout.</li>
+
+                                <li><b>grid-template-columns</b>: Defines the number and size of columns.</li>    
+                                    
+                                <li><b>gap</b>: Adds spacing between grid items.</li>
+                            </ul>
+                        </li>
+                        <li>Media queries ensure the page adapts to different screen sizes.
+                            <ul class="bullet-point-list">
+                                <li><b>@media </b>: Adjusts layout and styles for smaller screens (e.g., stacking elements vertically).</li>
+
+                                <li><b>width, height, and flex</b>: Ensure elements resize and reposition appropriately.</li>  
+                            </ul>
+                        </li>
+                        <li>Creates a fixed, collapsible sidebar for navigation.
+                            <ul class="bullet-point-list">
+                                <li><b>position: fixed</b>: Keeps the sidebar in place while scrolling.</li>
+
+                                <li><b>width and height</b>: Define the size of the sidebar.</li>    
+                                    
+                                <li><b>background-color and color</b>: Set the sidebar's color scheme.</li>
+                                
+                                <li><b>overflow-y: auto</b>: Adds scrolling if the content overflows.</li>
+                            </ul>
+                        </li>
+                        <li> Zig Zag Layout alternates between image and text for a dynamic, engaging layout.
+                            <ul class="bullet-point-list">
+                                <li><b>flex-direction </b>:  Alternates between row and row-reverse for zigzag effect.</li>
+                            </ul>
+                        </li>
+                        <li> Sroll Margins ensures target anchor links account for sidebar menu options.
+                            <ul class="bullet-point-list">
+                                <li><b>scroll-margin-top </b>:  Adds space above sections to prevent content from being hidden behind the header.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
                     
 
                     <h3>Accessibility</h3>
-                        
+                        <ul class="bullet-point-list">
+                            <li>Semantic HTML tags provide meaning and structure to the content, making it easier for screen readers and assistive technologies to interpret.</li>
+                            <li>ARIA (Accessible Rich Internet Applications) roles and attributes enhance accessibility for interactive elements.</li>
+                            <li>Ensures all interactive elements are accessible via keyboard "Tab". sers who cannot use a mouse can still interact with the page.</li>
+                            <li>Ensures text is readable for users with visual impairments. 
+                                Text and background colors meet WCAG 2.1 AA contrast requirements (e.g., dark blue text on a light background).
+                                Users with low vision or color blindness can read the content easily.</li>
+                            <li>Provides text alternatives for images, making them accessible to screen readers.
+                                Visually impaired users can understand the content of images through screen readers.</li>   
+                        </ul>
 
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#contentVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
-
+                        <p><a href="../ValidationPage/validation_ST1.html#volunteerVal">Navigate to Validation page - Volunteer Page section</a></p>
                         
                     <h3>Link to the page</h3>
                         <p><a href="content.html">Include a link to the actual page you describe.</a></p>
@@ -324,7 +393,7 @@
     </div>
 
     <footer>
-        <p>Replace the footer with your teams' website footer</p>
+        <div id="footer-placeholder"></div>
     </footer>
 </body>
 </html>
