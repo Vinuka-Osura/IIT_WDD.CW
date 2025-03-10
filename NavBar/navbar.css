@@ -25,15 +25,9 @@
 }
 
 .header-logo img {
-    height: 50px;
+    height: 60px;
     width: auto;
     margin-right: 10px;
-}
-
-.site-name {
-    color: var(--color-text-inverse);
-    font-size: 24px;
-    font-weight: 600;
 }
 
 /* Header Icons */
@@ -330,4 +324,14 @@ body.dark-mode .header-container {
     .navbar-item {
         margin: 5px 0;
     }
+}
+
+.name {
+    font-family: 'Dancing Script', cursive;
+}
+
+.name {
+    color: var(--color-text-inverse);
+    font-size: 40px;
+    font-weight: 600;
 }
