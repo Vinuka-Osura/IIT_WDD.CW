@@ -61,17 +61,17 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 8px;
-  }
-  
-  .dataTables_wrapper .col-4 {
+}
+
+.dataTables_wrapper .col-4 {
     flex: 1;
-  }
-  
-  .dataTables_wrapper .text-center {
+}
+
+.dataTables_wrapper .text-center {
     text-align: center;
-  }
-  
-  .dt-header {
+}
+
+.dt-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +82,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .footer-left {

@@ -37,11 +37,21 @@
   text-align: center;
 }
 
-.header-thumb {
+/* .header-thumb {
   width: 20px;
   vertical-align: middle;
   margin-right: 4px;
+} */
+
+.header-thumb {
+  width: 20px;
+  height: auto; /* Maintains aspect ratio */
+  vertical-align: middle;
+  margin-right: 4px;
+  display: inline-block; /* Ensures proper alignment if used inside text */
+  border-radius: 4px; /* Optional: Adds rounded corners for a smoother look */
 }
+
 
 a.table-link {
   color: var(--color-primary);

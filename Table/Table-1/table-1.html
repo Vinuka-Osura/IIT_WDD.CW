@@ -18,8 +18,8 @@
         <table id="education-data" class="display">
             <thead>
                 <tr>
-                    <th rowspan="2" width="100px">Country</th>
-                    <th rowspan="2"> Country <br> Flag</th>
+                    <th rowspan="2" width="90px">Country</th>
+                    <th rowspan="2" width="90px" hight="50px"> Country <br> Flag</th>
                     <th colspan="2">2015 Data</th>
                     <th colspan="2">2020 Data</th>
                     <th colspan="2">Absolute Change</th>
@@ -51,7 +51,7 @@
                         {
                             "data": "flag",
                             "render": function (data, type, row) {
-                                return '<img src="' + data + '" alt="' + row.country + ' Flag" style="height:30px;">';
+                                return '<img src="' + data + '" alt="' + row.country + ' Flag" style="height:50px;">';
                             }
                         },
                         { "data": "literacy2015" },
