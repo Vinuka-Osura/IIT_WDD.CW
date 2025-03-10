@@ -9,6 +9,7 @@
   border-collapse: collapse;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-table-background);
 }
 
 #projects-table th,
@@ -92,11 +93,6 @@
 
 #projects-table a:hover {
   text-decoration: underline;
-}
-
-.icon-check {
-  color: green;
-  font-weight: bold;
 }
 
 #projects-table th[title] {
