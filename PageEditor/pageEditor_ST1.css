@@ -36,8 +36,12 @@ p{
 /* Sections with Scroll Margin */
 #splash
 #volunteer
+#content
+#challenge
+#compliance
+#ref
 {
-    scroll-margin-top: 150px; /* Adjust based on header height */
+    scroll-margin-top: 315px; /* Adjust based on header height */
 }
 
 
