@@ -1,89 +1,382 @@
-
-/* Sidebar Styles */
-.container {
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     display: flex;
-    align-items: stretch;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+}
+/* Main Container */
+.container {
+    margin-top: 115px;
+    display: flex;
+    flex: 1;
+    padding: 20px; /* Add padding around the container */
+    gap: 20px; /* Space between sidebar and content */
 }
 
 /* Sidebar */
 .sidebar {
-    width: 0; /* Start with collapsed sidebar */
-    min-height: 100vh;
-    background-color:#b8b9bb;
-    padding-top: 60px;
-    transition: width 0.3s ease;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    overflow: hidden;
-    z-index: 0;
+    width: 250px; /* Fixed width for sidebar */
+    background-color: #043155; /* Light blue background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
 }
 
-.sidebar.open {
-    width: 220px;
+/* Main Content */
+.content {
+    flex: 1; /* Take up remaining space */
+    background-color: #f4f9ff; /* Light blue background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
 }
 
-/* Sidebar Menu Items */
 .sidebar nav ul {
-    list-style: none;
+    list-style: none; /* Remove bullet points */
     padding: 0;
     margin: 0;
 }
 
 .sidebar nav ul li {
     padding: 15px;
-    text-align: left;
+    border-bottom: 1px solid #094776; /* Add a border between items */
 }
 
 .sidebar nav ul li a {
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    display: block;
+    font-size: 1.1em;
 }
 
 .sidebar nav ul li a:hover {
-    background-color: #006494;
+    color: #ffcc00; /* Yellow on hover */
 }
 
-/* Toggle Button */
-.toggle-btn {
-    position: absolute;
-    left: 0; /* Keep it always visible */
-    top: 110px;
-    background-color: #104da6;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 1000; /* Ensure it stays above everything */
-    transition: left 0.3s ease;
+/* Box Container */
+.box {
+    display: flex; /* Use flexbox for layout */
+    background-color: #f4f9ff; /* Light blue background */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    margin: 20px; /* Add margin around the box */
 }
 
-/* Move button when sidebar expands */
-.sidebar.open + .toggle-btn {
-    left: 220px; /* Push the button to match expanded sidebar */
+/* Box Image */
+.box-image {
+    flex: 1; /* Take up half the box */
 }
 
-.toggle-btn:hover {
-    background-color: #006494;
+.box-image img {
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Fill the container */
+    object-fit: cover; /* Ensure the image covers the area */
 }
 
-/* Main Content */
-.main-content {
-    flex-grow: 1;
-    transition: margin-left 0.3s ease;
-    margin-left: 0; /* Default position */
+/* Box Text */
+.box-text {
+    flex: 1; /* Take up half the box */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    padding: 20px; /* Add padding */
+    background-color: #2f648c; /* Blue background */
+    color: white; /* White text */
+    text-align: center; /* Center text */
 }
 
-.sidebar.open ~ .main-content {
-    margin-left: 220px; /* Shift content when sidebar opens */
+.box-text h2 {
+    font-size: 1.6em; /* Adjust text size */
+    margin: 0; /* Remove default margin */
 }
 
-.main-topic{
-    background-color: rgb(176, 177, 177);
-    padding: 20px;
-    color: #000000;
-    text-align: center;
-    margin-top: 0px;
+/* Paragraph Section */
+.paragraph-section {
+    text-align: center; /* Center-align text */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 40px auto; /* Add margin and center the section */
+    padding: 20px; /* Add padding */
+}
+
+.paragraph-section h2 {
+    font-size: 2em; /* Larger heading */
+    color: #094776; /* Dark blue color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.paragraph-section p {
+    font-size: 1.1em; /* Slightly larger paragraph text */
+    color: #333; /* Dark gray color */
+    line-height: 1.6; /* Improve readability */
+}
+/* Challenges Section */
+.challenges-section {
+    text-align: center; /* Center-align text */
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 40px auto; /* Add margin and center the section */
+    padding: 20px; /* Add padding */
+}
+
+.challenges-section h2 {
+    font-size: 2em; /* Larger heading */
+    color: #094776; /* Dark blue color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.challenges-section .intro-text {
+    font-size: 1.1em; /* Slightly larger paragraph text */
+    color: #333; /* Dark gray color */
+    margin-bottom: 40px; /* Space below the intro text */
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+}
+
+/* Card Styling */
+.card {
+    background-color: white; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    padding: 20px; /* Add padding */
+    width: calc(33.33% - 40px); /* Three cards per row with gap */
+    text-align: left; /* Align text to the left */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.card-icon {
+    font-size: 2em; /* Larger icon */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+.card h3 {
+    font-size: 1.5em; /* Larger heading */
+    color: #094776; /* Dark blue color */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.card ul {
+    list-style-type: disc; /* Add bullet points */
+    padding-left: 20px; /* Add padding for bullet points */
+    margin: 0; /* Remove default margin */
+}
+
+.card ul li {
+    font-size: 1em; /* Regular text size */
+    color: #555; /* Dark gray color */
+    margin-bottom: 10px; /* Space between list items */
+}
+
+/* Zigzag Section */
+.zigzag-section {
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 40px auto; /* Add margin and center the section */
+    padding: 20px; /* Add padding */
+}
+
+/* Zigzag Row */
+.zigzag-row {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap:0px; /* Space between image and content */
+    margin-bottom: 60px; /* Space between rows */
+}
+
+/* Reverse Row (Picture on Right, Content on Left) */
+.zigzag-row.reverse {
+    flex-direction: row-reverse; /* Reverse the order */
+}
+
+/* Zigzag Image */
+.zigzag-image {
+    flex: 1; /* Take up half the space */
+}
+
+.zigzag-image img {
+    width: 70%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Zigzag Content */
+.zigzag-content {
+    flex: 1; /* Take up half the space */
+    text-align: left; /* Align text to the left */
+}
+
+.zigzag-content h3 {
+    font-size: 1.8em; /* Larger heading */
+    color: #094776; /* Dark blue color */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.zigzag-content p {
+    font-size: 1.1em; /* Slightly larger paragraph text */
+    color: #333; /* Dark gray color */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* United Nations Goals Section */
+.un-goals-section {
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 40px auto; /* Add margin and center the section */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center-align text */
+}
+
+.un-goals-section h2 {
+    font-size: 2em; /* Larger heading */
+    color: #094776; /* Dark blue color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.un-goals-section .intro-text {
+    font-size: 1.1em; /* Slightly larger paragraph text */
+    color: #333; /* Dark gray color */
+    margin-bottom: 40px; /* Space below the intro text */
+}
+
+/* Goals Grid */
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    margin-bottom: 40px; /* Space below the grid */
+}
+
+/* Goal Card */
+.goal-card {
+    background-color: white; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.goal-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.goal-icon {
+    font-size: 2em; /* Larger icon */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+.goal-card h3 {
+    font-size: 1.5em; /* Larger heading */
+    color: #094776; /* Dark blue color */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.goal-card p {
+    font-size: 1em; /* Regular text size */
+    color: #555; /* Dark gray color */
+}
+
+/* World Efforts Section */
+.world-efforts {
+    text-align: left; /* Align text to the left */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the section */
+}
+
+.world-efforts h3 {
+    font-size: 1.8em; /* Larger heading */
+    color: #094776; /* Dark blue color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.world-efforts ul {
+    list-style-type: disc; /* Add bullet points */
+    padding-left: 20px; /* Add padding for bullet points */
+    margin: 0; /* Remove default margin */
+}
+
+.world-efforts ul li {
+    font-size: 1.1em; /* Slightly larger text */
+    color: #333; /* Dark gray color */
+    margin-bottom: 10px; /* Space between list items */
+}
+
+/* Sections with Scroll Margin */
+#education-for-all,
+#challenges-in-education,
+#un-goals,
+#world-efforts {
+    scroll-margin-top: 80px; /* Adjust based on header height */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .zigzag-row, .zigzag-row.reverse {
+        flex-direction: column; /* Stack image and content vertically on smaller screens */
+    }
+
+    .zigzag-image, .zigzag-content {
+        flex: none; /* Reset flex for stacked layout */
+    }
+
+    .zigzag-content {
+        text-align: center; /* Center-align text on smaller screens */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* One card per row on mobile */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+    }
+
+    .box-image, .box-text {
+        flex: none; /* Reset flex for stacked layout */
+    }
+
+    .box-text {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height */
+        position: relative; /* Remove fixed position */
+        padding-top: 0; /* Reset padding */
+    }
+
+    .content {
+        margin-left: 0; /* Remove offset */
+        margin-top: 60px; /* Adjust for header */
+    }
+
+    footer {
+        margin-left: 0; /* Remove offset */
+    }
 }

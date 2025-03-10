@@ -1,38 +1,50 @@
-/* Define CSS variables for easy color changes */
 .site-footer {
-    --primary-color: #007bff;
-    --primary-hover: #0056b3;
-    --secondary-color: #21d192;
-    --footer-bg: #d4d9dd;
-    --footer-text: #333;
-    --border-color: #2c2929;
+        /* Primary Colors */
+        --color-primary: #007bff;
+        --color-primary-hover: #0056b3;
+    
+        --color-secondary: #005dc0;
+        --color-secondary-hover: #3b83cf;
+        /* Background Colors */
+        --color-background-footer: #d4d9dd;
+    
+        /* Text Colors */
+        --color-text: #333;
+    
+        /* Neutrals */
+        --color-white: #ffffff;
+        --color-border: #2c2929;
+    
+        /* Transitions */
+        --transition-speed: 0.3s;
 }
 
-/* Footer Container */
+/* ............................................ Footer Container ......................................... */
 .site-footer {
-    background-color: var(--footer-bg);
-    color: var(--footer-text);
+    background-color: var(--color-background-footer);
+    color: var(--color-text);
     padding: 20px 20px;
     font-family: Arial, sans-serif;
     margin-top: 30px;
 }
 
-/* Links Styling */
+/* ............................................ Links Styling ............................................ */
 .site-footer a {
-    color: var(--primary-color);
+    color: var(--color-primary);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color var(--transition-speed) ease;
 }
+
 
 .site-footer a:hover {
-    color: var(--primary-hover);
+    color: var(--color-primary-hover);
 }
 
-/* Middle Section: Columns */
+/* ................................... Middle Section: Columns ..................................... */
 .footer-middle {
     display: flex;
     flex-wrap: wrap;
-    border-top: 1px dotted var(--border-color);
+    border-top: 1px dotted var(--color-border);
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 20px;
@@ -64,9 +76,14 @@
 .branding-social a {
     margin-right: 10px;
     font-size: 2.5em;
+    color: var(--color-secondary)
 }
 
-/* Quick Links Column */
+.branding-social a:hover {
+    color: var(--color-border)
+}
+
+/* ...................................... Quick Links Column ........................................ */
 .footer-links {
     flex: 1 1 200px;
 }
@@ -76,15 +93,34 @@
     padding: 0;
     column-count: 2;
     column-gap: 20px;
+
 }
 
 .footer-links li {
     margin-bottom: 8px;
 }
 
-/* Contact Column */
+.footer-links a {
+    color: var(--color-primary-hover)
+}
+
+.footer-links a:hover {
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+/*  ........................................Contact Column ........................................ */
 .footer-contact {
     flex: 1 1 200px;
+}
+
+.footer-contact a {
+    color: var(--color-primary-hover)
+}
+
+.footer-contact a:hover {
+    color: var(--color-text);
+    font-weight: bold;
 }
 
 .footer-newsletter {
@@ -98,35 +134,65 @@
 
 .footer-newsletter input[type="email"] {
     padding: 8px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-border);
     border-radius: 4px;
     margin-bottom: 10px;
 }
 
 .footer-newsletter button {
     padding: 8px;
-    background-color: var(--primary-color);
+    background-color: var(--color-secondary);
     border: none;
-    color: #fff;
+    color: var(--color-white);
+    font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition-speed) ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .footer-newsletter button:hover {
-    background-color: var(--primary-hover);
+    background-color: var(--color-secondary-hover);
+    animation: pop var(--transition-speed) ease-in-out;
 }
 
-/* Bottom Section: Copyright and Legal */
+/* ...................................... Bottom Section: Copyright and Legal ............................ */
 .footer-bottom {
     text-align: center;
     margin-top: 5px;
-    border-top: 1px dotted var(--border-color);
+    border-top: 1px dotted var(--color-border);
     padding-top: 5px;
     font-size: 0.9em;
 }
 
-/* Responsive Adjustments */
+.footer-bottom a {
+    color: var(--color-primary-hover)
+}
+
+.footer-bottom a:hover {
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+/* Simple Fix */
+#address {
+    margin-left: 16px;
+}
+
+/* ......................................... Responsive Adjustments ................................... */
 @media (max-width: 768px) {
     .footer-middle {
         flex-direction: column;

@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 1.1em;
 }
 
 #education-data {
@@ -12,10 +13,11 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 0.9em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    background-color: var(--color-table-background);
 }
 
 #education-data thead tr {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-white);
 }
 
@@ -61,17 +63,17 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 8px;
-  }
-  
-  .dataTables_wrapper .col-4 {
+}
+
+.dataTables_wrapper .col-4 {
     flex: 1;
-  }
-  
-  .dataTables_wrapper .text-center {
+}
+
+.dataTables_wrapper .text-center {
     text-align: center;
-  }
-  
-  .dt-header {
+}
+
+.dt-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +84,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .footer-left {

@@ -1,0 +1,19 @@
+.stud h2{
+    color: black;
+}
+
+/* Sections with Scroll Margin */
+#splashVal
+#volunteerVal
+{
+    scroll-margin-top: 150px; /* Adjust based on header height */
+
+}
+
+/* Sections with Scroll Margin */
+#splash
+#volunteer
+#content
+{
+    scroll-margin-top: 180px; /* Adjust based on header height */
+}

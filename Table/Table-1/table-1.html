@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quality Education - Home</title>
-    <link rel="stylesheet" href="../../Common/global.css">
+    <link rel="stylesheet" href="../../Common/style.css">
     <link rel="stylesheet" href="../Table-1/table-1.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -18,8 +18,8 @@
         <table id="education-data" class="display">
             <thead>
                 <tr>
-                    <th rowspan="2" width="100px">Country</th>
-                    <th rowspan="2"> Country <br> Flag</th>
+                    <th rowspan="2" width="90px">Country</th>
+                    <th rowspan="2" width="90px" hight="50px"> Country <br> Flag</th>
                     <th colspan="2">2015 Data</th>
                     <th colspan="2">2020 Data</th>
                     <th colspan="2">Absolute Change</th>
@@ -51,7 +51,7 @@
                         {
                             "data": "flag",
                             "render": function (data, type, row) {
-                                return '<img src="' + data + '" alt="' + row.country + ' Flag" style="height:30px;">';
+                                return '<img src="' + data + '" alt="' + row.country + ' Flag" style="height:50px;">';
                             }
                         },
                         { "data": "literacy2015" },

@@ -3,12 +3,11 @@ body {
 }
 
 .content-all {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 0 30px;
 }
 
 .hero-section {
-    background: url('Images/pic-3.jpg') no-repeat center center/cover;
+    background: url('Images/hero-S2.1.jpg') no-repeat center center/cover;
     color: var(--color-background-3);
     text-align: center;
     padding: 80px 20px;
@@ -17,7 +16,7 @@ body {
 }
 
 .hero-overlay {
-    background-color: rgba(0, 0, 0, 0.525);
+    background-color: rgba(0, 0, 0, 0.603);
     padding: 40px;
     display: inline-block;
 }
@@ -33,75 +32,131 @@ body {
     margin: 0 auto;
 }
 
+/* .................................................. content-section ........................................*/
+
 .content-section {
-    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.content-heading {
+    width: 100%;
+    background-color: var(--heading-text-color);
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.content-heading h2 {
+    margin: 0;
+    color: var(--color-white);
+}
+
+/* .................................   Body - contains image and text ....................................... */
+
+.content-body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin: 10px 0;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.content-body .content-image,
+.content-body .content-text {
+    min-width: 300px;
+}
+
+/* ............................................. 3 section of content layout .................................. */
+
+.content-section.image-left .content-body .content-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.content-section.image-left .content-body .content-text {
+    flex: 2;
+}
+
+/* .......................................................  image right one ..............................................*/
+
+.content-section.image-right .content-body {
+    margin-left: 20px;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.content-section.image-right .content-body .content-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content-section.image-right .content-body .content-text,
+.content-section.image-right .content-body .content-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.content-section.image-right .content-body .content-paragraph {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* ..................................................................  no image one ..............................................*/
+
+.content-section.no-image {
+    background-color: var(--color-background-2-t);
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
 .content-section.no-image .full-width {
     width: 100%;
 }
 
-.content-section.no-image {
-    background-color: var(--color-background-2);
+.content-section.no-image h2 {
+    text-align: center;
+    background-color: var(--heading-text-color);
+    color: var(--color-white);
+    padding: 15px;
+}
+
+.content-section.no-image p {
+    background-color: var(--color-background-2-t);
     padding: 20px;
 }
 
+/* ............................................................... Text element styling .................................................. */
 
-.content-section.image-left .content-image {
-    flex: 1;
-    min-width: 300px;
-    margin-right: 20px;
+.content-text p {
+    margin: 15px 0;
+    font-size: 1.13em;
+    padding: 15px;
 }
 
-.content-section.image-left .content-text {
-    flex: 2;
-    min-width: 300px;
-}
-
-.content-section.image-right .content-text {
-    flex: 2;
-    min-width: 300px;
-    margin-right: 20px;
-}
-
-.content-section.image-right .content-image {
-    flex: 1;
-    min-width: 300px;
-}
-
-.image-left .content-text .subtopics,
-.image-right .content-text .subtopics {
-    margin-top: 0;
-}
-
-.content-text h2 {
-    text-align: center;
-    background-color: var(--heading-bg);
-    color: var(--color-primary);
+.content-paragraph p {
+    font-size: 1.13em;
     padding: 10px;
-    margin-top: 0;
+    background-color: var(--heading-bg);
+    color: var(--color-text);
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+    font-weight: bolder;
 }
 
 .content-text dt {
     font-weight: bold;
     margin-top: 15px;
-    color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 .content-text dd {
     margin-left: 20px;
     margin-bottom: 10px;
     line-height: 1.5;
-}
-
-.content-text p {
-    margin: 15px 0;
-    font-size: 1.11em;
-    padding: 15px;
 }
 
 .content-text ul {
@@ -174,7 +229,7 @@ body {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-white);
     padding: 10px 15px;
     text-decoration: none;
@@ -185,7 +240,7 @@ body {
 }
 
 #go-to-top:hover {
-    background-color: var(--color-primary-hover);
+    background-color: var(--color-secondary-hover);
 }
 
 

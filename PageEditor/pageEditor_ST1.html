@@ -4,21 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Editor Student - provide your student name</title>
+    <title>Page Editor Student 01- Treeshanie Goonewardena</title>
 
-    <link rel="stylesheet" href="page-editor.css"> <!-- External CSS link -->
+    <link rel="stylesheet" href="pageEditor_ST1.css"> <!-- External CSS link -->
+    <link rel="stylesheet" href="page-editor.css">
+    <link rel="stylesheet" href="../Common/Global.css">  <!-- Link to Global Styles -->
 
 </head>
 <body>
     
     <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
 
+    <script src="../Common/global.js"></script>
+
     <header id="top">
-        <h1>Replace the header with your teams' website header</h1>
+        <div id="header-placeholder"></div>
     </header>
 
     <section class="stud">
-        <h2>Student name, student role</h2>
+        <h2>Treeshanie Goonewardena, Student 01</h2>
     </section>
 
     <div class="container">
@@ -28,70 +32,366 @@
             <!-- Update those first three sections for the pages you were responsible to implement -->
 
             <section>
-                <h2 id="splash">Splash Page</h2>
+                <h2 id="splash">Splash Screen</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                    <h4>Structure and content Presentation</h4>
+                        <ul class="bullet-point-list">
+                            <li><code>&lt;h1&gt;</code> : The title of the website is placed within an <code>&lt;h1&gt;</code> tag to indicate its importance as the main heading.</li>
+                            <li><code>&lt;p&gt;</code>: The mission statement and team members are wrapped in <code>&lt;p&gt;</code> tags to ensure they are displayed as distinct text blocks.</li>
+                            <li><code>&lt;button&gt;</code>: A button is included to allow users to manually navigate to the home page in case they do not want to wait for the automatic redirection.</li>
+                        </ul>
+                    
+                    <h4>Automatic Redirection </h4> 
+                        <p>The <code>&lt;meta&gt;</code> refresh tag is used to automatically redirect users to the home page after 4 seconds. This method ensures a seamless transition from the splash screen without requiring user interaction.
+                        The following meta tag is implemented in the <code>&lt;head&gt;</code> section of the HTML file:</p>
+
+                        <p>
+                            <pre><code class="code-snippet">
+                                meta http-equiv="refresh" content="4;url=../HomePage/home.html"
+                            </code></pre>
+                        </p>
+
+                    <h4>Background Image Integration</h4>  
+                        <ul class="bullet-point-list">
+                            <li>The <span class="span-highlight">background</span> property is used to apply a full-screen image to the splash screen, ensuring a visually engaging design.</li>
+                            <li><span class="span-highlight">background: url('images/Bookcases.jpg');</span> :This ensures that the image covers the entire screen while maintaining aspect ratio.</li>
+                            <li>A semi-transparent dark overlay (rgba(0,0,0,0.5)) is applied to improve the contrast between the background image and the text, making the content more readable.</li>
+                        </ul>
+
+                    <h4>Animated Loader </h4> 
+                        <ul class="bullet-point-list">
+                            <li>A <code>&lt;div class="loader"&gt;</code> element is used to create a spinning animation using CSS keyframes.</li>
+                            <li>The animation is achieved using the <span class="span-highlight"> @keyframes spin </span> rule, which rotates the loader continuously. The animation starts at 0 degrees and smoothly rotates to 360 degrees, creating a spinning effect:</li>
+                        </ul>
+
+                        <h5>Sample code:</h5>
+
+                        <p>
+                            <pre><code class="code-snippet">
+                                @keyframes spin {
+                                    0% { transform: rotate(0deg); }
+                                    100% { transform: rotate(360deg); }
+                                }
+                        </code></pre>
+                        </p>
+
+                    <h4>Key CSS Techniques and Justification</h4>    
+                        <ul class="bullet-point-list">
+                            <li>This ensures that the content is vertically and horizontally centered, making it visually balanced.
+                                <pre><code class="code-snippet">
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    height: 100vh;
+                                </code></pre>
+                            </li>
+                            <li>Adds space on the sides, preventing the text from being too wide and ensuring readability.
+                                <pre><code class="code-snippet">
+                                    padding: 0 10%;
+                                </code></pre> 
+                            </li>
+                            <li>Enables continuous rotation for the loader.
+                                <pre><code class="code-snippet">
+                                    animation: spin 1s linear infinite;
+                                </code></pre>
+                            </li>
+                        </ul>
                     
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                    <ul class="bullet-point-list">
+                        <li>The page follows a semantic HTML structure, using <code>&lt;h1&gt;</code> for the main title and <code>&lt;p&gt;</code> for descriptive text.<br>
+                            This ensures that screen readers can navigate and interpret content correctly, improving accessibility for visually impaired users.</li>
+                        <li>A dark overlay (background: rgba(0, 0, 0, 0.5)) is applied over the background image.<br>
+                            This improves the contrast between the text and background, making the content readable for users with low vision.</li>
+                        <li>The line-height property is used to improve text readability:<br>
+                            This ensures that text is not too cramped, making it easier to read, especially for users with cognitive impairments.
+                            <pre><code class="code-snippet">
+                            .mission {
+                                line-height: 1.6;
+                            }
+                            </code></pre>
+                        </li>
+                        <li>The "Go to Website" button is a standard <code>&lt;button&gt;</code> element allowing keyboard navigation using "Tab" key and activation using "Enter key".</li>
+                        <li>The automatic redirection using <code>&lt;meta&gt;</code> tags  may cause issues for screen reader users.<br>
+                            To provide an alternative, a manual "Go to Website" button is also included so users can navigate at their own pace.
+                        </li>
+
+                    </ul>
+
+                    <h4>Wave Evaluation report for accessibility in Splash Screen</h4>
+                    <img src="../PageEditor/images/Screenshot 2025-03-09 215154.png">
                     
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#splashVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                        <p><a href="../ValidationPage/validation_ST1.html#splashVal">Navigate to Validation page - Splash Screen section</a></p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                     <h3>Link to the page</h3>
-                        <p><a href="splash.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="../SplashScreen/SplashScreen.html">Navigate to Splash Screen</a></p>
             </section>
 
             <section>
                 <h2 id="volunteer">Volunteer Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                        <h4>Main structure and content Presentation</h4>
+                        <p>The main structure of the page is built using common HTML tags and styled with CSS.</p>
+                        <ul class="bullet-point-list">
+                            <li><b><code>&lt;!DOCTYPE html&gt;</code></b>: Declares the document as HTML5.</li>
+                            <li><b><code>&lt;head&gt;</code></b>: Contains metadata, such as the character set 
+                                (<code>&lt;meta charset="UTF-8"&gt;</code>), viewport settings for responsiveness
+                                 (<code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>),
+                                  and links to external stylesheets (<code>&lt;link rel="stylesheet" href="..."&gt;</code>).</li>
+                            <li><b><code>&lt;body&gt;</code></b>: Contains all visible content on the page.</li>
+                            <li><b><code>&lt;header&gt;</code></b>: Holds the navigation bar placeholder (<code>&lt;div id="header-placeholder"&gt;</code><code>&lt;/div&gt;</code>)integrated from the global.js file.</li>
+                            <li><b><code>&lt;section&gt;</code></b>: Used to group related content, such as volunteer cards, reviews, and feedback.</li>
+                        </ul>
+                        
+                        <h4>Scrollable Information Section</h4>
+                        <p>This section includes volunteer cards, buttons, and a dropdown for sorting and filtering.</p>
+
+                        <h5>Volunteer Cards:</h5>
+                
+
+                        <ul class="bullet-point-list">
+                            <li>Each card is created using a <code>&lt;div&gt;</code> with the class "card".</li>
+                            <li>For each card:</li>
+                            <ul class="bullet-point-list">
+                                <li><b>Title</b>: <code>&lt;h2&gt;</code> for the card title.</li>
+                                <li><b>Description</b>: <code>&lt;p&gt;</code> for a brief description of the volunteer opportunity.</li>
+                                <li><b>What is needed list</b>: <code>&lt;ul &gt;</code>and <code>&lt;li&gt;</code> for listing what is needed (e.g., "Teachers to teach Maths, Science, and English").</li>
+                                <li><b>Register Now Button</b>: <code>&lt;button&gt;</code> for registration, styled with a blue background and hover effect.</li>
+                                <li><b>Date Circle</b>: <code>&lt;div class="date-circle"&gt;</code>  to display the event date and location.</li>
+                                <li><b>Images</b>: <code>&lt;img&gt;</code>  for visual appeal, positioned absolutely within the card.</li>
+                            </ul>
+                        </ul>
+
+                        <h5>Dropdown for Sorting:</h5>
+
+                        <ul class="bullet-point-list">
+                            <li>Created using a <code>&lt;select&gt;</code> element with <code>&lt;option&gt;</code> tags for sorting options (e.g., "Most Popular," "Newest").</li>
+                            <li>Styled with padding, border, and hover effects for interactivity.</li>
+
+                        </ul>
+
+                        <h4> User Ratings and Reviews Section</h4>
+                        <p>This section displays overall ratings and individual reviews from volunteers.</p>
+
+                        <h5>Overall Rating Summary:</h5>
+
+                        <ul class="bullet-point-list">
+                            <li>Created using a <code>&lt;div&gt;</code> with the class "overall-rating".</li>
+                            <li>This displays:
+                                <ul class="bullet-point-list">
+                                    <li>A rating score (<code>&lt;p class="rating-score"&gt;</code>).</li>
+                                    <li>Star icons (<code>&lt;p class="rating"&gt;</code>).</li>
+                                    <li>A summary text (<code>&lt;p class="rating-summary"&gt;</code>).</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h5>Individual Reviews:</h5>
+                        <ul class="bullet-point-list">
+                            <li>Each review is a <code>&lt;div&gt;</code> with the class review-card.</li>
+                            <li>Each card contains:
+                                <ul class="bullet-point-list">
+                                    <li>A rating (<code>&lt;p class="review-rating"&gt;</code>).</li>
+                                    <li>Review text (<code>&lt;p class="review-text"&gt;</code>).</li>
+                                    <li>A "See More" link (<code>&lt;a href="#" class="see-more"&gt;</code>).</li>
+                                    <li>Metadata (e.g., reviewer name and date).</li>
+                                </ul>
+                            </li>
+                        </ul>
+                     
+                    <h4>Feedback Form</h4>
+                    <p>This section allows users to submit feedback about their volunteering experience.</p>
+
+                        <h5>Form Elements:</h5>
+                        <ul class="bullet-point-list">
+                            <li><b>Star Rating Input</b>: Created using radio buttons (<code>&lt;input type="radio"&gt;</code>) styled as stars.</li>
+                            <li><b>Feedback Text Area</b>: A <code>&lt;textarea&gt;</code> for users to write their reviews.</li>
+                            <li><b>Buttons</b>: <code>&lt;button&gt;</code> elements for submitting or canceling feedback.</li>
+                        </ul>
+
+                    <h4>Key CSS Techniques and Justification</h4>  
+                    <ul class="bullet-point-list">
+                        <li><b>CSS Grid (display: grid;):</b><br>
+                            Used for the volunteer cards and individual reviews to create a responsive, organized layout.
+                            Grid allows for precise control over the placement of elements, making it ideal for creating multi-column layouts.
+                        </li>
+                        <li><b>Flexbox (display: flex;):</b><br>
+                            Used for aligning the overall rating and reviews side by side.
+                            Flexbox is perfect for creating flexible, one-dimensional layouts and aligning items within a container.
+                        </li>
+                        <li><b>Media Queries (@media):</b><br>
+                            Used to adjust the layout for smaller screens (e.g., changing the cards to a single-column layout).
+                            Media queries ensure the page is responsive and accessible on all devices.</li>
+                    </ul>  
+
 
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                        <p>In the volunteer.html page, several techniques were used to address accessibility.</p>
+                        <ul class="bullet-point-list">
+                            <li>Semantic HTML tags were used to provide meaningful structure to the page, making it easier for screen readers and assistive technologies to interpret the content.</li>
+                            <li>ARIA roles and attributes were used to enhance accessibility for dynamic content and interactive elements.</li>
+                            <li>The page is designed to be fully navigable using a keyboard, ensuring that users who cannot use a mouse can still interact with the content.</li>
+                            <li>All images include descriptive alt attributes, providing text alternatives for screen readers and users who cannot see the images.</li>
+                        </ul>
 
-                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#volunteerVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                    <h4>Wave Evaluation report for accessibility in Volunteer Page</h4>
+                    <img src="../PageEditor/images/Screenshot 2025-03-10 023035.png">
 
-                        
+                    <h3>Link to the validation page</h3> 
+                        <p><a href="../ValidationPage/validation_ST1.html#volunteerVal">Navigate to Validation page - Volunteer Page section</a></p> 
                     <h3>Link to the page</h3>
-                        <p><a href="volunteer.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="../Volunteer/volunteer.html">Navigate to Volunteer Page</a></p>
             </section>
 
             <section>
                 <h2 id="content">Content Page</h2>
+
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+
+                    <h4>HTML Techniques</h4>
+                    <ul class="bullet-point-list">
+                        <li>Semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;footer&gt;</code> are used to structure the content logically.
+                             This improves accessibility and maintainability.
+                        </li>
+                        <li>ARIA roles and attributes enhance accessibility for screen readers and keyboard navigation.</li>
+                        <li>External resources (e.g., CSS and JavaScript files) promote modularity and reusability.</li>
+
+                    </ul>
+
+                    <h4>CSS Techniques</h4>
+                    <ul class="bullet-point-list">
+                        <li>Flexbox layout is used for creating flexible and responsive layouts.
+                            <ul class="bullet-point-list">
+                                <li><b>display: flex </b>: Used in .box, .zigzag-row, and .card-container for flexible alignment.</li>
+
+                                <li><b>flex-direction</b>: Controls the direction of flex items (e.g., row or column).</li>    
+                                    
+                                <li><b>justify-content and align-items</b>: Center content horizontally and vertically.</li>
+                            </ul>
+                        </li>
+                        <li>Grid Layout is used for creating complex, responsive layouts.
+                            <ul class="bullet-point-list">
+                                <li><b>display: grid </b>: Used in .goals-grid for a responsive card layout.</li>
+
+                                <li><b>grid-template-columns</b>: Defines the number and size of columns.</li>    
+                                    
+                                <li><b>gap</b>: Adds spacing between grid items.</li>
+                            </ul>
+                        </li>
+                        <li>Media queries ensure the page adapts to different screen sizes.
+                            <ul class="bullet-point-list">
+                                <li><b>@media </b>: Adjusts layout and styles for smaller screens (e.g., stacking elements vertically).</li>
+
+                                <li><b>width, height, and flex</b>: Ensure elements resize and reposition appropriately.</li>  
+                            </ul>
+                        </li>
+                        <li>Creates a fixed, collapsible sidebar for navigation.
+                            <ul class="bullet-point-list">
+                                <li><b>position: fixed</b>: Keeps the sidebar in place while scrolling.</li>
+
+                                <li><b>width and height</b>: Define the size of the sidebar.</li>    
+                                    
+                                <li><b>background-color and color</b>: Set the sidebar's color scheme.</li>
+                                
+                                <li><b>overflow-y: auto</b>: Adds scrolling if the content overflows.</li>
+                            </ul>
+                        </li>
+                        <li> Zig Zag Layout alternates between image and text for a dynamic, engaging layout.
+                            <ul class="bullet-point-list">
+                                <li><b>flex-direction </b>:  Alternates between row and row-reverse for zigzag effect.</li>
+                            </ul>
+                        </li>
+                        <li> Sroll Margins ensures target anchor links account for sidebar menu options.
+                            <ul class="bullet-point-list">
+                                <li><b>scroll-margin-top </b>:  Adds space above sections to prevent content from being hidden behind the header.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    
 
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                        <ul class="bullet-point-list">
+                            <li>Semantic HTML tags provide meaning and structure to the content, making it easier for screen readers and assistive technologies to interpret.</li>
+                            <li>ARIA (Accessible Rich Internet Applications) roles and attributes enhance accessibility for interactive elements.</li>
+                            <li>Ensures all interactive elements are accessible via keyboard "Tab". sers who cannot use a mouse can still interact with the page.</li>
+                            <li>Ensures text is readable for users with visual impairments. 
+                                Text and background colors meet WCAG 2.1 AA contrast requirements (e.g., dark blue text on a light background).
+                                Users with low vision or color blindness can read the content easily.</li>
+                            <li>Provides text alternatives for images, making them accessible to screen readers.
+                                Visually impaired users can understand the content of images through screen readers.</li>   
+                        </ul>
+
+                        <h4>Wave Evaluation report for accessibility in Content Page - Challenges and UN Goals for Education</h4>
+                        <img src="../PageEditor/images/Screenshot 2025-03-10 120955.png">    
 
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#contentVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
-
+                        <p><a href="../ValidationPage/validation_ST1.html#contentVal">Navigate to Validation page - Content Page section</a></p>
                         
                     <h3>Link to the page</h3>
-                        <p><a href="content.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="../Content/content_ST1.html">Navigate to Content Page</a></p>
             </section>
 
             <section>
                 <h2 id="challenge"> Challenges and Lessons Learned</h2>
-                    <p>Detail any challenges encountered during the implementation process and explain how they were resolved. Reflect on the lessons learned from overcoming these challenges.</p> 
+                    <h3> Splash Screen redirection</h3>
+                    <p>The splash screen was not redirecting users to the home page as expected.
+                        The file path used in the <code>&lt;meta&gt;</code> tag and button's onclick event was incorrect. Since the splash screen was inside the SplashScreen/ folder, it needed to go up one level to access HomePage/index.html.
+                    </p>
+                    <p><b>lesson learned: </b>Understanding relative file paths is essential in web development. </p>
+
+                    <h3> Browser Back Button Disabled After Redirection</h3>
+                    <p>After redirecting from the splash screen to the home page, the browser back button was not working.
+                        The issue was caused by using the <code>&lt;meta http-equiv="refresh"&gt;</code> tag for redirection. This method does not create a proper history entry in the browser, preventing users from navigating back to the splash screen.
+                        Since the requirement was to use the meta refresh tag, no changes were made to the redirection method. The behavior was noted as a limitation of this approach.
+                    </p>
+                    <p><b>lesson learned: </b>Using <code>&lt;meta http-equiv="refresh"&gt;</code> for redirection does not create a history entry, which disables the browser back button. If navigation history is required, alternative methods like JavaScript-based redirection should be considered. </p>
+
+                    <h3>Reusing Navbar in Volunteer Page</h3>
+                    <p>The navbar from the existing website needed to be reused in the new Volunteer page without duplicating code.
+                        Used JavaScript (fetch()) to dynamically load the navbar from ../NavBar/navbar.html into the Volunteer page.
+                    </p>
+                    <p><b>lesson learned: </b>Using dynamic loading ensures consistency and easier updates across the site. </p>
+
+                    <h3> Overlap Between Sidebar and Main Content</h3>
+                    <p>The sidebar and main content were overlapping, making the layout messy.
+                        The sidebar was using position: fixed, which caused it to overlap with the main content. Additionally, the main content did not have enough margin or padding to account for the sidebar.
+                        Replaced position: fixed with position: sticky for the sidebar to ensure it stays in place while scrolling but does not overlap.
+                        Added margin-left to the main content to create space for the sidebar.
+                    </p>
+                    <p><b>lesson learned: </b>position: fixed can cause overlap issues if not managed carefully. position: sticky is often a better choice for sidebars. </p>
+
+                    <h3> Responsive Design Issues</h3>
+                    <p>
+                        On smaller screens, the content did not stack vertically as intended therefore added a media query to change the flex direction
+                    </p>
+                    <p><b>lesson learned: </b> Use media queries to adapt layouts for different screen sizes.</p>
             </section>
 
             <section>
                 <h2 id="compliance"> Compliance</h2>
-                    <p>Discuss how the pages you have created are compliant with Janet regulations governing web page publication. This includes demonstrating your understanding and application of these regulations. Be realistic and truthful.</p> 
+                <h3>Compliance with Janet Regulations</h3>
+                    <ul class="bullet-point-list">
+                        <li><b>Text Alternatives</b>: All images on the website include alt attributes, ensuring that screen readers can describe them to visually impaired users.</li>
+                        <li><b>Contrast and Readability</b>:The color scheme (e.g., dark blue background with white text) provides sufficient contrast, making text readable for users with visual impairments.</li>
+                        <li><b>Responsive Design</b>: The layout adapts to different screen sizes, ensuring content is perceivable on both desktop and mobile devices.</li>
+                        <li><b>Keyboard Navigation</b>: All interactive elements (e.g., links in the sidebar) are navigable using the keyboard. This ensures that users who cannot use a mouse can still access all content.</li> 
+                        <li><b>Focus Indicators</b>: Interactive elements (like links and buttons) have visible focus indicators, making it clear which element is currently selected when navigating with a keyboard.</li>
+                        <li><b>Clear Language</b>: The content is written in simple, clear language to ensure it is understandable by a wide audience.</li>
+                        <li><b>Semantic HTML</b>: The website uses semantic HTML tags (e.g., <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>) to ensure the structure is clear and interpretable by assistive technologies.</li>
+                        <li><b>Valid Code</b>: The HTML and CSS have been validated using tools like the W3C Markup Validation Service to ensure they follow web standards. Aslo validated by Wave Evaluation tool for accessibility</li>    
+                    </ul> 
 
                     
             </section>
 
             <section>
                 <h2 id="ref">References</h2>
-                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
                     <ul class="ref">
-                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
-                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
+                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 10 March 2025).</li>
+                        <li>World Wide Web Consortium (W3C). (n.d.). W3C Markup Validation Service. Available at : <a href="#">https://validator.w3.org/</a></li>
+
                     </ul>
             </section>
 
@@ -111,24 +411,6 @@
                         <li><a href="#volunteer">Volunteer page</a></li>
                         <li><a href="#content">Content page</a></li>
                     </ul>
-                <li>Student 2</li>
-                    <ul>
-                        <li><a href="#">Home page </a></li>
-                        <li><a href="#">Table page</a></li>
-                        <li><a href="#">Content page</a></li>
-                    </ul>
-                <li>Student 3</li>
-                    <ul>
-                        <li><a href="#">Feedback page</a> </li>
-                        <li><a href="#">Team page</a></li>
-                        <li><a href="#">Content page</a></li>
-                    </ul>
-                <li>Student 4</li>
-                    <ul>
-                        <li><a href="#">Profile page </a></li>
-                        <li><a href="#">Sitemap page</a></li>
-                        <li><a href="#">Content page</a></li>
-                    </ul>
                 <li><a href="#challenge">Challenges and Lessons Learned</a></li>
                 <li><a href="#compliance">Compliance</a></li>
                 <li><a href="#ref">References</a></li>
@@ -137,7 +419,7 @@
     </div>
 
     <footer>
-        <p>Replace the footer with your teams' website footer</p>
+        <div id="footer-placeholder"></div>
     </footer>
 </body>
 </html>

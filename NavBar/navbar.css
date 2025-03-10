@@ -1,19 +1,12 @@
 .header {
-    --primary-color: #007bff;
-    --secondary-color: #0056b3;
-    --background-color: #f8f9fa;
-    --text-color: #ffffff;
-    --black: #333;
+    --color-text-inverse: #ffffff;
     --white: #ffffff;
-    --dark-gray: #343a40;
     --blue-gradient: linear-gradient(135deg, #0d47a1, #42a5f5);
-    --blue-reverce-gradient: linear-gradient(135deg, #42a5f5,#0d47a1 );
     --transition-speed: 0.3s;
 }
 
-.body {
+.header {
     font-family: Arial, sans-serif;
-
 }
 
 /* -------------------- Top-Level Header -------------------- */
@@ -38,10 +31,9 @@
 }
 
 .site-name {
-    color: var(--text-color);
+    color: var(--color-text-inverse);
     font-size: 24px;
     font-weight: 600;
-    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
 }
 
 /* Header Icons */
@@ -61,7 +53,7 @@
 .search-toggle {
     background: none;
     border: none;
-    color: var(--text-color);
+    color: var(--color-text-inverse);
     font-size: 20px;
     cursor: pointer;
 }
@@ -73,7 +65,7 @@
     right: calc(100% + 10px);
     background: #fff;
     padding: 5px 5px 5px 5px;
-    width : auto;
+    width: auto;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -136,7 +128,7 @@ body.dark-mode .header-container {
 }
 
 .language-dropdown .desktop-item {
-    color: var(--text-color);
+    color: var(--color-text-inverse);
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
@@ -162,7 +154,7 @@ body.dark-mode .header-container {
 }
 
 .language-dropdown .drop-menu li a {
-    color: var(--text-color);
+    color: var(--color-text-inverse);
     text-decoration: none;
 }
 
@@ -177,6 +169,24 @@ body.dark-mode .header-container {
     width: 40px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+@keyframes flashShadow {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+.user-profile img:hover {
+    animation: flashShadow 0.5s ease;
 }
 
 /* ................................................... Language Dropdown .......................................... */
@@ -206,7 +216,7 @@ body.dark-mode .header-container {
 
 .navbar-item a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--color-text-inverse);
     padding: 10px 15px;
     display: block;
     font-weight: bold;
@@ -217,7 +227,7 @@ body.dark-mode .header-container {
 .navbar-item a:hover,
 .navbar-item.active a {
     border-bottom: 2px solid var(--white);
-    background-color:rgba(0, 0, 0, 0.15)
+    background-color: rgba(0, 0, 0, 0.15)
 }
 
 /* ............................................................ Mega Menu ........................................................ */

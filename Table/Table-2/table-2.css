@@ -9,6 +9,7 @@
   border-collapse: collapse;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-table-background);
 }
 
 #projects-table th,
@@ -18,30 +19,63 @@
   text-align: center;
 }
 
-#projects-table thead th {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
+/* ............................................................Table Title Styling................................ */
 .table-title {
   font-size: 1.5em;
   padding: 20px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-background-4);
   color: var(--color-white);
   text-align: center;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
 }
 
 .table-logo {
-  height: 40px;
-  vertical-align: middle;
-  margin-right: 10px;
+  height: 50px;
+  margin-right: 15px;
 }
 
+/* Header container for icon and text in header cells */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#projects-table thead tr:nth-child(2) th {
+  background-color: var(--color-background-4);
+  color: #fff;
+}
 
 .header-icon {
-  width: 20px;
-  vertical-align: middle;
-  margin-right: 5px;
+  width: auto;
+  height: 80px;
+  margin-bottom: 5px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.header-icon:hover {
+  animation: wiggle 0.3s ease-in-out;
 }
 
 #projects-table tbody tr:nth-child(even) {
@@ -61,17 +95,20 @@
   text-decoration: underline;
 }
 
-.icon-check {
-  color: green;
-  font-weight: bold;
-}
-
 #projects-table th[title] {
   cursor: help;
 }
 
-@media (max-width: 768px) {
+.fa-eye {
+  color: var(--color-secondary);
+  font-size: 20px;
+}
 
+.fa-eye:hover {
+  color: var(--color-border);
+}
+
+@media (max-width: 768px) {
   #projects-table th,
   #projects-table td {
     padding: 8px;
