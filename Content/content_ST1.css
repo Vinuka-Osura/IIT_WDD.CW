@@ -6,19 +6,30 @@ body {
     flex-direction: column;
     min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
 }
-
+/* Main Container */
+.container {
+    margin-top: 115px;
+    display: flex;
+    flex: 1;
+    padding: 20px; /* Add padding around the container */
+    gap: 20px; /* Space between sidebar and content */
+}
 
 /* Sidebar */
 .sidebar {
     width: 250px; /* Fixed width for sidebar */
     background-color: #043155; /* Light blue background */
-    color: rgb(255, 255, 255);
-    padding-top: 110px; /* Push sidebar down to avoid header overlap */
-    height: calc(100vh - 80px); /* Full height minus header height */
-    position: fixed; /* Fixed position */
-    top: 0;
-    left: 0;
-    overflow-y: auto; /* Add scroll if content overflows */
+    color: white;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Main Content */
+.content {
+    flex: 1; /* Take up remaining space */
+    background-color: #f4f9ff; /* Light blue background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
 }
 
 .sidebar nav ul {
@@ -40,14 +51,6 @@ body {
 
 .sidebar nav ul li a:hover {
     color: #ffcc00; /* Yellow on hover */
-}
-
-/* Main Content */
-.content {
-    margin-left: 250px; /* Offset content by sidebar width */
-    margin-top: 80px; /* Offset content by header height */
-    padding: 20px;
-    flex: 1; /* Take up remaining space */
 }
 
 /* Box Container */

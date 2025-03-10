@@ -17,8 +17,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
@@ -34,8 +34,8 @@ body {
     background: rgb(32, 148, 202);
 }
 .team-member img {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 60%;
     object-fit: cover;
     display: block;

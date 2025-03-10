@@ -239,7 +239,7 @@
                     <img src="../PageEditor/images/Screenshot 2025-03-10 023035.png">
 
                     <h3>Link to the validation page</h3> 
-                        <p><a href="../ValidationPage/validation_ST1.html#volunteerhVal">Navigate to Validation page - Volunteer Page section</a></p> 
+                        <p><a href="../ValidationPage/validation_ST1.html#volunteerVal">Navigate to Validation page - Volunteer Page section</a></p> 
                     <h3>Link to the page</h3>
                         <p><a href="../Volunteer/volunteer.html">Navigate to Volunteer Page</a></p>
             </section>
@@ -323,31 +323,75 @@
                                 Visually impaired users can understand the content of images through screen readers.</li>   
                         </ul>
 
+                        <h4>Wave Evaluation report for accessibility in Content Page - Challenges and UN Goals for Education</h4>
+                        <img src="../PageEditor/images/Screenshot 2025-03-10 120955.png">    
+
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="../ValidationPage/validation_ST1.html#volunteerVal">Navigate to Validation page - Volunteer Page section</a></p>
+                        <p><a href="../ValidationPage/validation_ST1.html#contentVal">Navigate to Validation page - Content Page section</a></p>
                         
                     <h3>Link to the page</h3>
-                        <p><a href="content.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="../Content/content_ST1.html">Navigate to Content Page</a></p>
             </section>
 
             <section>
                 <h2 id="challenge"> Challenges and Lessons Learned</h2>
-                    <p>Detail any challenges encountered during the implementation process and explain how they were resolved. Reflect on the lessons learned from overcoming these challenges.</p> 
+                    <h3> Splash Screen redirection</h3>
+                    <p>The splash screen was not redirecting users to the home page as expected.
+                        The file path used in the <code>&lt;meta&gt;</code> tag and button's onclick event was incorrect. Since the splash screen was inside the SplashScreen/ folder, it needed to go up one level to access HomePage/index.html.
+                    </p>
+                    <p><b>lesson learned: </b>Understanding relative file paths is essential in web development. </p>
+
+                    <h3> Browser Back Button Disabled After Redirection</h3>
+                    <p>After redirecting from the splash screen to the home page, the browser back button was not working.
+                        The issue was caused by using the <code>&lt;meta http-equiv="refresh"&gt;</code> tag for redirection. This method does not create a proper history entry in the browser, preventing users from navigating back to the splash screen.
+                        Since the requirement was to use the meta refresh tag, no changes were made to the redirection method. The behavior was noted as a limitation of this approach.
+                    </p>
+                    <p><b>lesson learned: </b>Using <code>&lt;meta http-equiv="refresh"&gt;</code> for redirection does not create a history entry, which disables the browser back button. If navigation history is required, alternative methods like JavaScript-based redirection should be considered. </p>
+
+                    <h3>Reusing Navbar in Volunteer Page</h3>
+                    <p>The navbar from the existing website needed to be reused in the new Volunteer page without duplicating code.
+                        Used JavaScript (fetch()) to dynamically load the navbar from ../NavBar/navbar.html into the Volunteer page.
+                    </p>
+                    <p><b>lesson learned: </b>Using dynamic loading ensures consistency and easier updates across the site. </p>
+
+                    <h3> Overlap Between Sidebar and Main Content</h3>
+                    <p>The sidebar and main content were overlapping, making the layout messy.
+                        The sidebar was using position: fixed, which caused it to overlap with the main content. Additionally, the main content did not have enough margin or padding to account for the sidebar.
+                        Replaced position: fixed with position: sticky for the sidebar to ensure it stays in place while scrolling but does not overlap.
+                        Added margin-left to the main content to create space for the sidebar.
+                    </p>
+                    <p><b>lesson learned: </b>position: fixed can cause overlap issues if not managed carefully. position: sticky is often a better choice for sidebars. </p>
+
+                    <h3> Responsive Design Issues</h3>
+                    <p>
+                        On smaller screens, the content did not stack vertically as intended therefore added a media query to change the flex direction
+                    </p>
+                    <p><b>lesson learned: </b> Use media queries to adapt layouts for different screen sizes.</p>
             </section>
 
             <section>
                 <h2 id="compliance"> Compliance</h2>
-                    <p>Discuss how the pages you have created are compliant with Janet regulations governing web page publication. This includes demonstrating your understanding and application of these regulations. Be realistic and truthful.</p> 
+                <h3>Compliance with Janet Regulations</h3>
+                    <ul class="bullet-point-list">
+                        <li><b>Text Alternatives</b>: All images on the website include alt attributes, ensuring that screen readers can describe them to visually impaired users.</li>
+                        <li><b>Contrast and Readability</b>:The color scheme (e.g., dark blue background with white text) provides sufficient contrast, making text readable for users with visual impairments.</li>
+                        <li><b>Responsive Design</b>: The layout adapts to different screen sizes, ensuring content is perceivable on both desktop and mobile devices.</li>
+                        <li><b>Keyboard Navigation</b>: All interactive elements (e.g., links in the sidebar) are navigable using the keyboard. This ensures that users who cannot use a mouse can still access all content.</li> 
+                        <li><b>Focus Indicators</b>: Interactive elements (like links and buttons) have visible focus indicators, making it clear which element is currently selected when navigating with a keyboard.</li>
+                        <li><b>Clear Language</b>: The content is written in simple, clear language to ensure it is understandable by a wide audience.</li>
+                        <li><b>Semantic HTML</b>: The website uses semantic HTML tags (e.g., <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>) to ensure the structure is clear and interpretable by assistive technologies.</li>
+                        <li><b>Valid Code</b>: The HTML and CSS have been validated using tools like the W3C Markup Validation Service to ensure they follow web standards. Aslo validated by Wave Evaluation tool for accessibility</li>    
+                    </ul> 
 
                     
             </section>
 
             <section>
                 <h2 id="ref">References</h2>
-                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
                     <ul class="ref">
-                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
-                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
+                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 10 March 2025).</li>
+                        <li>World Wide Web Consortium (W3C). (n.d.). W3C Markup Validation Service. Available at : <a href="#">https://validator.w3.org/</a></li>
+
                     </ul>
             </section>
 
@@ -366,24 +410,6 @@
                         <li><a href="#splash">Splash page</a></li>
                         <li><a href="#volunteer">Volunteer page</a></li>
                         <li><a href="#content">Content page</a></li>
-                    </ul>
-                <li>Student 2</li>
-                    <ul>
-                        <li><a href="#">Home page </a></li>
-                        <li><a href="#">Table page</a></li>
-                        <li><a href="#">Content page</a></li>
-                    </ul>
-                <li>Student 3</li>
-                    <ul>
-                        <li><a href="#">Feedback page</a> </li>
-                        <li><a href="#">Team page</a></li>
-                        <li><a href="#">Content page</a></li>
-                    </ul>
-                <li>Student 4</li>
-                    <ul>
-                        <li><a href="#">Profile page </a></li>
-                        <li><a href="#">Sitemap page</a></li>
-                        <li><a href="#">Content page</a></li>
                     </ul>
                 <li><a href="#challenge">Challenges and Lessons Learned</a></li>
                 <li><a href="#compliance">Compliance</a></li>
