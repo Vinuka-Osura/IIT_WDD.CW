@@ -6,6 +6,11 @@
     font-size: 1.1em;
 }
 
+.countryflag{
+    width: 90px;
+    height: 50px;
+}
+
 #education-data {
     width: auto;
     border-collapse: collapse;

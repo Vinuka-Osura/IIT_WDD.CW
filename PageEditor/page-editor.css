@@ -1,5 +1,5 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -92,7 +92,7 @@ aside li {
 .stud {
     text-align: center;
     line-height: 0;
-    background-color: #cbccc2ef;
+    background-color: #595a54ef;
     color: white;
     margin-top: 115px;
 }
