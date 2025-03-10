@@ -18,11 +18,11 @@
   text-align: center;
 }
 
-/* Table Title Styling */
+/* ............................................................Table Title Styling................................ */
 .table-title {
   font-size: 1.5em;
   padding: 20px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-background-4);
   color: var(--color-white);
   text-align: center;
   display: flex; 
@@ -31,8 +31,8 @@
 }
 
 .table-logo {
-  height: 50px;           /* Increased size */
-  margin-right: 15px;     /* Added margin for spacing */
+  height: 50px;
+  margin-right: 15px;
 }
 
 /* Header container for icon and text in header cells */
@@ -42,17 +42,15 @@
   align-items: center;
 }
 
-/* Styling for the second header row (the one with icons and text) */
 #projects-table thead tr:nth-child(2) th {
-  background-color: #1E90FF; /* New heading color */
+  background-color: var(--color-background-4);
   color: #fff;
 }
 
-/* Header icon styling with wiggle effect on hover */
 .header-icon {
-  width: auto;           /* Adjust if needed */
+  width: auto;
   height: 80px;
-  margin-bottom: 5px;    /* Creates space between icon and text */
+  margin-bottom: 5px;
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease-in-out;
 }
@@ -103,6 +101,15 @@
 
 #projects-table th[title] {
   cursor: help;
+}
+
+.fa-eye {
+  color: var(--color-secondary);
+  font-size: 20px;
+}
+
+.fa-eye:hover {
+  color: var(--color-border);
 }
 
 @media (max-width: 768px) {

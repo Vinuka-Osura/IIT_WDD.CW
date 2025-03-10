@@ -1,13 +1,7 @@
 .header {
-    --primary-color: #007bff;
-    --secondary-color: #0056b3;
-    --background-color: #f8f9fa;
-    --text-color: #ffffff;
-    --black: #333;
+    --color-text-inverse: #ffffff;
     --white: #ffffff;
-    --dark-gray: #343a40;
     --blue-gradient: linear-gradient(135deg, #0d47a1, #42a5f5);
-    --blue-reverce-gradient: linear-gradient(135deg, #42a5f5, #0d47a1);
     --transition-speed: 0.3s;
 }
 
@@ -37,7 +31,7 @@
 }
 
 .site-name {
-    color: var(--text-color);
+    color: var(--color-text-inverse);
     font-size: 24px;
     font-weight: 600;
 }
@@ -59,7 +53,7 @@
 .search-toggle {
     background: none;
     border: none;
-    color: var(--text-color);
+    color: var(--color-text-inverse);
     font-size: 20px;
     cursor: pointer;
 }
@@ -134,7 +128,7 @@ body.dark-mode .header-container {
 }
 
 .language-dropdown .desktop-item {
-    color: var(--text-color);
+    color: var(--color-text-inverse);
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
@@ -160,7 +154,7 @@ body.dark-mode .header-container {
 }
 
 .language-dropdown .drop-menu li a {
-    color: var(--text-color);
+    color: var(--color-text-inverse);
     text-decoration: none;
 }
 
@@ -222,7 +216,7 @@ body.dark-mode .header-container {
 
 .navbar-item a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--color-text-inverse);
     padding: 10px 15px;
     display: block;
     font-weight: bold;

@@ -3,6 +3,8 @@
         --color-primary: #007bff;
         --color-primary-hover: #0056b3;
     
+        --color-secondary: #005dc0;
+        --color-secondary-hover: #3b83cf;
         /* Background Colors */
         --color-background-footer: #d4d9dd;
     
@@ -74,7 +76,11 @@
 .branding-social a {
     margin-right: 10px;
     font-size: 2.5em;
-    color: var(--color-primary-hover)
+    color: var(--color-secondary)
+}
+
+.branding-social a:hover {
+    color: var(--color-border)
 }
 
 /* ...................................... Quick Links Column ........................................ */
@@ -100,6 +106,7 @@
 
 .footer-links a:hover {
     color: var(--color-text);
+    font-weight: bold;
 }
 
 /*  ........................................Contact Column ........................................ */
@@ -112,7 +119,8 @@
 }
 
 .footer-contact a:hover {
-    color: var(--color-text)
+    color: var(--color-text);
+    font-weight: bold;
 }
 
 .footer-newsletter {
@@ -133,9 +141,10 @@
 
 .footer-newsletter button {
     padding: 8px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     border: none;
     color: var(--color-white);
+    font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color var(--transition-speed) ease;
@@ -156,7 +165,7 @@
 }
 
 .footer-newsletter button:hover {
-    background-color: var(--color-primary-hover);
+    background-color: var(--color-secondary-hover);
     animation: pop var(--transition-speed) ease-in-out;
 }
 
@@ -174,7 +183,8 @@
 }
 
 .footer-bottom a:hover {
-    color: var(--color-text)
+    color: var(--color-text);
+    font-weight: bold;
 }
 
 /* Simple Fix */
