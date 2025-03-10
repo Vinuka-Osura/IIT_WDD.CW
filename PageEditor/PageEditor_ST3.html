@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student 03 - Navodya Rajapaksha</title>
+
+    <link rel="stylesheet" href="PageEditor_ST3.css"> <!-- External CSS link -->
+    <link rel="stylesheet" href="../Common/Global.css">
+    
+
+
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header id="top">
+        <header>
+            <div id="header-placeholder"></div>
+        </header>
+    </header>
+
+    <section class="stud">
+        <h2>Navodya Rajapaksha - Student 03</h2>
+    </section>
+
+    <div class="container">
+       
+        <main>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+
+            <section>
+                <h2 id="team">Team Members page</h2>
+                    <h3>Technical Description</h3>
+                        <p>This web page uses HTML for structure and CSS for styling, ensuring a clean and responsive team introduction section. 
+                            The <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> utilize JavaScript (global.js) for dynamic content loading, improving reusability. 
+                                A flexbox-based .team-container aligns members, while .team-member sections include an <code>&lt;img&gt;</code> for profile pictures and a .
+                                team-details div for names and roles. 
+                                CSS ensures consistent typography with appropriate font sizes and spacing, while images are resized without distortion using object-fit: cover. 
+                                Interactive hover effects and potential media queries enhance responsiveness. 
+                                The structure follows semantic HTML principles, aiding readability and accessibility.
+
+                                Accessibility is addressed in this page through semantic HTML, color contrast, responsive design, and interactive elements. The page uses semantic tags like <code>&lt; header &gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;h1&gt;</code>, and <code>&lt;p&gt;</code> to improve screen reader compatibility and assist users with disabilities in navigating the content. The text contrast is carefully managed by using dark text on light backgrounds and ensuring that the hover color (rgb(32, 148, 202)) remains readable. Alt attributes (alt="Member Photo") in <code>&lt;img &gt;</code> elements provide descriptions for visually impaired users relying on screen readers. The page layout is fully responsive due to Flexbox (display: flex; flex-wrap: wrap;), ensuring proper content adaptation across different screen sizes, including mobile devices. Interactive elements, such as the hover effects on .team-member, use smooth transitions (ease-in-out) instead of sudden movements, reducing motion-related discomfort for sensitive users. Additionally, sufficient padding, spacing, and font sizes enhance readability for users with visual impairments. These accessibility improvements make the page more inclusive and user-friendly for a diverse audience.
+                        </p> 
+
+                        
+                    
+                    <h3>Accessibility</h3>
+                        <p>Accessibility is addressed in this page through semantic HTML, color contrast, responsive design, and interactive elements. 
+                            The page uses semantic tags like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;h1&gt;</code>, and <code>&lt;p&gt;</code> to improve screen reader compatibility and assist users with disabilities in navigating the content. 
+                            The text contrast is carefully managed by using dark text on light backgrounds and ensuring that the hover color (rgb(32, 148, 202)) remains readable. Alt attributes (alt="Member Photo") in <code>&lt;img&gt;</code> elements provide descriptions for visually impaired users relying on screen readers. 
+                            The page layout is fully responsive due to Flexbox (display: flex; flex-wrap: wrap;), ensuring proper content adaptation across different screen sizes, including mobile devices. Interactive elements, such as the hover effects on 
+                            .team-member, use smooth transitions (ease-in-out) instead of sudden movements, reducing motion-related discomfort for sensitive users. Additionally, sufficient padding, spacing, and font sizes enhance readability for users with visual impairments. 
+                            These accessibility improvements make the page more inclusive and user-friendly for a diverse audience</p>
+                    
+                    <h3>Link to the Team page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="../Team/team.html">Include a link to the Team page</a>, use the marker to jump to the corresponding section of the team Page.</p> 
+                        <h3>Link to the page</h3>
+                        <p><a href="../Team/team.html"></a></p>
+                    
+            </section>
+
+            <section>
+                <h2 id="Feedback">Feedback Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>This feedback form webpage is designed using HTML for structure, CSS for styling, and JavaScript for interactivity, 
+                            ensuring a user-friendly and accessible experience. The form is organized with semantic elements like <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> 
+                                for consistency, dynamically loaded through an external JavaScript file (global.js). The <code>&lt;form&gt;</code> contains <code>&lt;fieldset&gt;</code> elements 
+                                    that group related inputs for clarity, with <code>&lt;legend&gt;</code> providing context. Various input types, including text, email, 
+                                        telephone, date, and file upload, ensure users can submit structured feedback. A <code>&lt;textarea&gt;</code> with a character counter 
+                                            dynamically updates the remaining character count, improving usability. The dropdown (<code>&lt;select&gt;</code>) categorizes feedback, while the rating system,
+                                                 implemented with <code>&lt;input type="radio"&gt;</code> and styled labels, enhances interactivity with hover and selection effects using JavaScript. 
+                                                 The layout is optimized using CSS, with a structured, responsive design employing properties like display: flex, gap, 
+                                                 and padding for alignment and spacing. Form elements are styled for readability, using adequate contrast and spacing, 
+                                                 while transitions (ease-in-out) provide smooth interactions, improving user experience. The submit button ensures functionality, 
+                                                 and the form is designed to be mobile-friendly and accessible with clear labels, structured navigation, and screen reader 
+                                                 compatibility
+                                                
+                                                
+                                                 This CSS enhances the feedback form’s visual appeal, accessibility, and usability while ensuring a responsive and structured layout. 
+                                                 The body background color (#daf0f3) provides a soft, eye-friendly contrast, while the form container (form) is centered with 
+                                                 max-width: 500px, margin: auto, and box-shadow for a subtle elevation effect. Form fields are grouped within fieldset for better 
+                                                 organization, with legend styled for clarity (font-size: 1.5em, text-align: center). Labels are bold for better readability, and i
+                                                 nput fields (input, textarea, select) are given width: 100%, padding: 8px, and border-radius: 4px to ensure ease of use. The 
+                                                 rating system employs display: flex with a row-reverse structure, ensuring a visually intuitive selection, where checked or 
+                                                 hovered stars change color (color: gold) using sibling selectors. The submit button is emphasized with a green background 
+                                                 (#28a745), smooth hover transitions, and width: 100% for accessibility. The char-count text (font-size: 0.9em, color: gray) 
+                                                 provides user feedback dynamically. This styling ensures a professional, accessible, and user-friendly form.                        
+                                                
+                                                
+                                                </p> 
+
+                    <h3>Accessibility</h3>
+                        <p>I addressed accessibility by using semantic HTML elements like <code>&lt;label&gt;</code> for form fields, <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> for grouping related inputs, ensuring screen readers can navigate efficiently. Keyboard accessibility is maintained by using standard form elements and a radio-button-based rating system. Color contrast is optimized for readability, and visual feedback is provided for interactive elements. Required fields are clearly marked with validation, and a live character count updates dynamically for text input. These measures enhance usability for users with disabilities while maintaining a smooth experience for all users..</p>
+
+                    <h3>Link to the Feedback page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="../Feedback/feedback.html">Include a link to the Freedback page</a></p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                        <h3>Link to the page</h3>
+                        <p><a href="../Feedback/feedback.html"></a></p>
+                        
+                   
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>This webpage employs semantic HTML with <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;div&gt;</code> elements to enhance structure, accessibility, and maintainability. A flexbox layout is used in .main-topic-container to align images and text efficiently, while CSS animations and transitions (e.g., transform: scale(1.02), box-shadow) create interactive hover effects. The gradient text effect in .main-topic-text span improves aesthetics, and images are styled with object-fit: cover for responsiveness. The "Go to Top" button includes smooth transitions, and a shadow-boxed layout enhances readability. The structured content blocks (.p1, .p2, etc.) improve reusability, while a consistent color scheme and border-radius provide a modern, clean design.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>This webpage incorporates accessibility best practices to ensure inclusivity for all users, including those using assistive technologies. Semantic HTML elements like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, an<code>&lt;h2&gt;</code> headings improve screen reader navigation and document structure. Alt attributes (alt="...") on images provide descriptive text for visually impaired users. Form elements are properly labeled, ensuring clear interaction. The high-contrast text on backgrounds enhances readability, while hover and focus states (e.g., button highlights and image scaling) improve usability for keyboard users. The "Go to Top" button aids navigation, and the responsive design ensures accessibility across various screen sizes and devices.</p>
+
+                    
+
+                        <h3>Link to the content page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="../Content/Content_ST3.html">Include a link to the content page</a></p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+   
+                    <h3>Link to the page</h3>
+                        <p><a href="../Content/Content_ST3.html"></a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                    <p>During the implementation of this page, one key challenge was ensuring that the responsive design worked seamlessly across various devices while maintaining visual integrity. Some images were initially stretching or not displaying well on smaller screens, which was resolved by using CSS's object-fit: cover to ensure images maintained their aspect ratios. Another issue was ensuring the hover effects and interactivity remained functional for keyboard users, which required careful attention to focus states and accessible button styles. By testing across different screen sizes and using a mobile-first approach, I ensured a consistent user experience. The lesson learned was the importance of thorough testing and iterative improvements, particularly for ensuring accessibility and responsiveness across all devices and user needs.</p> 
+            </section>
+
+            
+            <section>
+                <h2 id="ref">References</h2>
+                <p>
+                    <ul class="reference Student 3">
+                        <li> Freepik(2025) <i>Freepik</i> Available at: <a href="#">https://www.freepik.com//</a> (Last accessed: 07 MAR 2025).</li>
+                        
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                <li>Student 1</li>
+                    <ul> 
+                        <li><a href="#splash">Splash page</a></li>
+                        <li><a href="#volunteer">Volunteer page</a></li>
+                        <li><a href="#content">Content page</a></li>
+                    </ul>
+                <li>Student 2</li>
+                    <ul>
+                        <li><a href="#">Home page </a></li>
+                        <li><a href="#">Table page</a></li>
+                        <li><a href="#">Content page</a></li>
+                    </ul>
+                <li>Student 3</li>
+                    <ul>
+                        <li><a href="#">Feedback page</a> </li>
+                        <li><a href="#">Team page</a></li>
+                        <li><a href="#">Content page</a></li>
+                    </ul>
+                <li>Student 4</li>
+                    <ul>
+                        <li><a href="#">Profile page </a></li>
+                        <li><a href="#">Sitemap page</a></li>
+                        <li><a href="#">Content page</a></li>
+                    </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Replace the footer with your teams' website footer</p>
+    </footer>
+</body>
+</html>

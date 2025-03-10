@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+} 
+
+section {
+    background: #ffffff;
+    padding: 0px;
+    margin:  auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.main-topic-container {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.main-topic-container img {
+    width: 65%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.main-topic-text {
+    position: relative;
+    width: 35%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    text-align: center;
+    font: size ;;
+    font-weight: bold;
+    padding: 0px;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #f1f1f1; 
+}
+
+.main-topic-text span {
+    background: linear-gradient(90deg, #007BFF, #00BFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    color: #333;
+    font: size 35px;
+}
+
+.success-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.success-img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#top {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+#top:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
