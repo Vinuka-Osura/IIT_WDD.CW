@@ -52,7 +52,7 @@ main h3 {
 
 aside {
     flex: 1;
-    background-color: #f4f4f4;
+    background-color: #f4f4f42f;
     padding: 15px;
     border: 1px solid #ddd;
     margin-right: 20px;
@@ -67,7 +67,7 @@ section {
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #ddd;
-    background-color: #fafafa;
+    background-color: #fafafa2f;
 }
 
 .ref li {
@@ -86,7 +86,7 @@ aside li {
 .stud {
     text-align: center;
     line-height: 0;
-    background-color: #cbccc2ef;
+    background-color: #595a54ef;
     color: white;
     margin-top: 115px;
 }

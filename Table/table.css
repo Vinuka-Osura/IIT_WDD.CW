@@ -126,6 +126,15 @@ body.dark-mode .table-section iframe {
     margin: 10px;
 }
 
+.analysis-section ul li {
+    margin-bottom: 1rem;
+}
+
+.analysis-section ul li:last-child {
+    margin-bottom: 0;
+}
+
+
 #sidebar {
     position: fixed;
     top: 50%;
