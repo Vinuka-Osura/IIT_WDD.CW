@@ -9,7 +9,8 @@ h2 {
   border-collapse: collapse;
   margin-bottom: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  
+  font-size: 1.1em;
+  background-color: var(--color-table-background);
 }
 
 .table-title {

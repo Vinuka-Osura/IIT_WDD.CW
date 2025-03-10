@@ -15,7 +15,7 @@
     /* Background Colors */
     --color-background-1: #f8f9fa;
     --color-background-2: #e9ecef;
-    --color-background-2-t: #e9ecef68;
+    --color-background-2-t: #93959768;
     --color-background-3: #fff;
     --color-background-4: #007bffae;
     --color-background-5: #a4abb48b;
@@ -28,20 +28,21 @@
     --color-text-inverse: #ffffff;
 
     /* Headings */
-    --heading-bg: #e0f7fa;
+    --heading-bg: #73bbc5;
     --heading-text-color: #006064;
     --underline-pattern: repeating-linear-gradient(90deg, #006064, #006064 5px, transparent 5px, transparent 10px);
 
     /* Neutrals */
     --color-white: #ffffff;
     --color-white-t: #ffffff68;
-    --color--light-gray: #f0f0f0;
+    --color--light-gray: #dbd9d9;
     --color-dark-gray: #343a40;
     --color-border: #2c2929;
 
     /*tables*/
     --color-table-border: #ddd;
     --color-table-hover: #cecece;
+    --color-table-background: #a1b7f3;
 
     /* Gradients */
     --gradient-blue: linear-gradient(135deg, #0d47a1, #42a5f5);
