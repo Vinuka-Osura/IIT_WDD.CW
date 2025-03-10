@@ -4,6 +4,117 @@
 
 
 
+body.dark-mode .container a {
+    color: #40c4ff;
+}
+
+body.dark-mode .container a:hover,
+.container a:hover {
+    color: #0056b3;
+}
+
+/* ..................................... Adjusting links within .top in dark mode .................................... */
+body.dark-mode .top a {
+    color: #ddd;
+}
+
+/* ............................................. Rest of css ............................................. */
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main {
+    flex: 3;
+    background-color: #e9ecef31;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 1.8em;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.300);
+}
+
+main h3 {
+    text-align: left;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.300);
+}
+
+aside {
+    flex: 1;
+    background-color: #f4f4f42f;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+aside h3 {
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fafafa2f;
+}
+
+.ref li {
+    list-style: none;
+    padding-bottom: 9px;
+}
+
+aside a {
+    text-decoration: none;
+}
+
+aside li {
+    padding-bottom: 4px;
+}
+
+.stud {
+    text-align: center;
+    line-height: 0;
+    background-color: #595a54ef;
+    color: white;
+    margin-top: 127px;
+}
+
+.top {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+
+.top a {
+    padding: 10px 20px;
+    /* Adds padding for button-like feel */
+    background-color: #007bff;
+    /* Button color */
+    color: white;
+    /* Text color */
+    text-decoration: none;
+    /* Removes underline */
+    border-radius: 20px;
+    /* Rounds the corners */
+    font-size: 12px;
+    /* Adjust font size */
+    font-weight: bold;
+    /* Make the text stand out */
+}
+
+.top a:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    /* Adds a subtle shadow */
+
+
 /* Sections with Scroll Margin */
 #teamv1
 #feedback

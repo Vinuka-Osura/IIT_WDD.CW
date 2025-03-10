@@ -310,6 +310,27 @@ body {
     margin-bottom: 10px; /* Space between list items */
 }
 
+/* Go to Top Button Styles */
+#goToTopBtn {
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    z-index: 99; /* Ensure it's above other elements */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    background-color: #3eabff; /* Button background color */
+    color: rgb(0, 0, 0); /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 15px; /* Padding */
+    border-radius: 20%; /* Circular button */
+    font-size: 18px; /* Font size */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+#goToTopBtn:hover {
+    background-color: #42a7f9; /* Darker background on hover */
+}
+
 /* Sections with Scroll Margin */
 #education-for-all,
 #challenges-in-education,
