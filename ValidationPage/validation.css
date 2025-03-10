@@ -1,8 +1,14 @@
-.stud h2{
-    color: black;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+.container a {
+    color: #007bff;
+}
 
+/* ........................................... Dark mode ........................................................ */
 
 body.dark-mode .container a {
     color: #40c4ff;
@@ -82,7 +88,7 @@ aside li {
     line-height: 0;
     background-color: #595a54ef;
     color: white;
-    margin-top: 127px;
+    margin-top: 115px;
 }
 
 .top {
@@ -113,12 +119,4 @@ aside li {
     /* Darker shade on hover */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     /* Adds a subtle shadow */
-
-
-/* Sections with Scroll Margin */
-#teamv1
-#feedback
-#contentVal1
-{
-    scroll-margin-top: 180px; /* Adjust based on header height */
 }
