@@ -40,14 +40,8 @@
   text-align: center;
 }
 
-/* .header-thumb {
-  width: 20px;
-  vertical-align: middle;
-  margin-right: 4px;
-} */
-
 .header-thumb {
-  width: 20px;
+  width: 100px;
   height: auto; /* Maintains aspect ratio */
   vertical-align: middle;
   margin-right: 4px;

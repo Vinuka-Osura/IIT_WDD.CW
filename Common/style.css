@@ -81,13 +81,5 @@ img {
 }
 
 .linkoffset {
-    position: relative;
-}
-
-.linkoffset::before {
-    content: "";
-    display: block;
-    height: 108px;
-    margin-top: -108px;
-    visibility: hidden;
+    scroll-margin-top: 140px;
 }
