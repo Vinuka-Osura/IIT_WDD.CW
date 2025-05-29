@@ -62,6 +62,7 @@
     </section>
 
     <!-- Table 1 Section: Literacy & Enrollment -->
+    <div id="table-1" class="linkoffset"></div>
     <section class="table-section" id="table1-heading">
       <h2 class="section-heading">Global Literacy and Enrollment Rates</h2>
       <iframe src="Table-1/table-1.html" title="Table 1: Literacy & Enrollment Data"
@@ -97,6 +98,7 @@
     </section>
 
     <!-- Table 2 Section: Projects -->
+    <div id="table-2" class="linkoffset"></div>
     <section class="table-section" id="table2-heading">
       <h2 class="section-heading">Projects Improving Quality Education</h2>
       <iframe src="Table-2/table-2.html" title="Table 2: Education Projects" onload="resizeIframe(this)"></iframe>
@@ -128,6 +130,7 @@
     </section>
 
     <!-- Table 3 Section: Funding, Infrastructure & Indicators -->
+    <div id="table-3" class="linkoffset"></div>
     <section class="table-section" id="table3-heading">
       <h2 class="section-heading">Quality Education – Funding, Infrastructure & Indicators</h2>
       <iframe src="Table-3/table-3.html" title="Table 3: Funding & Infrastructure" onload="resizeIframe(this)"></iframe>
@@ -168,6 +171,7 @@
     </section>
 
     <!-- Table 4 Section: Expanded Global Education Indicators -->
+    <div id="table-4" class="linkoffset"></div>
     <section class="table-section" id="table4-heading">
       <h2 class="section-heading">Expanded Global Education Indicators (2015-2022)</h2>
       <iframe src="Table-4/table-4.html" title="Table 4: Expanded Global Education Indicators"
@@ -247,7 +251,7 @@
         const targetId = this.getAttribute("href").substring(1);
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
-          const headerOffset = 108;
+          const headerOffset = 125;
           const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
           const offsetPosition = elementPosition - headerOffset;
           window.scrollTo({ top: offsetPosition, behavior: "smooth" });

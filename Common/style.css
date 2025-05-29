@@ -80,14 +80,6 @@ img {
     z-index: 1000;
 }
 
-/* .linkoffset {
-    position: relative;
+.linkoffset {
+    scroll-margin-top: 140px;
 }
-
-.linkoffset::before {
-    content: "";
-    display: block;
-    height: 120px;
-    margin-top: -120px;
-    visibility: hidden;
-} */

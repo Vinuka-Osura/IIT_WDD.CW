@@ -252,7 +252,7 @@
                 const targetId = this.getAttribute("href").substring(1);
                 const targetElement = document.getElementById(targetId);
                 if (targetElement) {
-                    const headerOffset = 108;
+                    const headerOffset = 120;
                     const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
                     const offsetPosition = elementPosition - headerOffset;
                     window.scrollTo({ top: offsetPosition, behavior: "smooth" });
